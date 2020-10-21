@@ -108,25 +108,42 @@ module.exports = typewriter;
 - Game State
   - Title screen - hit space to begin (saaphire monkey title)
   - Single Character Frame (choose character)
-  - Background art - world looks dying - the closer you get to the end it becomes more alive
+  - Background art - world looks dying - the closer you get to the endgame it becomes more alive
   - Create 5 frames(stops on the map)
   - 3 for the gems, 1 random, 1 endstate
   - Happy Path
 
 # STORYLINE DETAILS - STEPS
 
-- Story Introduction
+- Story Introduction - PART 1
 
   - Elder describes state of the world - impending doom
   - Gives Quest to find the 3 pieces of the sapphire
   - Return whole sapphire to the legendary relic - Saaphire monkey
   - Queue interaction with USER - " Have you been listening/ do you understand?"
   - USER to respond with yes/no - buttons
+  - Elder then says - then, first go to the desert and find the alchemist
 
-- Let the game begin - PART 1
+- Let the game begin - PART 2
 
   - USER lands in the world map showing the various paths to go forward
   - USER moves to the next EVENT - which initiates a Story Component
-  -
+  - Desert scene
+  - Alchemist explains how to retrieve 1st sapphire piece
+  - At sunrise: Puzzle => Shifting sands - series of prompts (arrow keys on keyboard)
+  - SUCCESS - Write story surrounding your bravery in retrieving the gem in the shifting sands - alchemist tells you next clue - Find the hunter to find next sapphire
+  - FAIL - Have to wait until next sunrise ( 3 chances )
+  - Fades out/in to next day - Alchemist tries to help again with more direction
+  - Repeat
+  - FAIL ALL 3 ATTEMPTS? The alchemist is gone upon waking up, the sapphire is lost and doom is approaching - you must move forward without this piece. There is a note left from the alchemist - telling next clue - Find the hunter to find next sapphire
 
-- PART 2
+- PART 3
+
+  - USER is now back to world map
+  - Moves to next location EVENT on map
+  - Grassland/Plains Scene
+  - USER finds an old camp, expecting to the find hunter - sees no one
+  - Search the campsite looking for clues
+  - USER is then surprised by the hunter - asked why YOU are there
+  - Hunter then prompts riddles
+  - SUCCESS -
