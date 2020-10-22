@@ -118,6 +118,9 @@ module.exports = typewriter;
 
 - Story Introduction - PART 1
 
+  - USER lands in the world map showing the various paths to go forward
+  - USER moves to the next EVENT - which initiates a Story Component
+  - Ruin Scene
   - Elder describes state of the world - impending doom
   - Gives Quest to find the 3 shards of the sapphire
   - Return whole sapphire to the legendary relic - Sapphire monkey
