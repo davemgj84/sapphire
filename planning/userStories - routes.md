@@ -38,4 +38,4 @@
 - /GET Dialogues "/scene/:id/dialogue/:id"
 - /GET Adventures "/adventure/:id"
 
-![WIREFRAMES]()
+![WIREFRAMES](https://github.com/davemgj84/sapphire/blob/master/planning/Sapphire%20-%20Wireframes.jpg?raw=true)
