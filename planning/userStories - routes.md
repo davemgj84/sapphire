@@ -19,7 +19,7 @@
 
 # ERD
 
-![ERD DIAGRAM]()
+![ERD DIAGRAM](https://github.com/davemgj84/sapphire/blob/master/planning/Sapphire.jpg?raw=true)
 
 # ROUTES
 
