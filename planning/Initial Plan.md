@@ -82,6 +82,7 @@ module.exports = typewriter;
 ## Stretch
 
 - Web sockets? Not sure if we need it as it will be single player
+- Comments on player summaries - likes etc
 
 # STORYLINE
 
