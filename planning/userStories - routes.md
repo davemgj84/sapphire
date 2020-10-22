@@ -37,3 +37,5 @@
 - /GET Badges "/scene/:id/badge/:id"
 - /GET Dialogues "/scene/:id/dialogue/:id"
 - /GET Adventures "/adventure/:id"
+
+![WIREFRAMES]()
