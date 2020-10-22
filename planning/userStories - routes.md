@@ -19,7 +19,7 @@
 
 # ERD
 
-![ERD DIAGRAM](https://github.com/davemgj84/sapphire/blob/master/planning/Sapphire%20-%20ERD.jpg?raw=true)
+![ERD DIAGRAM](https://github.com/davemgj84/sapphire/blob/master/planning/images/Sapphire%20-%20ERD.jpg?raw=true)
 
 # ROUTES
 
@@ -38,4 +38,4 @@
 - /GET Dialogues "/scene/:id/dialogue/:id"
 - /GET Adventures "/adventure/:id"
 
-![WIREFRAMES](https://github.com/davemgj84/sapphire/blob/master/planning/Sapphire%20-%20Wireframes.jpg?raw=true)
+![WIREFRAMES](https://github.com/davemgj84/sapphire/blob/master/planning/images/Sapphire%20-%20Wireframes.jpg?raw=true)
