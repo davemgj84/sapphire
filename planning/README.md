@@ -1,4 +1,4 @@
-# Chose your own adventure! Let's make a plan!
+# Quest for the Sapphire Monkey
 
 ## User experience
 
@@ -93,7 +93,7 @@ module.exports = typewriter;
 
   - Ancient Relic Saaphire Monkey - Legend? Myth?
   - Impending Doom? Returning the Relic to its complete state will save the planet
-  - We find sections of the Gem - 3 pieces total
+  - We find sections of the Gem - 3 shards total
   - Once collected they magically become one again
   - We now must return the whole sapphire to the monkey
 
@@ -118,8 +118,8 @@ module.exports = typewriter;
 - Story Introduction - PART 1
 
   - Elder describes state of the world - impending doom
-  - Gives Quest to find the 3 pieces of the sapphire
-  - Return whole sapphire to the legendary relic - Saaphire monkey
+  - Gives Quest to find the 3 shards of the sapphire
+  - Return whole sapphire to the legendary relic - Sapphire monkey
   - Queue interaction with USER - " Have you been listening/ do you understand?"
   - USER to respond with yes/no - buttons
   - Elder then says - then, first go to the desert and find the alchemist
@@ -129,13 +129,13 @@ module.exports = typewriter;
   - USER lands in the world map showing the various paths to go forward
   - USER moves to the next EVENT - which initiates a Story Component
   - Desert scene
-  - Alchemist explains how to retrieve 1st sapphire piece
+  - Alchemist explains how to retrieve 1st sapphire shard
   - At sunrise: Puzzle => Shifting sands - series of prompts (arrow keys on keyboard)
   - SUCCESS - Write story surrounding your bravery in retrieving the gem in the shifting sands - alchemist tells you next clue - Find the hunter to find next sapphire
   - FAIL - Have to wait until next sunrise ( 3 chances )
   - Fades out/in to next day - Alchemist tries to help again with more direction
   - Repeat
-  - FAIL ALL 3 ATTEMPTS? The alchemist is gone upon waking up, the sapphire is lost and doom is approaching - you must move forward without this piece. There is a note left from the alchemist - telling next clue - Find the hunter to find next sapphire
+  - FAIL ALL 3 ATTEMPTS? The alchemist is gone upon waking up, the sapphire is lost and doom is approaching - you must move forward without this shard. There is a note left from the alchemist - telling next clue - Find the hunter to find next sapphire
 
 - PART 3
 
@@ -143,7 +143,39 @@ module.exports = typewriter;
   - Moves to next location EVENT on map
   - Grassland/Plains Scene
   - USER finds an old camp, expecting to the find hunter - sees no one
-  - Search the campsite looking for clues
+  - Searches the campsite looking for clues
   - USER is then surprised by the hunter - asked why YOU are there
-  - Hunter then prompts riddles
-  - SUCCESS -
+  - You respond with Alchemist sent you - looking for a Sapphire shard
+  - Hunter says he will help, but only if you answer his riddles
+  - "This old one runs forever, but never moves at all. He has not lungs nor throat, but still a mighty roaring call. What is it?
+  - OR
+  - "Bright as diamonds, loud as thunder, never still, a thing of wonder"
+  - Answer: "a waterfall"
+  - SUCCESS - The hunter leads you to a roaring waterfall and you are told to venture behind to find what you seek. He also tells you find the wise hermit deep within the enchanted forest - near the great tree
+  - FAIL - The hunter scoffs at you and just yells WATERFALL! - also tells you to find a wise hermit within the enchanted forest - near the great tree
+
+- Part 4
+
+  - USER is now back to world map
+  - Moves to next location EVENT on map
+  - Dense Forest Scene
+  - USER travels deep within the forest looking for the wise hermit/great tree
+  - The user finds the great tree, but no one to be found
+  - You hear a small voice calling to you
+  - You see a larger than average snail - THAT CAN TALK
+  - She EXCLAIMS - yo what up - I am the wise hermit
+  - USER !?
+  - FIND THESE POTENT POTABLES SO I CAN BE CURED!
+  - GAME TIME - GRAB THOSE HERBS
+  - SAVE THE SNAIL - SNAIL TAKES THE HERBS - ROLLS IT UP and - In a puff of smoke is returned to her former self -
+  - she gives you the last SHARD!
+  - TELLS YOU WHERE TO FIND LOST TEMPLE OF THE SAPPHIRE MONKEY!
+
+- Part 5
+
+  - USER is now back to world map
+  - Moves to next location EVENT on map
+  - Lost Temple Scene
+  - FIND THE SAPPHIRE MONKEY
+  - BOULDER SCENE! RUN AWAY GAME!
+  - SUCCESS! SAVE THE WORLD!
