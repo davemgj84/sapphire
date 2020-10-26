@@ -86,13 +86,13 @@ module.exports = typewriter;
 
 # STORYLINE
 
-- McGuffin - Search for the Saaphire Monkey (Goal)
+- McGuffin - Search for the Sapphire Monkey (Goal)
 
 - Single Character story - potentially different avatars (MVP)
 
-- What is the Saaphire Monkey -
+- What is the Sapphire Monkey -
 
-  - Ancient Relic Saaphire Monkey - Legend? Myth?
+  - Ancient Relic Sapphire Monkey - Legend? Myth?
   - Impending Doom? Returning the Relic to its complete state will save the planet
   - We find sections of the Gem - 3 shards total
   - Once collected they magically become one again
@@ -107,7 +107,7 @@ module.exports = typewriter;
 - Login to save progress or continue as guest
 
 - Game State
-  - Title screen - hit space to begin (saaphire monkey title)
+  - Title screen - hit space to begin (sapphire monkey title)
   - Single Character Frame (choose character)
   - Background art - world looks dying - the closer you get to the endgame it becomes more alive
   - Create 5 frames(stops on the map)
