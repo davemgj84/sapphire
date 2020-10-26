@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import DialogueScene from "../components/DialogueScene";
-import SapphireGame from "../game";
-import World from "../World";
+import DialogueScene from "./DialogueScene";
+import SapphireGame from "./SapphireGame";
+import World from "../phaser/World";
 
 const MAP = "MAP";
 const DIALOG = "DIALOG";
