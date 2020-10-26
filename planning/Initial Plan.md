@@ -86,13 +86,13 @@ module.exports = typewriter;
 
 # STORYLINE
 
-- McGuffin - Search for the Saaphire Monkey (Goal)
+- McGuffin - Search for the Sapphire Monkey (Goal)
 
 - Single Character story - potentially different avatars (MVP)
 
-- What is the Saaphire Monkey -
+- What is the Sapphire Monkey -
 
-  - Ancient Relic Saaphire Monkey - Legend? Myth?
+  - Ancient Relic Sapphire Monkey - Legend? Myth?
   - Impending Doom? Returning the Relic to its complete state will save the planet
   - We find sections of the Gem - 3 shards total
   - Once collected they magically become one again
@@ -100,7 +100,7 @@ module.exports = typewriter;
 
 - Also find easter eggs that are not the gem - random stuff - work with badges
 
-- Collection of hints that lead character to find Saaphire Monkey
+- Collection of hints that lead character to find Sapphire Monkey
 
 ## MVP/MVD
 
@@ -183,3 +183,11 @@ module.exports = typewriter;
   - FIND THE SAPPHIRE MONKEY
   - BOULDER SCENE! RUN AWAY GAME!
   - SUCCESS! SAVE THE WORLD!
+
+
+## TO-DO
+
+- Make POCs
+  - React Router
+  - React Router + Phaser
+  - Music 
