@@ -107,7 +107,7 @@ module.exports = typewriter;
 - Login to save progress or continue as guest
 
 - Game State
-  - Title screen - hit space to begin (saaphire monkey title)
+  - Title screen - hit space to begin (sapphire monkey title)
   - Single Character Frame (choose character)
   - Background art - world looks dying - the closer you get to the endgame it becomes more alive
   - Create 5 frames(stops on the map)
