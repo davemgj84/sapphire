@@ -100,7 +100,7 @@ module.exports = typewriter;
 
 - Also find easter eggs that are not the gem - random stuff - work with badges
 
-- Collection of hints that lead character to find Saaphire Monkey
+- Collection of hints that lead character to find Sapphire Monkey
 
 ## MVP/MVD
 
@@ -183,3 +183,11 @@ module.exports = typewriter;
   - FIND THE SAPPHIRE MONKEY
   - BOULDER SCENE! RUN AWAY GAME!
   - SUCCESS! SAVE THE WORLD!
+
+
+## TO-DO
+
+- Make POCs
+  - React Router
+  - React Router + Phaser
+  - Music 
