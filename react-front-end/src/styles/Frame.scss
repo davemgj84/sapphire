@@ -7,7 +7,7 @@
     "left game right"
     "bottom bottom bottom";
   grid-template-rows: 1fr 768px 1fr;
-  grid-template-columns: 1fr 1024 1fr;
+  grid-template-columns: 1fr 1024px 1fr;
 }
 
 #game {
@@ -16,9 +16,11 @@
 
 nav {
   display: flex;
+  justify-content: space-between;
+  padding: 1em;
   grid-area: top;
   background-color: red;
-  width: 100%
+  // width: 100%;
 }
 
 #bottom {
@@ -37,4 +39,3 @@ nav {
   grid-area: right;
   background-color: pink;
 }
-

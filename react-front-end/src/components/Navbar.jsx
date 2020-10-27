@@ -5,19 +5,17 @@ const Navbar = () => {
   const [counter, setCounter] = useState(0);
 
   return (
-    <div>
-      <nav>
-        <span id="logo">Sapphire</span>
-        <span className="badge-login-buttons">
-          <button>Badges</button>
-          <button>Logout</button>
-        </span>
+    <nav>
+      <span id="logo">Sapphire</span>
+      <span className="badge-login-buttons">
+        <button>Badges</button>
+        <button>Logout</button>
+      </span>
 
-        {/* <button onClick={() => setCounter((prev) => prev + 1)}>
+      {/* <button onClick={() => setCounter((prev) => prev + 1)}>
           {counter}
         </button> */}
-      </nav>
-    </div>
+    </nav>
   );
 };
 
