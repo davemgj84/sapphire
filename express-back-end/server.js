@@ -4,7 +4,7 @@ const { getDialogueBySceneID } = require("./database/queries");
 const Express = require("express");
 const App = Express();
 const BodyParser = require("body-parser");
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 8080;
 const ENV = process.env.ENV || "sapphire";
 
 // Express Configuration
