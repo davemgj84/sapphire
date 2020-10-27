@@ -19,17 +19,17 @@ function Content(props) {
   }, [props.match.params.id]);
 
   return (
-    <>
-      <Route
-        path="/scene/:id"
-        render={() => {
-          return <SapphireGame scene={World} show={stage === MAP} />;
-        }}
-      />
-      {stage === DIALOG && (
-        <Route path="/scene/:id" component={DialogueScene} />
-      )}
-    </>
+  <div id="game">
+    <Route
+      path="/scene/:id"
+      render={() => {
+        return <SapphireGame scene={World} show={stage === MAP} />;
+      }}
+    />
+    {stage === DIALOG && (
+      <Route path="/scene/:id" component={DialogueScene} />
+    )}
+  </div>
   );
 }
 

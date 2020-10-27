@@ -1,0 +1,40 @@
+#parent {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    "top top top"
+    "left game right"
+    "bottom bottom bottom";
+  grid-template-rows: 1fr 768px 1fr;
+  grid-template-columns: 1fr 1024 1fr;
+}
+
+#game {
+  grid-area: game;
+}
+
+nav {
+  display: flex;
+  grid-area: top;
+  background-color: red;
+  width: 100%
+}
+
+#bottom {
+  display: flex;
+  grid-area: bottom;
+  background-color: red;
+}
+
+#left {
+  display: flex;
+  grid-area: left;
+  background-color: pink;
+}
+
+#right {
+  grid-area: right;
+  background-color: pink;
+}
+
