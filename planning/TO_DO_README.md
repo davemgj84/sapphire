@@ -1,6 +1,7 @@
 # What do we need to do for MVD/MVP - Sapphire Monkey Checklist:
 
 - Setup Database for dialogue, badges, user, summary etc.
+- Add logic that stops sprite (collision logic)
 - badge component
 - show badges page? Not sure how we want this to look
 - Navbar component
