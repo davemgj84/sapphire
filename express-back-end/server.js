@@ -20,11 +20,17 @@ App.get("/api/data", (req, res) => {
       res.json(response.story);
     })
     .catch((err) => console.log(err));
-  // .finally(() => res.send("Hello"));
+});
 
-  // res.json({
-  //   message: "Seems to work!",
-  // })
+App.get("/api/scene/:id", (req, res) => {
+  const values = req.params.id;
+  console.log(req.params);
+  getDialogueBySceneID(values)
+    .then((response) => {
+      // console.log("Scene: ", response);
+      res.json(response);
+    })
+    .catch((err) => console.log(err));
 });
 
 App.listen(PORT, () => {

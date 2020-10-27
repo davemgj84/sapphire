@@ -25,7 +25,8 @@ const getDialogueBySceneID = (sceneID) => {
 
   return query
     .then((res) => {
-      return res.rows[0];
+      console.log("RES?", res.rows);
+      return res.rows;
     })
     .catch((err) => {
       throw `${err.code} executing fetch`;
