@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import DialogueBox from "./DialogueBox";
 import axios from "axios";
 import "../styles/SceneStyles.scss";
