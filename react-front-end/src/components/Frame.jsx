@@ -7,13 +7,13 @@ import Bottom from "./Bottom";
 import Navbar from "./Navbar";
 import TitlePage from "./TitlePage";
 
-const Frame = () => {
+const Frame = (props) => {
   return (
     <div id="parent">
       <Navbar />
       <Left />
       <Switch>
-        <Route exact path="/" component={TitlePage} />
+        <Route exact path="/" component={() => <TitlePage />} />
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />
