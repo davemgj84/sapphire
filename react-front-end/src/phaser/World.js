@@ -11,10 +11,13 @@ class World extends Phaser.Scene {
       right: [6, 8],
       up: [9, 11],
     };
+    //this is being declared in App.js
+    this.color = window.selectColor;
   }
 
   preload() {
-    const url = `/assets/character_sprites/sprite_red.png`;
+    console.log(this.color);
+    const url = `/assets/character_sprites/sprite_${this.color}.png`;
     this.load.tilemapTiledJSON("world", "/assets/sapphire.json");
     this.load.image("overworld_proper", "/assets/overworld_proper.png");
     this.load.spritesheet("player", url, {

@@ -15,10 +15,14 @@ const App = () => {
   //       setState(response.data);
   //     });
   // };
+  //this useEffect needs to stay stop level to set the character's color first
+  useEffect(() => {
+    window.selectColor = "blue";
+  }, []);
 
   return (
     <BrowserRouter>
-    <Frame />
+      <Frame />
       {/* <div className="App">
         <Navbar />
         <Route path="/scene/:id" component={Content} />
