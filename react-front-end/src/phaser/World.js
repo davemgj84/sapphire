@@ -43,6 +43,39 @@ class World extends Phaser.Scene {
     this.player.body.collideWorldBounds = true;
     this.physics.add.collider(this.player, collision);
 
+    this.anims.create({
+      key: "left",
+      frames: this.anims
+        .generateFrameNumbers("player", { start: 12, end: 14 })
+        .reverse(),
+      frameRate: 10,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: "right",
+      frames: this.anims.generateFrameNumbers("player", { start: 24, end: 26 }),
+      frameRate: 10,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: "up",
+      frames: this.anims.generateFrameNumbers("player", { start: 36, end: 38 }),
+      frameRate: 10,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: "down",
+      frames: this.anims.generateFrameNumbers("player", { start: 0, end: 2 }),
+      frameRate: 10,
+      repeat: -1,
+    });
+    // this.anims.create({
+    //   key: "idle",
+    //   frames: this.anims.generateFrameNumbers("player", { start: 0, end: 3 }),
+    //   frameRate: 10,
+    //   repeat: -1,
+    // });
+
     // Static EVENT GHOST Sprite:
     const eventGhost = this.physics.add.sprite(400, 496, "player").setScale(2);
     eventGhost.setVisible(false);
@@ -81,12 +114,16 @@ class World extends Phaser.Scene {
   update() {
     // CONTROLS :
     if (this.cursors.right.isDown) {
+      this.player.anims.play("right", true);
       this.player.body.setVelocityX(300);
     } else if (this.cursors.left.isDown) {
+      this.player.anims.play("left", true);
       this.player.body.setVelocityX(-300);
     } else if (this.cursors.down.isDown) {
+      this.player.anims.play("down", true);
       this.player.body.setVelocityY(300);
     } else if (this.cursors.up.isDown) {
+      this.player.anims.play("up", true);
       this.player.body.setVelocityY(-300);
     } else {
       this.player.body.setVelocity(0);
