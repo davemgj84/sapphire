@@ -6,21 +6,15 @@ import Frame from "./components/Frame";
 import axios from "axios";
 
 const App = () => {
-  //attempted to set the sprite color dynamically with state setter.
-  //passed setColor props from App -> Frame -> TitlePage
-  //had a button on TitlePage that when onClick() called setColor("pink")
-  //to see if it could change the window.selectorColor to pink inside the useEffect below
-  //this looked like window.selectColor = color
-  //it seems World.js is already loaded and does not want to let React change it
-
-  // const [color, setColor] = useState("blue");
-  // const newSetColor = (newColor) => {
-  //   console.log(newColor);
-  //   setColor(newColor);
-  // };
+  //need a separate component that allows user to select a color
+  //the component needs a setColor function to change the color at the top level
+  //
+  const [color, setColor] = useState("blue");
+  //must have color in the dependency array or it won't work
   useEffect(() => {
-    window.selectColor = "pink";
-  }, []);
+    window.selectColor = color;
+  }, [color]);
+  console.log(window);
 
   // const [state, setState] = useState("Message");
 
@@ -35,6 +29,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <button onClick={() => setColor("pink")}>pink</button>
       <Frame />
       {/* <div className="App">
         <Navbar />
