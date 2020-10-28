@@ -5,14 +5,43 @@ class World extends Phaser.Scene {
     super();
     this.tempx = 0;
     this.tempy = 0;
+
+    this.players = {
+      red: {
+        down: [0, 2],
+        left: [12, 14],
+        right: [24, 26],
+        up: [36, 38],
+      },
+      pink: {
+        down: [3, 5],
+        left: [15, 17],
+        right: [27, 29],
+        up: [39, 41],
+      },
+      darkBlue: {
+        down: [6, 8],
+        left: [18, 20],
+        right: [30, 32],
+        up: [42, 44],
+      },
+      lightBlue: {
+        down: [9, 11],
+        left: [21, 23],
+        right: [33, 35],
+        up: [45, 47],
+      },
+    };
   }
 
   preload() {
+    const url = `/assets/people_sprites.png`;
     this.load.tilemapTiledJSON("world", "/assets/sapphire.json");
     this.load.image("overworld_proper", "/assets/overworld_proper.png");
-    this.load.spritesheet("player", "/assets/people_sprites.png", {
+    this.load.spritesheet("player", url, {
       frameWidth: 32,
       frameHeight: 32,
+      startFrame: 5,
     });
 
     // enter button test link:
@@ -42,36 +71,54 @@ class World extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player.body.collideWorldBounds = true;
     this.physics.add.collider(this.player, collision);
+    const chosenPlayer = this.players["lightBlue"];
+
+    // lightBlue: {
+    //   down: [9, 11],
+    //   left: [21, 23],
+    //   right: [33, 35],
+    //   up: [45, 47],
+    // },
 
     this.anims.create({
       key: "left",
-      frames: this.anims
-        .generateFrameNumbers("player", { start: 12, end: 14 })
-        .reverse(),
+      frames: this.anims.generateFrameNumbers("player", {
+        start: chosenPlayer.left[0],
+        end: chosenPlayer.left[1],
+      }),
       frameRate: 10,
       repeat: -1,
     });
     this.anims.create({
       key: "right",
-      frames: this.anims.generateFrameNumbers("player", { start: 24, end: 26 }),
+      frames: this.anims.generateFrameNumbers("player", {
+        start: chosenPlayer.right[0],
+        end: chosenPlayer.right[1],
+      }),
       frameRate: 10,
       repeat: -1,
     });
     this.anims.create({
       key: "up",
-      frames: this.anims.generateFrameNumbers("player", { start: 36, end: 38 }),
+      frames: this.anims.generateFrameNumbers("player", {
+        start: chosenPlayer.up[0],
+        end: chosenPlayer.up[1],
+      }),
       frameRate: 10,
       repeat: -1,
     });
     this.anims.create({
       key: "down",
-      frames: this.anims.generateFrameNumbers("player", { start: 0, end: 2 }),
+      frames: this.anims.generateFrameNumbers("player", {
+        start: chosenPlayer.down[0],
+        end: chosenPlayer.down[1],
+      }),
       frameRate: 10,
       repeat: -1,
     });
     // this.anims.create({
     //   key: "idle",
-    //   frames: this.anims.generateFrameNumbers("player", { start: 0, end: 3 }),
+    //   frames: this.anims.generateFrameNumbers("player", { start: 3, end: 3 }),
     //   frameRate: 10,
     //   repeat: -1,
     // });
@@ -126,6 +173,7 @@ class World extends Phaser.Scene {
       this.player.anims.play("up", true);
       this.player.body.setVelocityY(-300);
     } else {
+      // this.player.anims.play("idle", true);
       this.player.body.setVelocity(0);
     }
 
