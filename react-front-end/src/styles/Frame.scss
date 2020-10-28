@@ -19,29 +19,32 @@ nav {
   justify-content: space-between;
   padding: 1em;
   grid-area: top;
-  background-color: #3e74c7;
+  background-color: #5181cc;
   align-items: center;
 }
 
 #bottom {
   display: flex;
   grid-area: bottom;
-  background-color: #3e74c7;
+  background-color: #5181cc;
 }
 
 #left {
   display: flex;
   grid-area: left;
-  background-color: hotpink;
+  background-color: #5181cc;
+  background-image: url("/assets/stonetransp.png");
 }
 
 #right {
   grid-area: right;
-  background-color: hotpink;
+  background-color: #5181cc;
+  background-image: url("/assets/stonetransp.png");
 }
 
 #logo {
   align-content: center;
-  color: #fff;
   font-size: 3em;
+  color: #ffff;
+  text-decoration: none;
 }
