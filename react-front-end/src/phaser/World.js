@@ -73,13 +73,6 @@ class World extends Phaser.Scene {
     this.physics.add.collider(this.player, collision);
     const chosenPlayer = this.players["lightBlue"];
 
-    // lightBlue: {
-    //   down: [9, 11],
-    //   left: [21, 23],
-    //   right: [33, 35],
-    //   up: [45, 47],
-    // },
-
     this.anims.create({
       key: "left",
       frames: this.anims.generateFrameNumbers("player", {
@@ -116,12 +109,6 @@ class World extends Phaser.Scene {
       frameRate: 10,
       repeat: -1,
     });
-    // this.anims.create({
-    //   key: "idle",
-    //   frames: this.anims.generateFrameNumbers("player", { start: 3, end: 3 }),
-    //   frameRate: 10,
-    //   repeat: -1,
-    // });
 
     // Static EVENT GHOST Sprite:
     const eventGhost = this.physics.add.sprite(400, 496, "player").setScale(2);
