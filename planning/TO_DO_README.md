@@ -1,27 +1,28 @@
 # What do we need to do for MVD/MVP - Sapphire Monkey Checklist:
 
-- Setup Database for dialogue, badges, user, summary etc.
+- X Setup Database for dialogue, badges, user, summary etc.
 - Add logic that stops sprite (collision logic)
 - badge component
 - show badges page? Not sure how we want this to look
-- Navbar component
-- Login/Logout button component
-- Logo/Home page button component
+- X Navbar component
+- Login/Logout button logic
+- X Logo/Home page button component
 - Title page art (Quest for the Sapphire Monkey)
-- Start Game button component
+- X Start Game button component
+- Start game at a scene, not the map
 - "Select Character" component
 - "Select Character" Artwork
 - Actual map we will use for Demo (will need 4-5 instances with different collision and ghostEvent hulk sprite at each scene location)
-- Chracter Sprite artwork - animations for movement on map
+- X Chracter Sprite artwork - animations for movement on map
 - Button Artwork for in map interactions ("Spacebar" to enter scene?)
 - Background art for each scene (5 total?)
-- Dialogue box component
+- X Dialogue box component
 - Integrating text "typewriter function" into dialogue
 - Scene component
 - Dialogue button components - "Next", "Continue", "End" - user interaction with the dialogue box?
 - Scene puzzles - mini games for each scene (4 scenes with games?)
 - Artwork for sapphire monkey (pixel art) and saving the world?
-- Routes connecting all of this to the DB
+- X Routes connecting all of this to the DB
 - Background Music for each section in the game? Music for Start game, scenes, map, final ending?
 - Writing the dialogue/story for the game - character interactions
 - Music/sound for getting a badge?

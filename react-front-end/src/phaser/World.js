@@ -11,7 +11,7 @@ class World extends Phaser.Scene {
       right: [6, 8],
       up: [9, 11],
     };
-    //this is being declared in App.js
+    //this is being declared in useColor.js
     this.color = window.selectColor;
   }
 
