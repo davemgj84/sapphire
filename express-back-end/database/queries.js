@@ -66,11 +66,23 @@ const getChoiceLabelsByDialogueID = (dialogueID) => {
     .catch((err) => err);
 };
 
-const getDialogueByChoiceID = (choiceID) => {
-  const sql = `SELECT story, id FROM dialogues
-  JOIN choices on choices.dialogue_id = dialogues.id
-  WHERE _id = $1`;
-  const query = pool.query(sql, [choiceID]);
+const getDialoguesById = (dialogueId) => {
+  const sql = `SELECT * FROM dialogues
+  JOIN choices ON dialogue_id = dialogues.id
+  WHERE dialogues.id = $1`;
+  const query = pool.query(sql, [dialogueId]);
+
+  return query
+    .then((res) => {
+      return res.rows;
+    })
+    .catch((err) => err);
+};
+
+const getSceneById = (sceneId) => {
+  const sql = `SELECT * FROM scenes
+  WHERE id = $1`;
+  const query = pool.query(sql, [sceneId]);
 
   return query
     .then((res) => {
@@ -85,4 +97,6 @@ module.exports = {
   getBadgesbyUserID,
   getsAdventurebyUserID,
   getChoiceLabelsByDialogueID,
+  getDialoguesById,
+  getSceneById,
 };

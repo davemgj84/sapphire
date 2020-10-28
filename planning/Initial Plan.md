@@ -124,7 +124,7 @@ module.exports = typewriter;
   - Elder describes state of the world - impending doom
   - Gives Quest to find the 3 shards of the sapphire
   - Return whole sapphire to the legendary relic - Sapphire monkey
-  - Queue interaction with USER - " Have you been listening/ do you understand?"
+  - Queue interaction with USER - Have you been listening/ do you understand?
   - USER to respond with yes/no - buttons
   - Elder then says - then, first go to the desert and find the alchemist
 
@@ -184,10 +184,9 @@ module.exports = typewriter;
   - BOULDER SCENE! RUN AWAY GAME!
   - SUCCESS! SAVE THE WORLD!
 
-
 ## TO-DO
 
 - Make POCs
   - React Router
   - React Router + Phaser
-  - Music 
+  - Music

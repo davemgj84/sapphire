@@ -4,25 +4,13 @@ VALUES
   ('monkey_King', 'vryCOOL@aol.com');
 
 INSERT INTO scenes
-  (user_id, title)
+  (title, initial_dialogue)
 VALUES
-  (1, 'Old Man');
-INSERT INTO scenes
-  (user_id, title)
-VALUES
-  (1, 'Alchemist');
-INSERT INTO scenes
-  (user_id, title)
-VALUES
-  (1, 'Hunter');
-INSERT INTO scenes
-  (user_id, title)
-VALUES
-  (1, 'Snail');
-INSERT INTO scenes
-  (user_id, title)
-VALUES
-  (1, 'Sapphire Monkey');
+  ('Old Man', 1),
+  ('Alchemist', 4),
+  ('Hunter', 7),
+  ('Snail', 10),
+  ('Sapphire Monkey', 13);
 
 -- DIALOGUES
 

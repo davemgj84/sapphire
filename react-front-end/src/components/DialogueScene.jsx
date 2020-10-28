@@ -9,7 +9,7 @@ const DialogueScene = (props) => {
 
   useEffect(() => {
     axios
-      .get(`/api/scene/${props.match.params.id}`) // You can simply make your requests to "/api/whatever you want"
+      .get(`/api/dialogues/${props.match.params.id}`) // You can simply make your requests to "/api/whatever you want"
       .then((response) => {
         setDialogues(response.data);
       });
