@@ -6,6 +6,7 @@ import Right from "./Right";
 import Bottom from "./Bottom";
 import Navbar from "./Navbar";
 import TitlePage from "./TitlePage";
+import ChooseChar from "./ChooseChar";
 
 const Frame = (props) => {
   return (
@@ -13,7 +14,8 @@ const Frame = (props) => {
       <Navbar />
       <Left />
       <Switch>
-        <Route exact path="/" component={() => <TitlePage />} />
+        <Route exact path="/" component={TitlePage} />
+        <Route path="/character" component={ChooseChar} />
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />

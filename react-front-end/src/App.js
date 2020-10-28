@@ -21,7 +21,6 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <button onClick={() => setColor("pink")}>pink</button>
       <Frame />
       {/* <div className="App">
         <Navbar />

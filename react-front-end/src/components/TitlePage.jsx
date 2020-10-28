@@ -6,7 +6,7 @@ const TitlePage = (props) => {
   return (
     <div id="start-new-game">
       <img src="/assets/placeholderArt.png" alt="art" />
-      <Link to={"/scene/1"} id="start-game">
+      <Link to={"/character"} id="start-game">
         <button>New Game</button>
       </Link>
     </div>
