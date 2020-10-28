@@ -4,17 +4,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 // import Navbar from "./components/Navbar";
 import Frame from "./components/Frame";
 import axios from "axios";
+import useColor from "./hooks/useColor";
 
 const App = () => {
-  //need a separate component that allows user to select a color
-  //the component needs a setColor function to change the color at the top level
-  //
-  const [color, setColor] = useState("blue");
-  //must have color in the dependency array or it won't work
-  useEffect(() => {
-    window.selectColor = color;
-  }, [color]);
-  console.log(window);
+  const { color, setColor } = useColor("green");
 
   // const [state, setState] = useState("Message");
 
@@ -25,7 +18,6 @@ const App = () => {
   //       setState(response.data);
   //     });
   // };
-  //this useEffect needs to stay stop level to set the character's color first
 
   return (
     <BrowserRouter>
