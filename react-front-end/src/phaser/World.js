@@ -147,21 +147,23 @@ class World extends Phaser.Scene {
 
   update() {
     // CONTROLS :
-    if (this.cursors.right.isDown) {
-      this.player.anims.play("right", true);
-      this.player.body.setVelocityX(300);
-    } else if (this.cursors.left.isDown) {
-      this.player.anims.play("left", true);
-      this.player.body.setVelocityX(-300);
-    } else if (this.cursors.down.isDown) {
-      this.player.anims.play("down", true);
-      this.player.body.setVelocityY(300);
-    } else if (this.cursors.up.isDown) {
-      this.player.anims.play("up", true);
-      this.player.body.setVelocityY(-300);
-    } else {
-      // this.player.anims.play("idle", true);
-      this.player.body.setVelocity(0);
+    if (document.getElementById("game-container").style.display === "block") {
+      if (this.cursors.right.isDown) {
+        this.player.anims.play("right", true);
+        this.player.body.setVelocityX(300);
+      } else if (this.cursors.left.isDown) {
+        this.player.anims.play("left", true);
+        this.player.body.setVelocityX(-300);
+      } else if (this.cursors.down.isDown) {
+        this.player.anims.play("down", true);
+        this.player.body.setVelocityY(300);
+      } else if (this.cursors.up.isDown) {
+        this.player.anims.play("up", true);
+        this.player.body.setVelocityY(-300);
+      } else {
+        // this.player.anims.play("idle", true);
+        this.player.body.setVelocity(0);
+      }
     }
 
     // Console logging the player position x and y:
