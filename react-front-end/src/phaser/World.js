@@ -16,7 +16,6 @@ class World extends Phaser.Scene {
   }
 
   preload() {
-    console.log(this.color);
     const url = `/assets/character_sprites/sprite_${this.color}.png`;
     this.load.tilemapTiledJSON("world", "/assets/sapphire.json");
     this.load.image("overworld_proper", "/assets/overworld_proper.png");
