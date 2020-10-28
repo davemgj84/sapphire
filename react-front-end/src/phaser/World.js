@@ -10,9 +10,9 @@ class World extends Phaser.Scene {
   preload() {
     this.load.tilemapTiledJSON("world", "/assets/sapphire.json");
     this.load.image("overworld_proper", "/assets/overworld_proper.png");
-    this.load.spritesheet("hulk", "/assets/sumoHulk_spriteSheet.png", {
-      frameWidth: 16,
-      frameHeight: 16,
+    this.load.spritesheet("player", "/assets/people_sprites.png", {
+      frameWidth: 32,
+      frameHeight: 32,
     });
 
     // enter button test link:
@@ -38,13 +38,13 @@ class World extends Phaser.Scene {
     collision.setDepth(0);
 
     // PLAYER :
-    this.player = this.physics.add.sprite(176, 624, "hulk").setScale(2);
+    this.player = this.physics.add.sprite(176, 624, "player").setScale(1);
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player.body.collideWorldBounds = true;
     this.physics.add.collider(this.player, collision);
 
     // Static EVENT GHOST Sprite:
-    const eventGhost = this.physics.add.sprite(400, 496, "hulk").setScale(2);
+    const eventGhost = this.physics.add.sprite(400, 496, "player").setScale(2);
     eventGhost.setVisible(false);
 
     // Create Scene button - set button to invisible until event:
