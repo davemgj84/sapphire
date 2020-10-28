@@ -5,43 +5,21 @@ class World extends Phaser.Scene {
     super();
     this.tempx = 0;
     this.tempy = 0;
-
-    this.players = {
-      red: {
-        down: [0, 2],
-        left: [12, 14],
-        right: [24, 26],
-        up: [36, 38],
-      },
-      pink: {
-        down: [3, 5],
-        left: [15, 17],
-        right: [27, 29],
-        up: [39, 41],
-      },
-      darkBlue: {
-        down: [6, 8],
-        left: [18, 20],
-        right: [30, 32],
-        up: [42, 44],
-      },
-      lightBlue: {
-        down: [9, 11],
-        left: [21, 23],
-        right: [33, 35],
-        up: [45, 47],
-      },
+    this.spriteView = {
+      down: [0, 2],
+      left: [3, 5],
+      right: [6, 8],
+      up: [9, 11],
     };
   }
 
   preload() {
-    const url = `/assets/people_sprites.png`;
+    const url = `/assets/character_sprites/sprite_red.png`;
     this.load.tilemapTiledJSON("world", "/assets/sapphire.json");
     this.load.image("overworld_proper", "/assets/overworld_proper.png");
     this.load.spritesheet("player", url, {
       frameWidth: 32,
       frameHeight: 32,
-      startFrame: 5,
     });
 
     // enter button test link:
@@ -71,42 +49,41 @@ class World extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player.body.collideWorldBounds = true;
     this.physics.add.collider(this.player, collision);
-    const chosenPlayer = this.players["lightBlue"];
 
     this.anims.create({
       key: "left",
       frames: this.anims.generateFrameNumbers("player", {
-        start: chosenPlayer.left[0],
-        end: chosenPlayer.left[1],
+        start: this.spriteView.left[0],
+        end: this.spriteView.left[1],
       }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     });
     this.anims.create({
       key: "right",
       frames: this.anims.generateFrameNumbers("player", {
-        start: chosenPlayer.right[0],
-        end: chosenPlayer.right[1],
+        start: this.spriteView.right[0],
+        end: this.spriteView.right[1],
       }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     });
     this.anims.create({
       key: "up",
       frames: this.anims.generateFrameNumbers("player", {
-        start: chosenPlayer.up[0],
-        end: chosenPlayer.up[1],
+        start: this.spriteView.up[0],
+        end: this.spriteView.up[1],
       }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     });
     this.anims.create({
       key: "down",
       frames: this.anims.generateFrameNumbers("player", {
-        start: chosenPlayer.down[0],
-        end: chosenPlayer.down[1],
+        start: this.spriteView.down[0],
+        end: this.spriteView.down[1],
       }),
-      frameRate: 10,
+      frameRate: 5,
       repeat: -1,
     });
 
