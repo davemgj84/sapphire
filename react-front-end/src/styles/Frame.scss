@@ -19,23 +19,29 @@ nav {
   justify-content: space-between;
   padding: 1em;
   grid-area: top;
-  background-color: red;
-  // width: 100%;
+  background-color: #3e74c7;
+  align-items: center;
 }
 
 #bottom {
   display: flex;
   grid-area: bottom;
-  background-color: red;
+  background-color: #3e74c7;
 }
 
 #left {
   display: flex;
   grid-area: left;
-  background-color: pink;
+  background-color: hotpink;
 }
 
 #right {
   grid-area: right;
-  background-color: pink;
+  background-color: hotpink;
+}
+
+#logo {
+  align-content: center;
+  color: #fff;
+  font-size: 3em;
 }

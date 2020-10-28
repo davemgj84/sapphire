@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DialogueBox from "./DialogueBox";
 import axios from "axios";
+import "../styles/SceneStyles.scss";
 
 const DialogueScene = (props) => {
-  // console.log(props.match.params.id); //pull scene id
-
   const [dialogues, setDialogues] = useState(["Message"]);
   const [index, setIndex] = useState(0);
 
@@ -17,9 +16,10 @@ const DialogueScene = (props) => {
       });
   }, [index]);
 
+  // @todo CHANGE IMAGE TO BE DYNAMIC TO SCENE WITH SCSS STYLING
   return (
-    <div>
-      <h1>This is a scene with dialogue</h1>
+    <div className="scene">
+      <img src="/assets/placeholderArt.png" alt="art" />
       <DialogueBox
         scene={props.match.params.id}
         dialogue={dialogues[index].story}

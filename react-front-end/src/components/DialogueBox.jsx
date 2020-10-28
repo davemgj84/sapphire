@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/DialogueBox.scss";
 
 export default function DialogueBox(props) {
   const endLength = (maxLength, currentIndex) => {
@@ -13,11 +14,19 @@ export default function DialogueBox(props) {
       <p>{props.dialogue}</p>
 
       {endLength(props.length, props.index) ? (
-        <Link to={`/scene/${Number(props.scene) + 1}`}>
+        <Link
+          to={`/scene/${Number(props.scene) + 1}`}
+          className="dialogue-buttons"
+        >
           <button>Return to Map</button>
         </Link>
       ) : (
-        <button onClick={() => props.setIndex((prev) => prev + 1)}>Next</button>
+        <button
+          className="dialogue-buttons"
+          onClick={() => props.setIndex((prev) => prev + 1)}
+        >
+          Next
+        </button>
       )}
     </div>
   );
