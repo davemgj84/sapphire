@@ -33,7 +33,7 @@ VALUES
   (2, 'scene 2, dialogue 10 You''ve completely failed in your task. This time, when you find yourself back at camp, the Alchemist''s home is baorded up with a note on the door that instructs you to find a Hunter in the plains. You shrug and wander off towards the horizon.'),
   (2, 'scene 2, dialogue 11 A small oasis is revealed in the heart of the shifting sands, and on a pedestal in the water glimmers a shining sapphire shard. Triumphantly, you return to the Alchemist who instructs you to seek out a friend of his that makes his living hunting in the plains aways away, and that he can lead you to the next shard.'),
 
- -- Scene3
+  -- Scene3
   (3, 'scene 3, dialogue 12 - You have been walking for hours through the great plains looking for the hunter the alchemist told you about. You come across a small camp, but here is no one to be seen. You decide to look through the camp and see if there are any clues to where they may have gone.'),
   (3, 'scene 3, dialogue 13 - HUNTER: WHO ARE YOU! - as he points his bow at you with a arrow ready to fire.'),
   (3, 'scene 3, dialogue 14 - You respond explaining that the alchemist sent you and you are looking the a sapphire shard'),
@@ -42,8 +42,8 @@ VALUES
   (3, 'scene 3, dialogue 17 HUNTER: That is wrong.... ill give you another chance tho... What is Bright as diamonds, loud as thunder, never still, a thing of wonder?'),
   (3, 'scene 3, dialogue 18 HUNTER: Excellent! That is the correct answer. I will show you to the waterfall and you will find the shard there. From there you must travel to the enchanted forest and find the hermit near the great tree. They might know where the last shard remains..'),
   (3, 'scene 3, dialogue 19 WRONG! The hunter scoffs... IT IS A WATERFALL! - HUNTER: find the waterfall and you will find the shard there. From there you must travel to the enchanted forest and find the hermit near the great tree. They might know where the last shard remains..'),
- 
---  Scene 4
+
+  --  Scene 4
 
   (4, 'scene 4, dialogue 20 - You travel to the enchanted forest in search of the wise hermit, looking for the Great Tree the Hunter told you about...'),
   (4, 'scene 4, dialogue 21 - You enter a small clearing and see the biggest tree you have ever seen in your entire life. It must be over 100 meters tall! Looking around, you dont see any place where there might be anyone, let alone a hermit.... suddenly you hear a faint squeaking sound and look down...'),
@@ -67,7 +67,10 @@ VALUES
   (5, 'scene 5, dialogue 36 You will go down in the history books as a failure. SRY! BTW, have you met my friend, Rick?'),
   (5, 'scene 5, dialogue 37 With the shards you provided, the sapphire monkey king rises to life, terrifying, awe-inspriring, and omnipoetent. This monkey is our savior.'),
   (5, 'scene 5, dialogue 38 With a flick of the wrist, the sapphire monkey spreads restoration to the land'),
-  (5, 'scene 5, dialogue 39 You are a hero of our time. The sapphire monkey crowns you with rubies. WOOHOO! Mission accomplished! Quest finished! THE END');
+  (5, 'scene 5, dialogue 39 You are a hero of our time. The sapphire monkey crowns you with rubies. WOOHOO! Mission accomplished! Quest finished! THE END'),
+
+  --adding buffer scene to scene 1
+  (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.');
 
 -- one badge per scene
 
@@ -82,18 +85,20 @@ VALUES
 
 -- choices 
 
-INSERT INTO choices 
+INSERT INTO choices
   (dialogue_id, label, next_dialogue_id, weight, summary)
-VALUES 
+VALUES
   (1, 'next', 2, 0, null),
   (2, 'next', 3, 0, null),
   (3, 'next', 4, 0, null),
   (4, 'next', 5, 0, 'You were tasked with a an important mission to find three sapphire shards and return them to the monkey. This will restore balance in the universe and save our planet.'),
   (5, 'no', 1, 20, 'You did not understand the mission at first and had listen to that old guy again.'),
-  (5, 'yes', null, 10, 'Let the adventure begin!'),
+  (5, 'yes', 40, 10, null),
+  (40, 'map', null, 0, 'Let the adventure begin!'),
   (6, 'next', 7, 10, null),
   (7, 'next', 8, 10, null),
   (8, 'Fail to find the Shard', 9, 10, null),
+  (9, 'Map', null, 10, null),
   (8, 'Lose the shard forever', 10, 10, 'The shard was forever lost in the sand'),
   (10, 'Map', null, 10, null),
   (8, 'Find the Shard', 11, 10, 'You found the shard in the desert'),
