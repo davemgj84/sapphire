@@ -29,6 +29,7 @@ VALUES
   (2, 'scene 2, dialogue 6 You follow directions given to you by the old man to find the Alchemist and find a small camp at the edge of the desert.'),
   (2, 'scene 2, dialogue 7 You find an man dressed in robes with strange symbols on it. This must be the alchemist. He waves you over and mentions that he recieved word of your approach.'),
   (2, 'scene 2, dialogue 8 Apparently part of the sapphire is lost in the desert and his mystical spookum powers can help guide you safely to it.'),
+  --tween sceene for game
   (2, 'scene 2, dialogue 9 You done messed it up. You find yourself back at the Alchemist''s camp and he sighs dramatically. He''ll help you again tomorrow, but you''ll have to learn a new path through the desert.'),
   (2, 'scene 2, dialogue 10 You''ve completely failed in your task. This time, when you find yourself back at camp, the Alchemist''s home is baorded up with a note on the door that instructs you to find a Hunter in the plains. You shrug and wander off towards the horizon.'),
   (2, 'scene 2, dialogue 11 A small oasis is revealed in the heart of the shifting sands, and on a pedestal in the water glimmers a shining sapphire shard. Triumphantly, you return to the Alchemist who instructs you to seek out a friend of his that makes his living hunting in the plains aways away, and that he can lead you to the next shard.'),
@@ -60,6 +61,8 @@ VALUES
   (5, 'scene 5, dialogue 29 Is is a magical place -- smells a little funny. A small price to endure to save mother Earth and all of her children.'),
   (5, 'scene 5, dialogue 30 Now where in the name of Jimminy Cricket is that darn monkey? You search high and low to uncover this important shrine.'),
   (5, 'scene 5, dialogue 31 AHA! There! In the rubble. A glimmer of hope, the sapphire monkey has been located. Time to return the sapphire shards to their rightful destination...ohhhh noooooo. Is that a boulder rolling my way!? RUN!'),
+
+  --boulder runaway scene
   (5, 'scene 5, dialogue 32 WOMP WOMP WOMP - smashed by a boulder. Was not on my list of potenital ways to die. GAME OVER'),
   (5, 'scene 5, dialogue 33 CLOSE CALL! Good thing I am a fast runner. Now, back to monkey business.'),
   (5, 'scene 5, dialogue 34 Very carefully, you reach to place those sapphire shards in the belly of the monkey king.'),
@@ -70,7 +73,9 @@ VALUES
   (5, 'scene 5, dialogue 39 You are a hero of our time. The sapphire monkey crowns you with rubies. WOOHOO! Mission accomplished! Quest finished! THE END'),
 
   --adding buffer scene to scene 1
-  (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.');
+  (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.'),
+  (5, 'RunningGame');
+--41
 
 -- one badge per scene
 
@@ -125,16 +130,19 @@ VALUES
   (28, 'next', 29, 0, 'You made it to the temple with no time to spare! You search diligently for the sapphire monkey'),
   (29, 'next', 30, 0, null),
   (30, 'next', 31, 0, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
-  (31, 'play game', 32, 20, 'DEATH BY BOULDER -- YIKES! Better luck next time.'),
-  (31, 'play game', 33, 10, 'You narrowly escape the boulder. Whew!'),
+  (31, 'play game', 41, 20, 'DEATH BY BOULDER -- YIKES! Better luck next time.'),
+  (31, 'play game', 41, 10, 'You narrowly escape the boulder. Whew!'),
   (32, 'play again', null, 20, null),
   (33, 'next', 34, 0, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
   (34, 'no gems', 35, 20, 'Uh-oh! There are no sapphires to offer to the monkey.'),
   (34, 'yes gems', 37, 10, 'Yes! Behold, the sapphire shards!'),
   (35, 'next', 36, 0, null),
-  (36, 'next', null, 0, 'An unsuccessful quest for the sapphires results in defeat and exahsution. The world is a dumpster fire'),
+  (36, 'next', null, 0, 'An unsuccessful quest for the sapphires results in defeat and exhaustion. The world is a dumpster fire'),
   (37, 'next', 38, 0, null),
-  (38, 'next', 39, 0, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero!');
+  (38, 'next', 39, 0, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero!'),
+  --added for boulder buffer
+  (41, 'escape!', 33, 0 , null),
+  (41, 'dead!', 32, 0 , null)
 
 -- adventures 
 
