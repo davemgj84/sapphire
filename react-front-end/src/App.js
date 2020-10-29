@@ -8,7 +8,7 @@ import useColor from "./hooks/useColor";
 
 const App = () => {
   //this logic is located in hook folder useColor
-  const { setColor } = useColor("green");
+  const { color, setColor } = useColor("green");
   //setColor is a state setter that's being passed down (App->Frame->ChooseChar->Character) and called in Character when a user clicks on an image of a sprite
 
   // const [state, setState] = useState("Message");
@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Frame setColor={setColor} />
+      <Frame currentColor={color} setColor={setColor} />
       {/* <div className="App">
         <Navbar />
         <Route path="/scene/:id" component={Content} />
