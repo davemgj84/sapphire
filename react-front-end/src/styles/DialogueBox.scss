@@ -11,8 +11,13 @@
   p {
     padding: 1em;
   }
+  div {
+    display: flex;
+  }
 
   .dialogue-buttons {
+    display: flex;
+    flex-direction: row;
     margin-right: 2em;
     align-self: flex-end;
   }
