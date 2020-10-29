@@ -6,8 +6,8 @@ const SapphireGame = (props) => {
   useEffect(() => {
     const config = {
       type: Phaser.AUTO,
-      width: 1024,
-      height: 768,
+      width: 800,
+      height: 608,
       physics: {
         default: "arcade",
         arcade: {

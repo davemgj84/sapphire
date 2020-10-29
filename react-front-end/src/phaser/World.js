@@ -25,7 +25,8 @@ class World extends Phaser.Scene {
     });
 
     // enter button test link:
-    this.load.image("button", "/assets/enter.png");
+    // this.load.image("button", "/assets/enter.png");
+    this.load.image("button", "/assets/space.png");
   }
 
   create() {
@@ -33,12 +34,12 @@ class World extends Phaser.Scene {
     const map = this.add.tilemap("world");
     const tileset = map.addTilesetImage("overworld_proper", "overworld_proper");
     const collision = map
-      .createStaticLayer("Collision", tileset, 0, 0)
+      .createStaticLayer("COLLISION", tileset, 0, 0)
       .setScale(2);
-    const grass = map.createStaticLayer("Grass", tileset, 0, 0).setScale(2);
-    const path = map.createStaticLayer("Path", tileset, 0, 0).setScale(2);
+    const grass = map.createStaticLayer("GRASS", tileset, 0, 0).setScale(2);
+    const path = map.createStaticLayer("PATH", tileset, 0, 0).setScale(2);
     const buildings = map
-      .createStaticLayer("Building", tileset, 0, 0)
+      .createStaticLayer("BUILDINGS", tileset, 0, 0)
       .setScale(2);
     collision.setCollisionBetween(0, 2);
     buildings.setDepth(0);
@@ -47,7 +48,7 @@ class World extends Phaser.Scene {
     collision.setDepth(0);
 
     // PLAYER :
-    this.player = this.physics.add.sprite(176, 624, "player").setScale(1);
+    this.player = this.physics.add.sprite(48, 528, "player").setScale(1);
     this.cursors = this.input.keyboard.createCursorKeys();
     this.player.body.collideWorldBounds = true;
     this.physics.add.collider(this.player, collision);
@@ -90,26 +91,114 @@ class World extends Phaser.Scene {
     });
 
     // Static EVENT GHOST Sprite:
-    const eventGhost = this.physics.add.sprite(400, 496, "player").setScale(2);
-    eventGhost.setVisible(false);
+    const scene1Ghost = this.physics.add.sprite(112, 528, "player");
+    scene1Ghost.setVisible(false);
+    const scene2Ghost = this.physics.add.sprite(304, 400, "player");
+    scene2Ghost.setVisible(false);
+    const scene3Ghost = this.physics.add.sprite(464, 272, "player");
+    scene3Ghost.setVisible(false);
+    const scene4Ghost = this.physics.add.sprite(624, 176, "player");
+    scene4Ghost.setVisible(false);
+    const scene5Ghost = this.physics.add.sprite(752, 80, "player");
+    scene5Ghost.setVisible(false);
 
     // Create Scene button - set button to invisible until event:
     const button = this.add.image(0, 0, "button");
-    const container = this.add.container(400, 450, [button]);
+    const container = this.add.container(400, 580, [button]);
     container.setSize(button.width, button.height).setScale(0.3);
     container.setInteractive();
     container.setVisible(false);
 
-    // Interaction with Ghost sprite - brings up option to enter new scene based on location and use space bar to enter scene!
-    // Enter scene button appears on overlap with Ghost sprite!
+    // Interaction with Ghost sprites - brings up option to enter new scene based on location and use space bar to enter scene!
+    // Enter scene button appears on overlap with Ghost sprites!
     this.physics.add.overlap(
       this.player,
-      eventGhost,
+      scene1Ghost,
       () => {
         if (
-          this.player.x === 400 &&
-          this.player.y > 480 &&
-          this.player.y < 500
+          this.player.y === 528 &&
+          this.player.x > 100 &&
+          this.player.x < 120
+        ) {
+          container.setVisible(true);
+          if (this.cursors.space.isDown) {
+            window.advanceScene();
+          }
+        } else {
+          container.setVisible(false);
+        }
+      },
+      null,
+      this
+    );
+    this.physics.add.overlap(
+      this.player,
+      scene2Ghost,
+      () => {
+        if (
+          this.player.y === 400 &&
+          this.player.x > 300 &&
+          this.player.x < 320
+        ) {
+          container.setVisible(true);
+          if (this.cursors.space.isDown) {
+            window.advanceScene();
+          }
+        } else {
+          container.setVisible(false);
+        }
+      },
+      null,
+      this
+    );
+    this.physics.add.overlap(
+      this.player,
+      scene3Ghost,
+      () => {
+        if (
+          this.player.x === 464 &&
+          this.player.y > 260 &&
+          this.player.y < 280
+        ) {
+          container.setVisible(true);
+          if (this.cursors.space.isDown) {
+            window.advanceScene();
+          }
+        } else {
+          container.setVisible(false);
+        }
+      },
+      null,
+      this
+    );
+    this.physics.add.overlap(
+      this.player,
+      scene4Ghost,
+      () => {
+        if (
+          this.player.x === 624 &&
+          this.player.y > 160 &&
+          this.player.y < 180
+        ) {
+          container.setVisible(true);
+          if (this.cursors.space.isDown) {
+            window.advanceScene();
+          }
+        } else {
+          container.setVisible(false);
+        }
+      },
+      null,
+      this
+    );
+    this.physics.add.overlap(
+      this.player,
+      scene5Ghost,
+      () => {
+        if (
+          this.player.x === 752 &&
+          this.player.y >= 80 &&
+          this.player.y < 100
         ) {
           container.setVisible(true);
           if (this.cursors.space.isDown) {
@@ -146,11 +235,11 @@ class World extends Phaser.Scene {
     }
 
     // Console logging the player position x and y:
-    // if (this.tempx !== this.player.x || this.tempy !== this.player.y) {
-    //   this.tempx = this.player.x;
-    //   this.tempy = this.player.y;
-    //   console.log("xy: ", this.tempx, this.tempy);
-    // }
+    //   if (this.tempx !== this.player.x || this.tempy !== this.player.y) {
+    //     this.tempx = this.player.x;
+    //     this.tempy = this.player.y;
+    //     console.log("xy: ", this.tempx, this.tempy);
+    //   }
   }
 }
 export default World;
