@@ -15,7 +15,10 @@ const Frame = (props) => {
       <Left />
       <Switch>
         <Route exact path="/" component={TitlePage} />
-        <Route path="/character" component={ChooseChar} />
+        <Route
+          path="/character"
+          component={() => <ChooseChar setColor={props.setColor} />}
+        />
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />

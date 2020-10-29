@@ -7,7 +7,9 @@ import axios from "axios";
 import useColor from "./hooks/useColor";
 
 const App = () => {
-  const { color, setColor } = useColor("green");
+  //this logic is located in hook folder useColor
+  const { setColor } = useColor("green");
+  //setColor is a state setter that's being passed down (App->Frame->ChooseChar->Character) and called in Character when a user clicks on an image of a sprite
 
   // const [state, setState] = useState("Message");
 
@@ -21,7 +23,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Frame />
+      <Frame setColor={setColor} />
       {/* <div className="App">
         <Navbar />
         <Route path="/scene/:id" component={Content} />
