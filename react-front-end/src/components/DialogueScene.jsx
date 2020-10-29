@@ -4,7 +4,6 @@ import axios from "axios";
 import "../styles/SceneStyles.scss";
 
 const DialogueScene = (props) => {
-  const [init, setInit] = useState(0);
   const [dialogues, setDialogues] = useState([]);
   const [currentDialogue, setCurrentDialogue] = useState({});
 
@@ -23,13 +22,11 @@ const DialogueScene = (props) => {
   // Grabs our initial scene dialogue ID
   useEffect(() => {
     axios.get(`/api/scene/${props.match.params.id}`).then((response) => {
-      setInit(response.data.scene.initial_dialogue);
       setDialogues(response.data.dialogues);
       setCurrentDialogue(response.data.dialogues[0]);
     });
   }, []);
 
-  // @todo CHANGE IMAGE TO BE DYNAMIC TO SCENE WITH SCSS STYLING
   return (
     <div className={`scene background${props.match.params.id}`}>
       <DialogueBox
