@@ -7,14 +7,14 @@ INSERT INTO scenes
   (title, initial_dialogue)
 VALUES
   ('Old Man', 1),
-  ('Alchemist', 4),
-  ('Hunter', 7),
-  ('Snail', 10),
-  ('Sapphire Monkey', 13);
+  ('Alchemist', 6),
+  ('Hunter', 12),
+  ('Snail', 20),
+  ('Sapphire Monkey', 28);
 
 -- DIALOGUES
 
--- scene 1
+-- Scene 1
 INSERT INTO dialogues
   (scene_id, story)
 VALUES
@@ -24,7 +24,7 @@ VALUES
   (1, 'scene 1, dialogue 4 This task is v. important, so pressure iz on like donkey kong'),
   (1, 'scene 1, dialogue 5 Old man: Ya hear me, or what!? (prompt yes or no)'),
 
-  -- scene 2
+  -- Scene 2
 
   (2, 'scene 2, dialogue 6 You follow directions given to you by the old man to find the Alchemist and find a small camp at the edge of the desert.'),
   (2, 'scene 2, dialogue 7 You find an man dressed in robes with strange symbols on it. This must be the alchemist. He waves you over and mentions that he recieved word of your approach.'),
@@ -33,7 +33,7 @@ VALUES
   (2, 'scene 2, dialogue 10 You''ve completely failed in your task. This time, when you find yourself back at camp, the Alchemist''s home is baorded up with a note on the door that instructs you to find a Hunter in the plains. You shrug and wander off towards the horizon.'),
   (2, 'scene 2, dialogue 11 A small oasis is revealed in the heart of the shifting sands, and on a pedestal in the water glimmers a shining sapphire shard. Triumphantly, you return to the Alchemist who instructs you to seek out a friend of his that makes his living hunting in the plains aways away, and that he can lead you to the next shard.'),
 
- -- scene3
+ -- Scene3
   (3, 'scene 3, dialogue 12 - You have been walking for hours through the great plains looking for the hunter the alchemist told you about. You come across a small camp, but here is no one to be seen. You decide to look through the camp and see if there are any clues to where they may have gone.'),
   (3, 'scene 3, dialogue 13 - HUNTER: WHO ARE YOU! - as he points his bow at you with a arrow ready to fire.'),
   (3, 'scene 3, dialogue 14 - You respond explaining that the alchemist sent you and you are looking the a sapphire shard'),
@@ -54,7 +54,7 @@ VALUES
   (4, 'scene 4, dialogue 26 - The snail eats the herbs you lay in front of her and she is magically transformed into her former self! She thanks you and asks if there is anything she can do for you on your journey?'),
   (4, 'scene 4, dialogue 27 - You are astonished at her transformation. After telling her that the Hunter sent you, and that you are looking for the last sapphire shard, she takes off her necklace and hands it to you... it carrys the shard in a pouch! She then tells you that where the ancient Sapphire Monkey relic resides - in the lost temple!'),
 
-    -- scene 5
+  -- Scene 5
 
   (5, 'scene 5, dialogue 28 Holy monkey bananagrams, you are inside of the sapphire monkey temple!'),
   (5, 'scene 5, dialogue 29 Is is a magical place -- smells a little funny. A small price to endure to save mother Earth and all of her children.'),

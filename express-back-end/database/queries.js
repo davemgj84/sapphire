@@ -11,7 +11,6 @@ const pool = new Pool({
 const getUserWithEmail = (email) => {
   const sql = `SELECT * FROM users WHERE email = $1`;
   const query = pool.query(sql, [email]);
-
   return query
     .then((res) => {
       return res.rows[0];
@@ -25,7 +24,6 @@ const getDialogueBySceneID = (sceneID) => {
 
   return query
     .then((res) => {
-      console.log("RES?", res.rows);
       return res.rows;
     })
     .catch((err) => {
@@ -58,7 +56,6 @@ const getsAdventurebyUserID = (userID) => {
 const getChoiceLabelsByDialogueID = (dialogueID) => {
   const sql = `SELECT label FROM choices WHERE dialogue_id = $1`;
   const query = pool.query(sql, [dialogueID]);
-
   return query
     .then((res) => {
       return res.rows;
@@ -71,7 +68,6 @@ const getDialoguesById = (dialogueId) => {
   JOIN choices ON dialogue_id = dialogues.id
   WHERE dialogues.id = $1`;
   const query = pool.query(sql, [dialogueId]);
-
   return query
     .then((res) => {
       return res.rows;
@@ -83,7 +79,6 @@ const getSceneById = (sceneId) => {
   const sql = `SELECT * FROM scenes
   WHERE id = $1`;
   const query = pool.query(sql, [sceneId]);
-
   return query
     .then((res) => {
       return res.rows;

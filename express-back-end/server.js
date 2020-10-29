@@ -3,6 +3,7 @@ const {
   getDialogueBySceneID,
   getDialoguesById,
   getSceneById,
+  getChoiceLabelsByDialogueID,
 } = require("./database/queries");
 
 const Express = require("express");
@@ -16,15 +17,15 @@ App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
 App.use(Express.static("public"));
 
-// // Sample GET route
-// App.get("/api/data", (req, res) => {
-//   getDialogueBySceneID(1)
-//     .then((response) => {
-//       console.log("Server: ", response);
-//       res.json(response.story);
-//     })
-//     .catch((err) => console.log(err));
-// });
+// Sample GET route
+App.get("/api/data", (req, res) => {
+  getDialogueBySceneID(1)
+    .then((response) => {
+      console.log("Server: ", response);
+      res.json(response.story);
+    })
+    .catch((err) => console.log(err));
+});
 
 App.get("/api/scene/:id", (req, res) => {
   const id = req.params.id;
@@ -39,6 +40,15 @@ App.get("/api/scene/:id", (req, res) => {
 App.get("/api/dialogues/:id", (req, res) => {
   const id = req.params.id;
   getDialoguesById(id)
+    .then((response) => {
+      res.json(response);
+    })
+    .catch((err) => console.log(err));
+});
+
+App.get("/api/choices/:id", (req, res) => {
+  const id = req.params.id;
+  getChoiceLabelsByDialogueID(id)
     .then((response) => {
       res.json(response);
     })
