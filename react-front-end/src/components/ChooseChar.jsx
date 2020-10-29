@@ -28,7 +28,6 @@ const ChooseChar = (props) => {
   return (
     <div id="choose-character">
       {allCharacters}
-      {/* <button onClick={() => setColor("pink")}>pink</button> */}
       <Link to={"/scene/1"} id="start-game">
         <button>Begin</button>
       </Link>
