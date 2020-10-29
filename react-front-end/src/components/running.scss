@@ -1,0 +1,14 @@
+.running-progress {
+  position: relative;
+  height: 20px;
+  width: 350px;
+  border-radius: 50px;
+  border: 1px solid;
+}
+
+.filler {
+  background: #c46d9f;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2 ease-in;
+}
