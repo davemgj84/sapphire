@@ -11,7 +11,7 @@ export default function DialogueBox(props) {
 
   return (
     <div className="dialogue-box">
-      <p>{props.dialogue}</p>
+      {/* <p>{props.dialogue}</p>
 
       {endLength(props.length, props.index) ? (
         <Link
@@ -23,11 +23,11 @@ export default function DialogueBox(props) {
       ) : (
         <button
           className="dialogue-buttons"
-          onClick={() => props.setIndex((prev) => prev + 1)}
+          // onClick={() => props.setIndex((prev) => prev + 1)}
         >
           Next
         </button>
-      )}
+      )} */}
     </div>
   );
 }

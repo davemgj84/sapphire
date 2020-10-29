@@ -5,7 +5,6 @@ import "../styles/TitlePage.scss";
 const ChooseChar = (props) => {
   return (
     <div id="choose-character">
-      <img src="/assets/placeholderArt.png" alt="art" />
       {/* <button onClick={() => setColor("pink")}>pink</button> */}
       <Link to={"/scene/1"} id="start-game">
         <button>Begin</button>

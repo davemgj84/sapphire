@@ -4,6 +4,7 @@ const {
   getDialoguesById,
   getSceneById,
   getChoiceLabelsByDialogueID,
+  getDialoguesBySceneId,
 } = require("./database/queries");
 
 const Express = require("express");
@@ -17,43 +18,42 @@ App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
 App.use(Express.static("public"));
 
-// Sample GET route
-App.get("/api/data", (req, res) => {
-  getDialogueBySceneID(1)
-    .then((response) => {
-      console.log("Server: ", response);
-      res.json(response.story);
-    })
-    .catch((err) => console.log(err));
+// // Sample GET route
+// App.get("/api/data", (req, res) => {
+//   getDialogueBySceneID(1)
+//     .then((response) => {
+//       console.log("Server: ", response);
+//       res.json(response.story);
+//     })
+//     .catch((err) => console.log(err));
+// });
+
+App.get("/api/scene/:id", async (req, res) => {
+  const id = req.params.id;
+  const scene = await getSceneById(id).catch((err) => console.log(err));
+  const dialogues = await getDialoguesBySceneId(id);
+  // Break down the data into something you can easily search (like an object)
+  const response = { scene, dialogues };
+  res.json(response);
 });
 
-App.get("/api/scene/:id", (req, res) => {
-  const id = req.params.id;
-  getSceneById(id)
-    .then((response) => {
-      // console.log("Scene: ", response);
-      res.json(response);
-    })
-    .catch((err) => console.log(err));
-});
+// App.get("/api/dialogues/:id", (req, res) => {
+//   const id = req.params.id;
+//   getDialoguesById(id)
+//     .then((response) => {
+//       res.json(response);
+//     })
+//     .catch((err) => console.log(err));
+// });
 
-App.get("/api/dialogues/:id", (req, res) => {
-  const id = req.params.id;
-  getDialoguesById(id)
-    .then((response) => {
-      res.json(response);
-    })
-    .catch((err) => console.log(err));
-});
-
-App.get("/api/choices/:id", (req, res) => {
-  const id = req.params.id;
-  getChoiceLabelsByDialogueID(id)
-    .then((response) => {
-      res.json(response);
-    })
-    .catch((err) => console.log(err));
-});
+// App.get("/api/choices/:id", (req, res) => {
+//   const id = req.params.id;
+//   getChoiceLabelsByDialogueID(id)
+//     .then((response) => {
+//       res.json(response);
+//     })
+//     .catch((err) => console.log(err));
+// });
 
 App.listen(PORT, () => {
   // eslint-disable-next-line no-console

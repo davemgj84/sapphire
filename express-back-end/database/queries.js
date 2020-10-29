@@ -75,13 +75,25 @@ const getDialoguesById = (dialogueId) => {
     .catch((err) => err);
 };
 
+const getDialoguesBySceneId = (sceneId) => {
+  const sql = `SELECT * FROM dialogues
+  JOIN choices ON dialogue_id = dialogues.id
+  WHERE dialogues.scene_id = $1`;
+  const query = pool.query(sql, [sceneId]);
+  return query
+    .then((res) => {
+      return res.rows;
+    })
+    .catch((err) => err);
+};
+
 const getSceneById = (sceneId) => {
   const sql = `SELECT * FROM scenes
   WHERE id = $1`;
   const query = pool.query(sql, [sceneId]);
   return query
     .then((res) => {
-      return res.rows;
+      return res.rows[0];
     })
     .catch((err) => err);
 };
@@ -94,4 +106,5 @@ module.exports = {
   getChoiceLabelsByDialogueID,
   getDialoguesById,
   getSceneById,
+  getDialoguesBySceneId,
 };
