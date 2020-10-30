@@ -32,7 +32,7 @@ const ChooseChar = (props) => {
       <div class="all-characters">{allCharacters}</div>
 
       <Link to={"/scene/1"} id="start-game">
-        <button>Begin</button>
+        <button className="start-btn"></button>
       </Link>
     </div>
   );

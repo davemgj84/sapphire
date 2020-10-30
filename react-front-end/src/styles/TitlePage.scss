@@ -19,6 +19,7 @@
   }
 }
 
+//styling ChooseChar.jsx
 .choose-character {
   display: flex;
   flex-direction: column;
@@ -28,5 +29,31 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .start-btn {
+    background-image: url(/assets/start.png);
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+
+//styling Character.jsx
+
+.card-style {
+  display: flex;
+  margin: 1em;
+  height: 220px;
+  width: 144px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+
+  .single-character {
+    transform: scale(1.5);
   }
 }
