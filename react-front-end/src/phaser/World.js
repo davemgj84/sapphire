@@ -23,6 +23,10 @@ class World extends Phaser.Scene {
       frameWidth: 32,
       frameHeight: 32,
     });
+    this.load.spritesheet("hulk", "/assets/sumoHulk_spriteSheet.png", {
+      frameWidth: 16,
+      frameHeight: 16,
+    });
 
     // enter button test link:
     // this.load.image("button", "/assets/enter.png");
@@ -111,6 +115,23 @@ class World extends Phaser.Scene {
       frameRate: 5,
       repeat: -1,
     });
+
+    //HULK COLLISION GHOSTS
+    const hulk1 = this.physics.add.sprite(144, 528, "hulk").setScale(2);
+    hulk1.body.immovable = true;
+    this.physics.add.collider(hulk1, this.player);
+
+    const hulk2 = this.physics.add.sprite(336, 400, "hulk").setScale(2);
+    hulk2.body.immovable = true;
+    this.physics.add.collider(hulk2, this.player);
+
+    const hulk3 = this.physics.add.sprite(464, 240, "hulk").setScale(2);
+    hulk1.body.immovable = true;
+    this.physics.add.collider(hulk3, this.player);
+
+    const hulk4 = this.physics.add.sprite(624, 144, "hulk").setScale(2);
+    hulk1.body.immovable = true;
+    this.physics.add.collider(hulk4, this.player);
 
     // Static EVENT GHOST Sprite:
     const scene1Ghost = this.physics.add.sprite(112, 528, "player");
