@@ -6,7 +6,7 @@ import useMinigameHook from "../hooks/useMinigameHooks";
 import { boulderCheck } from "../helpers/boulderCheck";
 
 export default function DialogueBox(props) {
-  const { state, runningMini } = useMinigameHook(props);
+  const { running, runningMini } = useMinigameHook(props);
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
@@ -16,8 +16,11 @@ export default function DialogueBox(props) {
 
   const getGame = (props) => {
     return (
-      boulderCheck(props, state) && (
-        <RunningGame minigame={runningMini} percentage={state.runningPercent} />
+      boulderCheck(props, running) && (
+        <RunningGame
+          minigame={runningMini}
+          percentage={running.runningPercent}
+        />
       )
     );
   };

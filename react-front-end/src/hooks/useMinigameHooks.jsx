@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 
 export default function useMinigameHook(props) {
-  const [state, setState] = useState({
+  //Running Game
+  const [running, setRunning] = useState({
     runningPercent: 0,
     lastLeg: "s",
   });
 
   useEffect(() => {
-    if (state.runningPercent === 100) {
-      setState({ ...state, finished: true });
+    if (running.runningPercent === 100) {
+      setRunning({ ...running, finished: true });
     }
-  }, [state.runningPercent]);
+  }, [running.runningPercent]);
 
   useEffect(() => {
     let timer;
-    if (state.finished === false) {
+    if (running.finished === false) {
       console.log("Hello!", props);
       timer = setTimeout(() => {
         props.current(props.next(props.dialogue[1]));
@@ -23,18 +24,18 @@ export default function useMinigameHook(props) {
     return () => {
       clearTimeout(timer);
     };
-  }, [state.finished]);
+  }, [running.finished]);
 
   const runningMini = (event) => {
-    state.finished = false;
+    running.finished = false;
     if (
       event.key === "s" &&
-      state.lastLeg !== "s" &&
-      state.runningPercent < 100
+      running.lastLeg !== "s" &&
+      running.runningPercent < 100
     ) {
-      const newPercent = state.runningPercent + 2.5;
+      const newPercent = running.runningPercent + 2.5;
       const newLeg = "s";
-      setState((prev) => ({
+      setRunning((prev) => ({
         ...prev,
         runningPercent: newPercent,
         lastLeg: newLeg,
@@ -42,12 +43,12 @@ export default function useMinigameHook(props) {
     }
     if (
       event.key === "a" &&
-      state.lastLeg !== "a" &&
-      state.runningPercent < 100
+      running.lastLeg !== "a" &&
+      running.runningPercent < 100
     ) {
-      const newPercent = state.runningPercent + 2.5;
+      const newPercent = running.runningPercent + 2.5;
       const newLeg = "a";
-      setState((prev) => ({
+      setRunning((prev) => ({
         ...prev,
         runningPercent: newPercent,
         lastLeg: newLeg,
@@ -55,5 +56,55 @@ export default function useMinigameHook(props) {
     }
   };
 
-  return { state, runningMini };
+  //Sands game
+
+  const [sand, setSand] = useState([]);
+  const [arrowButtons, setArrowButtons] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  const directions = ["ArrowUp", "ArrowLeft", "ArrowRight", "ArrowDown"];
+  // const desertPath = () => {
+
+  // };
+
+  useEffect(() => {
+    let output = [];
+    for (let i = 6; i > 0; i--) {
+      output.push(directions[Math.floor(Math.random() * 4)]);
+    }
+    setSand(output);
+  }, []);
+  // setSand(desertPath());
+
+  const sandMini = (event) => {
+    for (let i = 0; i < sand.length; i++) {
+      if (i === 0 && event.key === sand[0]) {
+        setArrowButtons([
+          ...arrowButtons.slice(0, 0),
+          true,
+          ...arrowButtons.slice(1),
+        ]);
+      } else if (event.key === sand[i] && arrowButtons[i - 1] === true) {
+        setArrowButtons([
+          ...arrowButtons.slice(0, i),
+          true,
+          ...arrowButtons.slice(i + 1),
+        ]);
+      }
+    }
+
+    // if (event.key === sand[0]) {
+    //   console.log("YES");
+    //   setArrowButtons([...arrowButtons.slice(0, 0), true, ...arrowButtons]);
+    // }
+  };
+  console.log(arrowButtons);
+
+  return { running, runningMini, sand, sandMini, arrowButtons };
 }
