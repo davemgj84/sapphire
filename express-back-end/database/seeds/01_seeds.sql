@@ -29,7 +29,7 @@ VALUES
   (2, 'scene 2, dialogue 6 You follow directions given to you by the old man to find the Alchemist and find a small camp at the edge of the desert.'),
   (2, 'scene 2, dialogue 7 You find an man dressed in robes with strange symbols on it. This must be the alchemist. He waves you over and mentions that he recieved word of your approach.'),
   (2, 'scene 2, dialogue 8 Apparently part of the sapphire is lost in the desert and his mystical spookum powers can help guide you safely to it.'),
-  --tween sceene for game
+  --tween sceene for game 42
   (2, 'scene 2, dialogue 9 You done messed it up. You find yourself back at the Alchemist''s camp and he sighs dramatically. He''ll help you again tomorrow, but you''ll have to learn a new path through the desert.'),
   (2, 'scene 2, dialogue 10 You''ve completely failed in your task. This time, when you find yourself back at camp, the Alchemist''s home is baorded up with a note on the door that instructs you to find a Hunter in the plains. You shrug and wander off towards the horizon.'),
   (2, 'scene 2, dialogue 11 A small oasis is revealed in the heart of the shifting sands, and on a pedestal in the water glimmers a shining sapphire shard. Triumphantly, you return to the Alchemist who instructs you to seek out a friend of his that makes his living hunting in the plains aways away, and that he can lead you to the next shard.'),
@@ -74,8 +74,10 @@ VALUES
 
   --adding buffer scene to scene 1
   (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.'),
-  (5, 'RunningGame');
---41
+  (5, 'RunningGame'),--41
+  (2, 'ShiftingSands');
+--42
+
 
 -- one badge per scene
 
@@ -102,12 +104,15 @@ VALUES
   (40, 'map', null, 0, 'Let the adventure begin!'),
   (6, 'next', 7, 10, null),
   (7, 'next', 8, 10, null),
-  (8, 'Fail to find the Shard', 9, 10, null),
-  (9, 'Map', null, 10, null),
-  (8, 'Lose the shard forever', 10, 10, 'The shard was forever lost in the sand'),
+
+  (8, 'play game', 42, 10, null),
+  (42, 'Fail to find the Shard', 9 , 10, null),
+  (9, 'play game', 42, 10, null),
+  (42, 'Lose the Shard forever', 10, 10, 'The shard was forever lost in the sand'),
   (10, 'Map', null, 10, null),
-  (8, 'Find the Shard', 11, 10, 'You found the shard in the desert'),
+  (42, 'Find the Shard', 11, 10, 'You found the shard in the desert'),
   (11, 'Map', null, 10, null),
+
   (12, 'Next', 13, 0, null),
   (13, 'Next', 14, 0, null),
   (14, 'Next', 15, 0, null),
