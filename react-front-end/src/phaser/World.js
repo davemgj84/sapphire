@@ -118,19 +118,31 @@ class World extends Phaser.Scene {
 
     //HULK COLLISION GHOSTS
 
-    const hulk1 = this.physics.add.sprite(144, 528, "hulk").setScale(2);
+    const hulk1 = this.physics.add
+      .sprite(144, 528, "hulk")
+      .setScale(2)
+      .setVisible(false);
     hulk1.body.immovable = true;
     this.physics.add.collider(hulk1, this.player);
 
-    const hulk2 = this.physics.add.sprite(336, 400, "hulk").setScale(2);
+    const hulk2 = this.physics.add
+      .sprite(336, 400, "hulk")
+      .setScale(2)
+      .setVisible(false);
     hulk2.body.immovable = true;
     this.physics.add.collider(hulk2, this.player);
 
-    const hulk3 = this.physics.add.sprite(464, 240, "hulk").setScale(2);
+    const hulk3 = this.physics.add
+      .sprite(464, 240, "hulk")
+      .setScale(2)
+      .setVisible(false);
     hulk3.body.immovable = true;
     this.physics.add.collider(hulk3, this.player);
 
-    const hulk4 = this.physics.add.sprite(624, 144, "hulk").setScale(2);
+    const hulk4 = this.physics.add
+      .sprite(624, 144, "hulk")
+      .setScale(2)
+      .setVisible(false);
     hulk4.body.immovable = true;
     this.physics.add.collider(hulk4, this.player);
 
@@ -169,6 +181,8 @@ class World extends Phaser.Scene {
           if (this.cursors.space.isDown) {
             window.advanceScene();
             hulk1.destroy();
+            scene1Ghost.destroy();
+            container.setVisible(false);
           }
         } else {
           container.setVisible(false);
@@ -190,6 +204,8 @@ class World extends Phaser.Scene {
           if (this.cursors.space.isDown) {
             window.advanceScene();
             hulk2.destroy();
+            scene2Ghost.destroy();
+            container.setVisible(false);
           }
         } else {
           container.setVisible(false);
@@ -211,6 +227,8 @@ class World extends Phaser.Scene {
           if (this.cursors.space.isDown) {
             window.advanceScene();
             hulk3.destroy();
+            scene3Ghost.destroy();
+            container.setVisible(false);
           }
         } else {
           container.setVisible(false);
@@ -232,6 +250,8 @@ class World extends Phaser.Scene {
           if (this.cursors.space.isDown) {
             window.advanceScene();
             hulk4.destroy();
+            scene4Ghost.destroy();
+            container.setVisible(false);
           }
         } else {
           container.setVisible(false);
@@ -252,6 +272,8 @@ class World extends Phaser.Scene {
           container.setVisible(true);
           if (this.cursors.space.isDown) {
             window.advanceScene();
+            scene5Ghost.destroy();
+            container.setVisible(false);
           }
         } else {
           container.setVisible(false);
