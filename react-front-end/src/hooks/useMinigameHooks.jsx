@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 
 export default function useMinigameHook(props) {
-  const [state, setState] = useState({
+  //Running Game
+  const [running, setRunning] = useState({
     runningPercent: 0,
     lastLeg: "s",
   });
 
   useEffect(() => {
-    if (state.runningPercent === 100) {
-      setState({ ...state, finished: true });
+    if (running.runningPercent === 100) {
+      setRunning({ ...running, finished: true });
     }
-  }, [state.runningPercent]);
+  }, [running.runningPercent]);
 
   useEffect(() => {
     let timer;
-    if (state.finished === false) {
+    if (running.finished === false) {
       console.log("Hello!", props);
       timer = setTimeout(() => {
         props.current(props.next(props.dialogue[1]));
@@ -23,18 +24,18 @@ export default function useMinigameHook(props) {
     return () => {
       clearTimeout(timer);
     };
-  }, [state.finished]);
+  }, [running.finished]);
 
   const runningMini = (event) => {
-    state.finished = false;
+    running.finished = false;
     if (
       event.key === "s" &&
-      state.lastLeg !== "s" &&
-      state.runningPercent < 100
+      running.lastLeg !== "s" &&
+      running.runningPercent < 100
     ) {
-      const newPercent = state.runningPercent + 2.5;
+      const newPercent = running.runningPercent + 2.5;
       const newLeg = "s";
-      setState((prev) => ({
+      setRunning((prev) => ({
         ...prev,
         runningPercent: newPercent,
         lastLeg: newLeg,
@@ -42,12 +43,12 @@ export default function useMinigameHook(props) {
     }
     if (
       event.key === "a" &&
-      state.lastLeg !== "a" &&
-      state.runningPercent < 100
+      running.lastLeg !== "a" &&
+      running.runningPercent < 100
     ) {
-      const newPercent = state.runningPercent + 2.5;
+      const newPercent = running.runningPercent + 2.5;
       const newLeg = "a";
-      setState((prev) => ({
+      setRunning((prev) => ({
         ...prev,
         runningPercent: newPercent,
         lastLeg: newLeg,
@@ -55,5 +56,7 @@ export default function useMinigameHook(props) {
     }
   };
 
-  return { state, runningMini };
+  // console.log(arrowButtons);
+
+  return { running, runningMini };
 }
