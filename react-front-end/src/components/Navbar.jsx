@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Frame.scss";
 
 const Navbar = () => {
@@ -9,7 +10,9 @@ const Navbar = () => {
       </a>
 
       <div className="badge-login-buttons">
-        <button className="badge">BADGES</button>
+        <Link to="/badges" className="badge">
+          BADGES
+        </Link>
         <button className="log-button">LOGOUT</button>
       </div>
     </nav>

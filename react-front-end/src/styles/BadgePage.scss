@@ -1,0 +1,24 @@
+.badge-list {
+  display: flex;
+  flex-direction: column;
+  font-family: "Press Start 2P", cursive;
+}
+
+.header {
+  align-self: center;
+}
+
+.badge-title {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.badge-image {
+  width: 100px;
+  height: 100px;
+}
+
+.badge-desc {
+  display: flex;
+  font-family: "VT323", monospace;
+}

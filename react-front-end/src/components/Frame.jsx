@@ -7,6 +7,7 @@ import Bottom from "./Bottom";
 import Navbar from "./Navbar";
 import TitlePage from "./TitlePage";
 import ChooseChar from "./ChooseChar";
+import BadgePage from "./BadgePage";
 
 const Frame = (props) => {
   return (
@@ -15,6 +16,7 @@ const Frame = (props) => {
       <Left />
       <Switch>
         <Route exact path="/" component={TitlePage} />
+        <Route path="/badges" component={BadgePage} />
         <Route
           path="/character"
           component={() => (

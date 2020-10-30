@@ -5,6 +5,7 @@ const {
   getSceneById,
   getChoiceLabelsByDialogueID,
   getDialoguesBySceneId,
+  getBadgesbyUserID,
 } = require("./database/queries");
 
 const Express = require("express");
@@ -34,6 +35,13 @@ App.get("/api/scene/:id", async (req, res) => {
   const dialogues = await getDialoguesBySceneId(id);
   // Break down the data into something you can easily search (like an object)
   const response = { scene, dialogues };
+  res.json(response);
+});
+
+App.get("/api/badges/:id", async (req, res) => {
+  const id = req.params.id;
+  const badges = await getBadgesbyUserID(id).catch((err) => console.log(error));
+  const response = { badges };
   res.json(response);
 });
 

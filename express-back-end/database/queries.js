@@ -34,10 +34,9 @@ const getDialogueBySceneID = (sceneID) => {
 const getBadgesbyUserID = (userID) => {
   const sql = `SELECT * FROM badges WHERE user_id = $1`;
   const query = pool.query(sql, [userID]);
-
   return query
     .then((res) => {
-      return res.rows[0];
+      return res.rows;
     })
     .catch((err) => err);
 };
