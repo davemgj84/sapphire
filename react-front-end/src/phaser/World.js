@@ -37,11 +37,28 @@ class World extends Phaser.Scene {
       .createStaticLayer("COLLISION", tileset, 0, 0)
       .setScale(2);
     const grass = map.createStaticLayer("GRASS", tileset, 0, 0).setScale(2);
+    const rivers = map.createStaticLayer("RIVERS", tileset, 0, 0).setScale(2);
     const path = map.createStaticLayer("PATH", tileset, 0, 0).setScale(2);
+    const bridges = map.createStaticLayer("BRIDGES", tileset, 0, 0).setScale(2);
+    const trees = map.createStaticLayer("TREES", tileset, 0, 0).setScale(2);
+    const hills = map.createStaticLayer("HILLS", tileset, 0, 0).setScale(2);
+    const hills2 = map.createStaticLayer("HILLS 2", tileset, 0, 0).setScale(2);
+    const clouds = map.createStaticLayer("CLOUDS", tileset, 0, 0).setScale(2);
+    const mountains = map
+      .createStaticLayer("MOUNTAINS", tileset, 0, 0)
+      .setScale(2);
+    const clouds2 = map
+      .createStaticLayer("CLOUDS 2", tileset, 0, 0)
+      .setScale(2);
+    const mountains2 = map
+      .createStaticLayer("MOUNTAINS 2", tileset, 0, 0)
+      .setScale(2);
     const buildings = map
       .createStaticLayer("BUILDINGS", tileset, 0, 0)
       .setScale(2);
     collision.setCollisionBetween(0, 2);
+
+    // DEPTH SO CHARACTER CAN WALK BEHIND OR IN FRONT:
     buildings.setDepth(0);
     grass.setDepth(0);
     path.setDepth(0);
