@@ -43,6 +43,9 @@ class World extends Phaser.Scene {
     const grass = map.createStaticLayer("GRASS", tileset, 0, 0).setScale(2);
     const rivers = map.createStaticLayer("RIVERS", tileset, 0, 0).setScale(2);
     const path = map.createStaticLayer("PATH", tileset, 0, 0).setScale(2);
+    const buildings = map
+      .createStaticLayer("BUILDINGS", tileset, 0, 0)
+      .setScale(2);
     const bridges = map.createStaticLayer("BRIDGES", tileset, 0, 0).setScale(2);
     const trees = map.createStaticLayer("TREES", tileset, 0, 0).setScale(2);
     const hills = map.createStaticLayer("HILLS", tileset, 0, 0).setScale(2);
@@ -57,21 +60,21 @@ class World extends Phaser.Scene {
     const mountains2 = map
       .createStaticLayer("MOUNTAINS 2", tileset, 0, 0)
       .setScale(2);
-    const buildings = map
-      .createStaticLayer("BUILDINGS", tileset, 0, 0)
-      .setScale(2);
     collision.setCollisionBetween(0, 2);
 
-    // DEPTH SO CHARACTER CAN WALK BEHIND OR IN FRONT:
-    buildings.setDepth(0);
+    // DEPTH SO CHARACTER CAN WALK BEHIND OR IN FRONT- 0 for now - will need to tinker - cause it effects how map appears as well:
     grass.setDepth(0);
+    rivers.setDepth(0);
     path.setDepth(0);
+    buildings.setDepth(0);
+    bridges.setDepth(0);
+    trees.setDepth(0);
     hills.setDepth(0);
     hills2.setDepth(0);
-    trees.setDepth(0);
     clouds.setDepth(0);
+    mountains.setDepth(0);
     clouds2.setDepth(0);
-    collision.setDepth(0);
+    mountains2.setDepth(0);
 
     // PLAYER :
     this.player = this.physics.add.sprite(48, 528, "player").setScale(1);
