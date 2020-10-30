@@ -35,6 +35,7 @@ export default function DialogueBox(props) {
                 message={props.dialogue[0].story}
                 key={props.dialogue[0].story}
               />
+              {/* {props.dialogue[0].story} */}
             </p>
             <div>
               {props.dialogue.map((choice) => (
