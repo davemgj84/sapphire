@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/DialogueBox.scss";
 import RunningGame from "./RunningGame";
 import useMinigameHook from "../hooks/useMinigameHooks";
 import { boulderCheck } from "../helpers/boulderCheck";
+import ShiftingSands from "./ShiftingSands";
+import { sandCheck } from "../helpers/sandCheck";
+import useSandHook from "../hooks/useSandHook";
 
 export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
+  const { sand, sandMini, arrowButtons } = useSandHook(props);
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
@@ -15,14 +19,33 @@ export default function DialogueBox(props) {
   };
 
   const getGame = (props) => {
-    return (
-      boulderCheck(props, running) && (
-        <RunningGame
-          minigame={runningMini}
-          percentage={running.runningPercent}
-        />
-      )
-    );
+    switch (props.dialogue[0].story) {
+      case "RunningGame":
+        return (
+          boulderCheck(props, running) && (
+            <RunningGame
+              minigame={runningMini}
+              percentage={running.runningPercent}
+            />
+          )
+        );
+        break;
+
+      case "ShiftingSands":
+        return (
+          sandCheck(props, arrowButtons) && (
+            <ShiftingSands
+              minigame={sandMini}
+              pattern={sand}
+              pressed={arrowButtons}
+            />
+          )
+        );
+        break;
+
+      default:
+        return false;
+    }
   };
 
   //renders multiple choices if props.dialogue is an array
