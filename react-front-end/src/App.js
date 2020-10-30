@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-// import Content from "./components/Content";
-// import Navbar from "./components/Navbar";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import Frame from "./components/Frame";
-import axios from "axios";
 import useColor from "./hooks/useColor";
-import ShiftingSands from "./components/ShiftingSands";
-import useMinigameHook from "./hooks/useMinigameHooks";
 
 const App = () => {
   //this logic is located in hook folder useColor
   const { color, setColor } = useColor("green");
-
-  const { sand, sandMini, arrowButtons } = useMinigameHook();
   //setColor is a state setter that's being passed down (App->Frame->ChooseChar->Character) and called in Character when a user clicks on an image of a sprite
 
   // const [state, setState] = useState("Message");
@@ -34,11 +27,6 @@ const App = () => {
       </div>
       <h1>{state}</h1>
       <button onClick={() => fetchData()}>Fetch Data</button> */}
-      <ShiftingSands
-        minigame={sandMini}
-        pattern={sand}
-        pressed={arrowButtons}
-      />
     </BrowserRouter>
   );
 };
