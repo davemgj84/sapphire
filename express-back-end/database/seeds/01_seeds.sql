@@ -130,7 +130,6 @@ VALUES
   (28, 'next', 29, 0, 'You made it to the temple with no time to spare! You search diligently for the sapphire monkey'),
   (29, 'next', 30, 0, null),
   (30, 'next', 31, 0, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
-  (31, 'play game', 41, 20, 'DEATH BY BOULDER -- YIKES! Better luck next time.'),
   (31, 'play game', 41, 10, 'You narrowly escape the boulder. Whew!'),
   (32, 'play again', null, 20, null),
   (33, 'next', 34, 0, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
@@ -141,8 +140,8 @@ VALUES
   (37, 'next', 38, 0, null),
   (38, 'next', 39, 0, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero!'),
   --added for boulder buffer
-  (41, 'escape!', 33, 0 , null),
-  (41, 'dead!', 32, 0 , null)
+  (41, 'escape!', 33, 0 , 'You narrowly escape the boulder. Whew!'),
+  (41, 'dead!', 32, 0 , 'DEATH BY BOULDER -- YIKES! Better luck next time.')
 
 -- adventures 
 
