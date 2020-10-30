@@ -6,6 +6,7 @@ import "../styles/SceneStyles.scss";
 const DialogueScene = (props) => {
   const [dialogues, setDialogues] = useState([]);
   const [currentDialogue, setCurrentDialogue] = useState({});
+  const [loaded, setLoaded] = useState(false);
 
   //searches for next dialogue and returns single object if only one or and array of objects for multiple choices
   const getNext = (current) => {
@@ -24,17 +25,20 @@ const DialogueScene = (props) => {
     axios.get(`/api/scene/${props.match.params.id}`).then((response) => {
       setDialogues(response.data.dialogues);
       setCurrentDialogue(response.data.dialogues[0]);
+      setLoaded(true);
     });
   }, []);
 
   return (
     <div className={`scene background${props.match.params.id}`}>
-      <DialogueBox
-        scene={props.match.params.id}
-        dialogue={currentDialogue}
-        current={setCurrentDialogue}
-        next={getNext}
-      />
+      {loaded && (
+        <DialogueBox
+          scene={props.match.params.id}
+          dialogue={currentDialogue}
+          current={setCurrentDialogue}
+          next={getNext}
+        />
+      )}
     </div>
   );
 };

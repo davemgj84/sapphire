@@ -29,13 +29,12 @@ export default function DialogueBox(props) {
       <>
         {getGame(props) || (
           <div className="dialogue-box">
-            {console.log(props.dialogue[0].story)}
             <p>
-              <TypeWriter
+              {/* <TypeWriter
                 message={props.dialogue[0].story}
                 key={props.dialogue[0].story}
-              />
-              {/* {props.dialogue[0].story} */}
+              /> */}
+              {props.dialogue[0].story}
             </p>
             <div>
               {props.dialogue.map((choice) => (
@@ -56,7 +55,6 @@ export default function DialogueBox(props) {
     return (
       <div className="dialogue-box">
         <p>
-          {console.log("Single Path", props.dialogue.story)}
           {/* <TypeWriter
             message={props.dialogue.story}
             key={props.dialogue.story}
