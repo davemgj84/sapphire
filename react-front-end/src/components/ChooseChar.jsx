@@ -5,21 +5,27 @@ import Character from "./Character";
 
 const ChooseChar = (props) => {
   const colorChoices = [
-    "pink",
-    "blue",
-    "red",
-    "brown",
-    "burgundy",
-    "lime",
-    "teal",
-    "green",
+    {
+      color: "pink",
+      name: "Penelope",
+      info: "Likes cantaloupe",
+    },
+    { color: "blue" },
+    { color: "brown" },
+    { color: "red" },
+    { color: "burgundy" },
+    { color: "lime" },
+    { color: "green" },
+    { color: "teal" },
   ];
 
-  const allCharacters = colorChoices.map((color, index) => {
+  const allCharacters = colorChoices.map((char, index) => {
     return (
       <Character
         key={index}
-        color={color}
+        color={char.color}
+        name={char.name}
+        info={char.info}
         chooseColor={props.setColor}
         currentColor={props.currentColor}
       />
@@ -29,7 +35,7 @@ const ChooseChar = (props) => {
     <div className="choose-character">
       <p>CHOOSE A CHARACTER</p>
 
-      <div class="all-characters">{allCharacters}</div>
+      <div className="all-characters">{allCharacters}</div>
 
       <Link to={"/scene/1"} id="start-game">
         <button className="start-btn"></button>

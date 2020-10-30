@@ -43,17 +43,35 @@
 
 //styling Character.jsx
 
-.card-style {
-  display: flex;
-  margin: 1em;
-  height: 220px;
-  width: 144px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  justify-content: center;
-  align-items: center;
+.card-container {
+  // position: static;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  // align-items: center;
+  // justify-content: center;
 
-  .single-character {
-    transform: scale(1.5);
+  .card-style {
+    // position: absolute;
+    grid-area: 1 / 2;
+    top: 0px;
+    display: flex;
+    margin: 1em;
+    height: 220px;
+    width: 144px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    will-change: transform, opacity;
+
+    .back {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .single-character {
+      transform: scale(1.5);
+    }
   }
 }
