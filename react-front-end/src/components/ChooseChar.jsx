@@ -12,8 +12,8 @@ const ChooseChar = (props) => {
     },
     {
       color: "blue",
-      name: "Bruce",
-      info: "Only drinks coffee at midnight",
+      name: "Bill Murray",
+      info: "Explorer",
     },
     {
       color: "brown",
@@ -22,13 +22,29 @@ const ChooseChar = (props) => {
     },
     {
       color: "red",
-      name: "",
-      info: "town simpleton",
+      name: "Xanthadar",
+      info: "Town simpleton",
     },
-    { color: "burgundy" },
-    { color: "lime" },
-    { color: "green" },
-    { color: "teal" },
+    {
+      color: "burgundy",
+      name: "",
+      info: "",
+    },
+    {
+      color: "lime",
+      name: "Dano",
+      info: "Medium person energy",
+    },
+    {
+      color: "green",
+      name: "Bruce",
+      info: "Only drinks coffee at midnight",
+    },
+    {
+      color: "teal",
+      name: "",
+      info: "",
+    },
   ];
 
   const allCharacters = colorChoices.map((char, index) => {
