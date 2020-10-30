@@ -15,6 +15,16 @@
   #start-game {
     display: block;
     position: absolute;
-    bottom: 3rem;
+    bottom: -3.5rem;
+    button {
+      font-family: "VT323", monospace;
+      font-size: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      background-color: #c3c5c8;
+    }
+    button:hover {
+      background-color: #ebebec;
+    }
   }
 }

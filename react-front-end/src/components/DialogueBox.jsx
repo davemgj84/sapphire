@@ -4,6 +4,7 @@ import "../styles/DialogueBox.scss";
 import RunningGame from "./RunningGame";
 import useMinigameHook from "../hooks/useMinigameHooks";
 import { boulderCheck } from "../helpers/boulderCheck";
+import TypeWriter from "./TypeWriter";
 
 export default function DialogueBox(props) {
   const { state, runningMini } = useMinigameHook(props);
@@ -28,7 +29,13 @@ export default function DialogueBox(props) {
       <>
         {getGame(props) || (
           <div className="dialogue-box">
-            <p>{props.dialogue[0].story}</p>
+            {console.log(props.dialogue[0].story)}
+            <p>
+              <TypeWriter
+                message={props.dialogue[0].story}
+                key={props.dialogue[0].story}
+              />
+            </p>
             <div>
               {props.dialogue.map((choice) => (
                 <button
@@ -47,13 +54,17 @@ export default function DialogueBox(props) {
     //renders single path
     return (
       <div className="dialogue-box">
-        <p>{props.dialogue.story}</p>
+        <p>
+          {console.log("Single Path", props.dialogue.story)}
+          {/* <TypeWriter
+            message={props.dialogue.story}
+            key={props.dialogue.story}
+          /> */}
+          {props.dialogue.story}
+        </p>
         {endScene() ? (
-          <Link
-            to={`/scene/${Number(props.scene) + 1}`}
-            className="dialogue-buttons"
-          >
-            <button>Return to Map</button>
+          <Link className="link-map" to={`/scene/${Number(props.scene) + 1}`}>
+            <button className="dialogue-buttons">Return to Map</button>
           </Link>
         ) : (
           <button

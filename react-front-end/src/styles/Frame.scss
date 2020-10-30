@@ -17,34 +17,73 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
   grid-area: top;
-  background-color: #5181cc;
+  background-color: #384048;
   align-items: center;
 }
 
 #bottom {
   display: flex;
   grid-area: bottom;
-  background-color: #5181cc;
+  background-color: #384048;
 }
 
 #left {
   display: flex;
   grid-area: left;
-  background-color: #5181cc;
+  background-color: #708090;
   background-image: url("/assets/stonetransp.png");
 }
 
 #right {
   grid-area: right;
-  background-color: #5181cc;
+  background-color: #708090;
   background-image: url("/assets/stonetransp.png");
 }
 
 #logo {
   align-content: center;
-  font-size: 3em;
+  font-size: 2em;
   color: #ffff;
   text-decoration: none;
+  font-family: "Press Start 2P", cursive;
+  padding-left: 4rem;
+}
+
+#logo:hover {
+  color: #b7bfc7;
+}
+
+.badge-login-buttons {
+  padding-right: 4rem;
+  padding-top: 1rem;
+}
+
+.badge {
+  margin-right: 3rem;
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #ffff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5em;
+}
+
+.badge:hover {
+  color: #b7bfc7;
+}
+
+.log-button {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #ffff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5em;
+}
+
+.log-button:hover {
+  color: #b7bfc7;
 }

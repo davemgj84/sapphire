@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Frame.scss";
 
 const Navbar = () => {
   return (
     <nav>
       <a id="logo" href="/">
-        Sapphire
+        <i className="fas fa-gem fa-2x"></i> SAPPHIRE
       </a>
 
       <div className="badge-login-buttons">
-        <button>Badges</button>
-        <button>Logout</button>
+        <button className="badge">BADGES</button>
+        <button className="log-button">LOGOUT</button>
       </div>
     </nav>
   );

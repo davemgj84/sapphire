@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import RunningFill from "./RunningFill";
-import "./running.scss";
+import "../styles/running.scss";
 
 export default function RunningGame(props) {
   useEffect(() => {
