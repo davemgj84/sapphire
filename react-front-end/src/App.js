@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Frame from "./components/Frame";
 import useColor from "./hooks/useColor";
+import MapMusic from "../src/components/MapMusic";
 
 const App = () => {
   //this logic is located in hook folder useColor
@@ -10,6 +11,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <MapMusic />
+
       <Frame currentColor={color} setColor={setColor} />
     </BrowserRouter>
   );
