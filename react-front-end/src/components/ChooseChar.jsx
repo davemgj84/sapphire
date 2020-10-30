@@ -10,7 +10,11 @@ const ChooseChar = (props) => {
       name: "Penelope",
       info: "Likes cantaloupe",
     },
-    { color: "blue" },
+    {
+      color: "blue",
+      name: "Bruce",
+      info: "Only drinks coffee at midnight",
+    },
     { color: "brown" },
     { color: "red" },
     { color: "burgundy" },

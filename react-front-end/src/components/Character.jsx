@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated as a } from "react-spring";
 import "../styles/TitlePage.scss";
 
@@ -7,11 +7,33 @@ const Character = (props) => {
 
   //React Spring setup for flipping cards
   const [flipped, setFlipped] = useState(false);
+  //variables used to make sprite walk on hover
+  const [hover, setHover] = useState(false);
+  const [xPosition, setXPosition] = useState(0);
+
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 150 },
   });
+
+  // const updateIndex = (curr, min, max) => {
+  //   return curr < max ? curr + 1 : min;
+  // };
+  //conditioned to only run on a mouse hover
+  useEffect(() => {
+    if (!hover) return;
+    const interval = setInterval(() => {
+      setXPosition((prev) => {
+        if (prev < 64) {
+          return prev + 32;
+        } else {
+          return 0;
+        }
+      });
+    }, 200);
+    return () => clearInterval(interval);
+  }, [hover, xPosition]);
 
   //JSX styling for dynamic component rendering
   const characterStyles = {
@@ -20,7 +42,7 @@ const Character = (props) => {
     width: "32px",
     backgroundImage: `url(/assets/character_sprites/sprite_${color}.png)`,
     //choosing 32x32px starting in the top, left corner to render single front view of each character
-    backgroundPosition: "0px 0px",
+    backgroundPosition: `${xPosition}px 0px`,
   };
 
   const cardStyleBack = {
@@ -48,6 +70,8 @@ const Character = (props) => {
       className="card-container"
       onClick={() => chooseColor(color)}
       onDoubleClick={() => setFlipped((prev) => !prev)}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
     >
       <a.div className="card-style" style={cardStyleBack}>
         <h3>{name}</h3>
