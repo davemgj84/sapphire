@@ -62,6 +62,12 @@ class World extends Phaser.Scene {
     buildings.setDepth(0);
     grass.setDepth(0);
     path.setDepth(0);
+    hills.setDepth(1);
+    hills2.setDepth(1);
+    trees.setDepth(1);
+    clouds.setDepth(1);
+    clouds2.setDepth(1);
+
     collision.setDepth(0);
 
     // PLAYER :
