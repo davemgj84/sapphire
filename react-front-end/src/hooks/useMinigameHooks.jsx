@@ -4,10 +4,7 @@ export default function useMinigameHook(props) {
   const [state, setState] = useState({
     runningPercent: 0,
     lastLeg: "s",
-    // finished: false,
   });
-  // const [start, setStart] = useState(false);
-  // console.log("THIS???: ", props);
 
   useEffect(() => {
     if (state.runningPercent === 100) {
