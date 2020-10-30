@@ -18,3 +18,15 @@
     bottom: 3rem;
   }
 }
+
+.choose-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .all-characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
