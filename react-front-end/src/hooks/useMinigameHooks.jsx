@@ -56,55 +56,7 @@ export default function useMinigameHook(props) {
     }
   };
 
-  //Sands game
+  // console.log(arrowButtons);
 
-  const [sand, setSand] = useState([]);
-  const [arrowButtons, setArrowButtons] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-
-  const directions = ["ArrowUp", "ArrowLeft", "ArrowRight", "ArrowDown"];
-  // const desertPath = () => {
-
-  // };
-
-  useEffect(() => {
-    let output = [];
-    for (let i = 6; i > 0; i--) {
-      output.push(directions[Math.floor(Math.random() * 4)]);
-    }
-    setSand(output);
-  }, []);
-  // setSand(desertPath());
-
-  const sandMini = (event) => {
-    for (let i = 0; i < sand.length; i++) {
-      if (i === 0 && event.key === sand[0]) {
-        setArrowButtons([
-          ...arrowButtons.slice(0, 0),
-          true,
-          ...arrowButtons.slice(1),
-        ]);
-      } else if (event.key === sand[i] && arrowButtons[i - 1] === true) {
-        setArrowButtons([
-          ...arrowButtons.slice(0, i),
-          true,
-          ...arrowButtons.slice(i + 1),
-        ]);
-      }
-    }
-
-    // if (event.key === sand[0]) {
-    //   console.log("YES");
-    //   setArrowButtons([...arrowButtons.slice(0, 0), true, ...arrowButtons]);
-    // }
-  };
-  console.log(arrowButtons);
-
-  return { running, runningMini, sand, sandMini, arrowButtons };
+  return { running, runningMini };
 }
