@@ -117,6 +117,7 @@ class World extends Phaser.Scene {
     });
 
     //HULK COLLISION GHOSTS
+
     const hulk1 = this.physics.add.sprite(144, 528, "hulk").setScale(2);
     hulk1.body.immovable = true;
     this.physics.add.collider(hulk1, this.player);
@@ -126,11 +127,11 @@ class World extends Phaser.Scene {
     this.physics.add.collider(hulk2, this.player);
 
     const hulk3 = this.physics.add.sprite(464, 240, "hulk").setScale(2);
-    hulk1.body.immovable = true;
+    hulk3.body.immovable = true;
     this.physics.add.collider(hulk3, this.player);
 
     const hulk4 = this.physics.add.sprite(624, 144, "hulk").setScale(2);
-    hulk1.body.immovable = true;
+    hulk4.body.immovable = true;
     this.physics.add.collider(hulk4, this.player);
 
     // Static EVENT GHOST Sprite:
@@ -164,8 +165,10 @@ class World extends Phaser.Scene {
           this.player.x < 120
         ) {
           container.setVisible(true);
+
           if (this.cursors.space.isDown) {
             window.advanceScene();
+            hulk1.destroy();
           }
         } else {
           container.setVisible(false);
@@ -186,6 +189,7 @@ class World extends Phaser.Scene {
           container.setVisible(true);
           if (this.cursors.space.isDown) {
             window.advanceScene();
+            hulk2.destroy();
           }
         } else {
           container.setVisible(false);
@@ -206,6 +210,7 @@ class World extends Phaser.Scene {
           container.setVisible(true);
           if (this.cursors.space.isDown) {
             window.advanceScene();
+            hulk3.destroy();
           }
         } else {
           container.setVisible(false);
@@ -226,6 +231,7 @@ class World extends Phaser.Scene {
           container.setVisible(true);
           if (this.cursors.space.isDown) {
             window.advanceScene();
+            hulk4.destroy();
           }
         } else {
           container.setVisible(false);
