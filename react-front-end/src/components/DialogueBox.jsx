@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/DialogueBox.scss";
 import TypeWriter from "./TypeWriter";
@@ -14,6 +14,7 @@ import useSandHook from "../hooks/useSandHook";
 export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
   const { sand, sandMini, arrowButtons, round } = useSandHook(props);
+  const [attempts, setAttempts] = useState(0);
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
@@ -41,6 +42,11 @@ export default function DialogueBox(props) {
               minigame={sandMini}
               pattern={sand}
               pressed={arrowButtons}
+              dialogue={props.dialogue}
+              current={props.current}
+              next={props.next}
+              attempts={attempts}
+              setAttempts={setAttempts}
             />
           )
         );
