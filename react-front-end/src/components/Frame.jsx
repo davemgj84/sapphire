@@ -15,11 +15,11 @@ const Frame = (props) => {
   const { color, setColor } = useColor("pink");
   const { hasBadge, setHasBadge, badgeItemsArray } = useBadge();
   // The below adds setHasBadge as global window function because passing it as a prop to Content component (and lower levels from thereon) causes the app to blow up. This is work around part 20 to make react work with phaser. Ideally, these badges would be collected inside Scenes and/or Minigames and therefore setHasBadge would need to be called within them.
-  // useEffect(() => {
-  //   window.setHasBadge = (id) =>
-  //     setHasBadge((prev) => ({ ...prev, [id]: true }));
-  // }, []);
-  // console.log(window);
+  useEffect(() => {
+    window.setHasBadge = (id) =>
+      setHasBadge((prev) => ({ ...prev, [id]: true }));
+  }, []);
+  console.log(window);
   return (
     <div id="parent">
       <Navbar />
@@ -33,10 +33,12 @@ const Frame = (props) => {
             <ChooseChar currentColor={color} setColor={setColor} />
           )}
         />
+        {/* passing setHasBadge into the content component here breaks the app*/}
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />
       <Bottom
+        //only have these here now to demonstrate buttons
         badgeItemsArray={badgeItemsArray}
         hasBadge={hasBadge}
         // need to pass setHasBadge to Content and down further to dialogueScene && dialogueBox to trigger function there.

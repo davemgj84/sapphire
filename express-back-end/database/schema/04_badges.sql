@@ -8,3 +8,5 @@ CREATE TABLE badges (
   description TEXT,
   image VARCHAR(255) 
 );
+
+userBadges
