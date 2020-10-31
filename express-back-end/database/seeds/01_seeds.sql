@@ -81,72 +81,84 @@ VALUES
 
 -- one badge per scene
 
-INSERT INTO badges
-  (scene_id, user_id, title, description, image)
+INSERT INTO badges 
+  (title, description, image)
 VALUES
-  (1, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
-  (2, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
-  (3, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
-  (4, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
-  (5, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg');
+  ('Sapphire One', 'part one of sapphire', '/assets/badges/01_sapphire_shard.png'), 
+  ('Sapphire Two', 'part two of sapphire', '/assets/badges/02_sapphire_shard.png'), 
+  ('Sapphire Three', 'part three of sapphire', '/assets/badges/03_sapphire_shard.png'), 
+  ('BigMac', 'badge for Andy', '/assets/badges/burger.png'), 
+  ('Pusheen', 'lolcatsz', '/assets/badges/pusheen.png'), 
+  ('narwhal', 'hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'), 
+  ('Boulder', 'things Travis likes + u ded by boulder sry!', '/assets/badges/rock.png'), 
+  ('Orangutan Ruby', 'there is a primate out there who wants this back', '/assets/badges/ruby.png'); 
+
+-- INSERT INTO badges
+--   (scene_id, user_id, title, description, image)
+-- VALUES
+--   (1, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
+--   (2, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
+--   (3, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
+--   (4, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
+--   (5, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg');
 
 -- choices 
 
 INSERT INTO choices
-  (dialogue_id, label, next_dialogue_id, weight, summary)
+  (dialogue_id, label, next_dialogue_id, badge_id, summary)
 VALUES
-  (1, 'Next', 2, 0, null),
-  (2, 'Next', 3, 0, null),
-  (3, 'Next', 4, 0, null),
-  (4, 'Next', 5, 0, 'You were tasked with a an important mission to find three sapphire shards and return them to the monkey. This will restore balance in the universe and save our planet.'),
-  (5, 'No', 1, 20, 'You did not understand the mission at first and had listen to that old guy again.'),
-  (5, 'Yes', 40, 10, null),
-  (40, 'Return to Map', null, 0, 'Let the adventure begin!'),
-  (6, 'Next', 7, 10, null),
-  (7, 'Next', 8, 10, null),
+  (1, 'Next', 2, null, null),
+  (2, 'Next', 3, null, null),
+  (3, 'Next', 4, null, null),
+  (4, 'Next', 5, null, 'You were tasked with a an important mission to find three sapphire shards and return them to the monkey. This will restore balance in the universe and save our planet.'),
+  (5, 'No', 1, null, 'You did not understand the mission at first and had listen to that old guy again.'),
+  (5, 'Yes', 40, null, null),
+  (40, 'Return to Map', null, null, 'Let the adventure begin!'),
+  (6, 'Next', 7, null, null),
+  (7, 'Next', 8, null, null),
 
-  (8, 'Play Game', 42, 10, null),
-  (42, 'Fail to find the Shard', 9 , 10, null),
-  (9, 'Try Again', 42, 10, null),
-  (42, 'Lose the Shard forever', 10, 10, 'The shard was forever lost in the sand'),
-  (10, 'Map', null, 10, null),
-  (42, 'Find the Shard', 11, 10, 'You found the shard in the desert'),
-  (11, 'Map', null, 10, null),
+  (8, 'Play Game', 42, null, null),
+  (42, 'Fail to find the Shard', 9 , null, null),
+  (9, 'Try Again', 42, null, null),
+  (42, 'Lose the Shard forever', 10, null, 'The shard was forever lost in the sand'),
+  (10, 'Map', null, null, null),
+  (42, 'Find the Shard', 11, 1, 'You found the shard in the desert'),
+  (11, 'Map', null, null, null),
 
-  (12, 'Next', 13, 0, null),
-  (13, 'Next', 14, 0, null),
-  (14, 'Next', 15, 0, null),
-  (15, 'Correct', 16, 0, null),
-  (16, 'Return to Map', null, 0, null),
-  (15, 'Wrong', 17, 0, null),
-  (17, 'Success', 18, 0, null),
-  (18, 'Return to Map', null, 0, null),
-  (17, 'Wrong', 19, 0, null),
-  (19, 'Return to Map', null, 0, null),
-  (20, 'Next', 21, 0, null),
-  (21, 'Next', 22, 0, null),
-  (22, 'Next', 23, 0, null),
-  (23, 'No', 24, 0, null),
-  (24, 'Return to Map', null, 0, null),
-  (23, 'Yes', 25, 0, null),
-  (25, 'Next', 26, 0, null),
-  (26, 'Next', 27, 0, null),
-  (27, 'Return to Map', null, 0, null),
-  (28, 'Next', 29, 0, 'You made it to the temple with no time to spare! You search diligently for the sapphire monkey'),
-  (29, 'Next', 30, 0, null),
-  (30, 'Next', 31, 0, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
-  (31, 'Play game', 41, 10, 'You narrowly escape the boulder. Whew!'),
-  (32, 'Play again', null, 20, null),
-  (33, 'Next', 34, 0, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
-  (34, 'No gems', 35, 20, 'Uh-oh! There are no sapphires to offer to the monkey.'),
-  (34, 'Yes gems', 37, 10, 'Yes! Behold, the sapphire shards!'),
-  (35, 'Next', 36, 0, null),
-  (36, 'Next', null, 0, 'An unsuccessful quest for the sapphires results in defeat and exhaustion. The world is a dumpster fire'),
-  (37, 'Next', 38, 0, null),
-  (38, 'Next', 39, 0, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero!'),
+  (12, 'Next', 13, null, null),
+  (13, 'Next', 14, null, null),
+  (14, 'Next', 15, null, null),
+  (15, 'Correct', 16, null, null),
+  (16, 'Return to Map', null, null, null),
+  (15, 'Wrong', 17, null, null),
+  (17, 'Success', 18, null, null),
+  (18, 'Return to Map', null, null, null),
+  (17, 'Wrong', 19, null, null),
+  (19, 'Return to Map', null, null, null),
+  (20, 'Next', 21, null, null),
+  (21, 'Next', 22, null, null),
+  (22, 'Next', 23, null, null),
+  (23, 'No', 24, null, null),
+  (24, 'Return to Map', null, null, null),
+  (23, 'Yes', 25, null, null),
+  (25, 'Next', 26, null, null),
+  (26, 'Next', 27, null, null),
+  (27, 'Return to Map', null, null, null),
+  (28, 'Next', 29, null, 'You made it to the temple with no time to spare! You search diligently for the sapphire monkey'),
+  (29, 'Next', 30, null, null),
+  (30, 'Next', 31, null, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
+  (31, 'Play game', 41, null, 'You narrowly escape the boulder. Whew!'),
+  (32, 'Play again', null, null, null),
+  (33, 'Next', 34, null, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
+  (34, 'No gems', 35, null, 'Uh-oh! There are no sapphires to offer to the monkey.'),
+  (34, 'Yes gems', 37, null, 'Yes! Behold, the sapphire shards!'),
+  (35, 'Next', 36, null, null),
+  (36, 'Next', null, null, 'An unsuccessful quest for the sapphires results in defeat and exhaustion. The world is a dumpster fire'),
+  (37, 'Next', 38, null, null),
+  (38, 'Next', 39, null, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero!'),
   --added for boulder buffer
-  (41, 'Escape!', 33, 0 , 'You narrowly escape the boulder. Whew!'),
-  (41, 'Dead!', 32, 0 , 'DEATH BY BOULDER -- YIKES! Better luck next time.')
+  (41, 'Escape!', 33, null , 'You narrowly escape the boulder. Whew!'),
+  (41, 'Dead!', 32, null , 'DEATH BY BOULDER -- YIKES! Better luck next time.')
 
 -- adventures 
 

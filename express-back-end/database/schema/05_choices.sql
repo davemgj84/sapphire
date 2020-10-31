@@ -5,6 +5,6 @@ CREATE TABLE choices (
   dialogue_id INTEGER REFERENCES dialogues(id),
   label TEXT,
   next_dialogue_id INTEGER REFERENCES dialogues(id),
-  weight INTEGER,
+  badge_id INTEGER REFERENCES badges(id), 
   summary TEXT
 );
