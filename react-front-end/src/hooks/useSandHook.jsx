@@ -69,7 +69,7 @@ export default function useSandHook(props) {
         setSandTimer({});
         setAttempts((prev) => prev + 1);
         setRound(0);
-        if (attempts >= 3) {
+        if (attempts >= 2) {
           setSandTimer({ finished: true });
           props.current(props.next(props.dialogue[1]));
         } else {
