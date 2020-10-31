@@ -1,5 +1,5 @@
-const sandCheck = (props, state) => {
-  if (state[5] === true) {
+const sandCheck = (props, state, round) => {
+  if (state[5] === true && round > 2) {
     document.getElementsByClassName("sand-game")[0].style.display = "none";
     props.current(props.next(props.dialogue[2]));
   }
