@@ -10,7 +10,6 @@ export default function ShiftingSands(props) {
       window.removeEventListener("keyup", props.minigame);
     }; //remove to prevent exponential fuckups
   }, [props.minigame]);
-  console.log("Sandporps: ", props);
 
   return (
     <div className="sand-game">
