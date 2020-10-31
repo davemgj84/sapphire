@@ -8,8 +8,8 @@ class MapMusic extends React.Component {
       <Sound
         url={song}
         playStatus={Sound.status.PLAYING}
-        playFromPosition={300 /* in milliseconds */}
-        volume={5}
+        // playFromPosition={300 /* in milliseconds */}
+        volume={3}
         autoLoad={true}
         onLoading={this.handleSongLoading}
         onPlaying={this.handleSongPlaying}

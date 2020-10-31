@@ -8,8 +8,10 @@ import Navbar from "./Navbar";
 import TitlePage from "./TitlePage";
 import ChooseChar from "./ChooseChar";
 import BadgePage from "./BadgePage";
+import useColor from "../hooks/useColor";
 
 const Frame = (props) => {
+  const { color, setColor } = useColor("pink");
   return (
     <div id="parent">
       <Navbar />
@@ -20,10 +22,7 @@ const Frame = (props) => {
         <Route
           path="/character"
           component={() => (
-            <ChooseChar
-              currentColor={props.currentColor}
-              setColor={props.setColor}
-            />
+            <ChooseChar currentColor={color} setColor={setColor} />
           )}
         />
         <Route path="/scene/:id" component={Content} />
