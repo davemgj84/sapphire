@@ -42,7 +42,7 @@ VALUES
   (3, 'scene 3, dialogue 16 HUNTER: Excellent! That is the correct answer. I will show you to the waterfall and you will find the shard there. From there you must travel to the enchanted forest and find the hermit near the great tree. They might know where the last shard remains..'),
   (3, 'scene 3, dialogue 17 HUNTER: That is wrong.... ill give you another chance tho... What is Bright as diamonds, loud as thunder, never still, a thing of wonder?'),
   (3, 'scene 3, dialogue 18 HUNTER: Excellent! That is the correct answer. I will show you to the waterfall and you will find the shard there. From there you must travel to the enchanted forest and find the hermit near the great tree. They might know where the last shard remains..'),
-  (3, 'scene 3, dialogue 19 WRONG! The hunter scoffs... IT IS A WATERFALL! - HUNTER: find the waterfall and you will find the shard there. From there you must travel to the enchanted forest and find the hermit near the great tree. They might know where the last shard remains..'),
+  (3, 'scene 3, dialogue 19 WRONG! The hunter scoffs... IT IS A WATERFALL! -  And take my cat! You are confused by this strange man and decide to seek shelter in a nearby forest to get away from him.'),
 
   --  Scene 4
 
@@ -50,7 +50,7 @@ VALUES
   (4, 'scene 4, dialogue 21 - You enter a small clearing and see the biggest tree you have ever seen in your entire life. It must be over 100 meters tall! Looking around, you dont see any place where there might be anyone, let alone a hermit.... suddenly you hear a faint squeaking sound and look down...'),
   (4, 'scene 4, dialogue 22 - Near your feet, there is a MEDIUM SIZED snail. Not that small, but not that big... and it is yelling at you!?'),
   (4, 'scene 4, dialogue 23 - SNAIL: HELP ME! I have been transformed into a snail and would love if you could find me some special herbs that can reverse the spell!? Will you help!? Please?!'),
-  (4, 'scene 4, dialogue 24 - SNAIL: REALLY?! You wont help a snail out! I can not believe it! She "STORMS" off.... well slowly slides away... '),
+  (4, 'scene 4, dialogue 24 - SNAIL: REALLY?! You wont help a snail out! I can not believe it! Hope you find your dad, Buddy! She "STORMS" off.... well slowly slides away... '),
   (4, 'scene 4, dialogue 25 - SNAIL: THANK YOU SO MUCH FOR HELPING ME!!!'),
   (4, 'scene 4, dialogue 26 - The snail eats the herbs you lay in front of her and she is magically transformed into her former self! She thanks you and asks if there is anything she can do for you on your journey?'),
   (4, 'scene 4, dialogue 27 - You are astonished at her transformation. After telling her that the Hunter sent you, and that you are looking for the last sapphire shard, she takes off her necklace and hands it to you... it carrys the shard in a pouch! She then tells you that where the ancient Sapphire Monkey relic resides - in the lost temple!'),
@@ -70,7 +70,7 @@ VALUES
   (5, 'scene 5, dialogue 36 You will go down in the history books as a failure. SRY! BTW, have you met my friend, Rick?'),
   (5, 'scene 5, dialogue 37 With the shards you provided, the sapphire monkey king rises to life, terrifying, awe-inspriring, and omnipoetent. This monkey is our savior.'),
   (5, 'scene 5, dialogue 38 With a flick of the wrist, the sapphire monkey spreads restoration to the land'),
-  (5, 'scene 5, dialogue 39 You are a hero of our time. The sapphire monkey crowns you with rubies. WOOHOO! Mission accomplished! Quest finished! THE END'),
+  (5, 'scene 5, dialogue 39 You are a hero of our time. The sapphire monkey crowns you with rubies. These are the long-lost Orangutan Rubies! Seems like there is more to this adventure...'),
 
   --adding buffer scene to scene 1
   (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.'),
@@ -85,13 +85,13 @@ INSERT INTO badges
   (title, description, image)
 VALUES
   ('Sapphire One', 'part one of sapphire', '/assets/badges/01_sapphire_shard.png'), 
-  ('Sapphire Two', 'part two of sapphire', '/assets/badges/02_sapphire_shard.png'), 
-  ('Sapphire Three', 'part three of sapphire', '/assets/badges/03_sapphire_shard.png'), 
+  ('Sapphire Two', 'part two of sapphire', '/assets/badges/01_sapphire_shard.png'), 
+  ('Sapphire Three', 'part three of sapphire', '/assets/badges/01_sapphire_shard.png'), 
   ('BigMac', 'badge for Andy', '/assets/badges/burger.png'), 
   ('Pusheen', 'lolcatsz', '/assets/badges/pusheen.png'), 
-  ('narwhal', 'hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'), 
+  ('Narwhal', 'hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'), 
   ('Boulder', 'things Travis likes + u ded by boulder sry!', '/assets/badges/rock.png'), 
-  ('Orangutan Ruby', 'there is a primate out there who wants this back', '/assets/badges/ruby.png'); 
+  ('Ruby Orangutan', 'there is a primate out there who wants this back', '/assets/badges/ruby.png'); 
 
 -- INSERT INTO badges
 --   (scene_id, user_id, title, description, image)
@@ -121,7 +121,7 @@ VALUES
   (42, 'Fail to find the Shard', 9 , null, null),
   (9, 'Try Again', 42, null, null),
   (42, 'Lose the Shard forever', 10, null, 'The shard was forever lost in the sand'),
-  (10, 'Map', null, null, null),
+  (10, 'Map', null, 4, null),
   (42, 'Find the Shard', 11, null, 'You found the shard in the desert'),
   (11, 'Map', null, 1, null),
 
@@ -129,36 +129,36 @@ VALUES
   (13, 'Next', 14, null, null),
   (14, 'Next', 15, null, null),
   (15, 'Correct', 16, null, null),
-  (16, 'Return to Map', null, null, null),
+  (16, 'Return to Map', null, 2, null),
   (15, 'Wrong', 17, null, null),
   (17, 'Success', 18, null, null),
   (18, 'Return to Map', null, null, null),
   (17, 'Wrong', 19, null, null),
-  (19, 'Return to Map', null, null, null),
+  (19, 'Return to Map', null, 5, null),
   (20, 'Next', 21, null, null),
   (21, 'Next', 22, null, null),
   (22, 'Next', 23, null, null),
   (23, 'No', 24, null, null),
-  (24, 'Return to Map', null, null, null),
+  (24, 'Return to Map', null, 6, null),
   (23, 'Yes', 25, null, null),
   (25, 'Next', 26, null, null),
   (26, 'Next', 27, null, null),
-  (27, 'Return to Map', null, null, null),
+  (27, 'Return to Map', null, 3, null),
   (28, 'Next', 29, null, 'You made it to the temple with no time to spare! You search diligently for the sapphire monkey'),
   (29, 'Next', 30, null, null),
   (30, 'Next', 31, null, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
   (31, 'Play game', 41, null, 'You narrowly escape the boulder. Whew!'),
-  (32, 'Play again', null, null, null),
+  (32, 'Play again', null, 7, null),
   (33, 'Next', 34, null, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
   (34, 'No gems', 35, null, 'Uh-oh! There are no sapphires to offer to the monkey.'),
   (34, 'Yes gems', 37, null, 'Yes! Behold, the sapphire shards!'),
   (35, 'Next', 36, null, null),
   (36, 'Next', null, null, 'An unsuccessful quest for the sapphires results in defeat and exhaustion. The world is a dumpster fire'),
   (37, 'Next', 38, null, null),
-  (38, 'Next', 39, null, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero!'),
+  (38, 'Next', 39, 8, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero! The Sapphire Monkey reveals a Ruby Orangutan. Seems like there is more to this adventure...'),
   --added for boulder buffer
   (41, 'Escape!', 33, null , 'You narrowly escape the boulder. Whew!'),
-  (41, 'Dead!', 32, null , 'DEATH BY BOULDER -- YIKES! Better luck next time.')
+  (41, 'Dead!', 32, null,  'DEATH BY BOULDER -- YIKES! Better luck next time.')
 
 -- adventures 
 

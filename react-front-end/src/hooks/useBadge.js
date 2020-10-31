@@ -35,6 +35,10 @@ const useBadge = () => {
   // if (loaded) {
   //   badgeItemsArray.forEach((badge) => (badgeState[badge.name] = false));
   // }
+  useEffect(() => {
+    window.setHasBadge = (id) =>
+      setHasBadge((prev) => ({ ...prev, [id]: true }));
+  }, []);
 
   return { hasBadge, setHasBadge, badgeItemsArray };
 

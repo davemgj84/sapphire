@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Badge from "./Badge";
-import useBadge from "../hooks/useBadge";
 
-//@ todo : maybe move sapphires to their own component
 const Badges = (props) => {
-  const { badgeItemsArray, hasBadge, setHasBadge } = props;
+  const { badgeItemsArray, hasBadge } = props;
 
   const allBadges = badgeItemsArray.map((badge, index) => {
     return (
@@ -12,7 +10,6 @@ const Badges = (props) => {
         key={index}
         image={badge.image}
         id={badge.id}
-        setHasBadge={setHasBadge}
         hasBadge={hasBadge}
       />
     );
