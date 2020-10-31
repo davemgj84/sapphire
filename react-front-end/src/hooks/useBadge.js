@@ -1,6 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const useBadge = () => {
+  const [data, setData] = useState([]);
+
+  //useEffect will allow everything to load before it runs
+  useEffect(() => {
+    axios
+      .get(`/api/badges`)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  console.log("this is hopefully badges from db", data);
+
   const badgeItemsArray = [
     {
       image: "01_sapphire_shard",
@@ -40,7 +55,6 @@ const useBadge = () => {
   badgeItemsArray.forEach((badge) => (badgeState[badge.name] = false));
 
   const [hasBadge, setHasBadge] = useState(badgeState);
-  console.log("hook", hasBadge);
 
   return { hasBadge, setHasBadge, badgeItemsArray };
 };

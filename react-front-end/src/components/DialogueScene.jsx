@@ -27,9 +27,6 @@ const DialogueScene = (props) => {
     }
   }, [currentDialogue]);
 
-  console.log("dialogues", dialogues);
-  console.log("current dialogue", currentDialogue);
-
   // Grabs our initial scene dialogue ID
   useEffect(() => {
     axios.get(`/api/scene/${props.match.params.id}`).then((response) => {

@@ -97,6 +97,16 @@ const getSceneById = (sceneId) => {
     .catch((err) => err);
 };
 
+const getAllBadges = () => {
+  const sql = `SELECT * FROM badges`;
+  const query = pool.query(sql);
+  return query
+    .then((res) => {
+      return res.rows;
+    })
+    .catch((err) => err);
+};
+
 module.exports = {
   getUserWithEmail,
   getDialogueBySceneID,
@@ -106,4 +116,5 @@ module.exports = {
   getDialoguesById,
   getSceneById,
   getDialoguesBySceneId,
+  getAllBadges,
 };

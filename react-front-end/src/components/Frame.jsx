@@ -19,7 +19,7 @@ const Frame = (props) => {
     window.setHasBadge = (id) =>
       setHasBadge((prev) => ({ ...prev, [id]: true }));
   }, []);
-  console.log(window);
+
   return (
     <div id="parent">
       <Navbar />
