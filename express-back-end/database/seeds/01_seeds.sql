@@ -122,8 +122,8 @@ VALUES
   (9, 'Try Again', 42, null, null),
   (42, 'Lose the Shard forever', 10, null, 'The shard was forever lost in the sand'),
   (10, 'Map', null, null, null),
-  (42, 'Find the Shard', 11, 1, 'You found the shard in the desert'),
-  (11, 'Map', null, null, null),
+  (42, 'Find the Shard', 11, null, 'You found the shard in the desert'),
+  (11, 'Map', null, 1, null),
 
   (12, 'Next', 13, null, null),
   (13, 'Next', 14, null, null),

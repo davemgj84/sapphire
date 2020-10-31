@@ -21,11 +21,12 @@ const DialogueScene = (props) => {
   };
 
   useEffect(() => {
-    if (currentDialogue.id === 16) {
+    if (currentDialogue.badge_id) {
       console.log("i got the ruby");
-      window.setHasBadge("ruby");
+      window.setHasBadge(currentDialogue.badge_id);
     }
   }, [currentDialogue]);
+  console.log("current dialogue", currentDialogue);
 
   // Grabs our initial scene dialogue ID
   useEffect(() => {

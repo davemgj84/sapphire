@@ -11,7 +11,7 @@ const Badges = (props) => {
       <Badge
         key={index}
         image={badge.image}
-        name={badge.name}
+        id={badge.id}
         setHasBadge={setHasBadge}
         hasBadge={hasBadge}
       />
