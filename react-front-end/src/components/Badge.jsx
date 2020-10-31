@@ -5,7 +5,7 @@ const Badge = (props) => {
   const { image, name, hasBadge, setHasBadge } = props;
 
   // const [hasBadge, setHasBadge] = useState(false);
-
+  console.log(setHasBadge);
   const imageStyles = {
     opacity: hasBadge[name] ? 1 : 0.25,
   };

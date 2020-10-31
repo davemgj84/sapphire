@@ -39,6 +39,8 @@ const DialogueScene = (props) => {
           next={getNext}
         />
       )}
+      {/* This is an example of how to set the setHasBadge via a global window function since Content component blows up if props are passed to it. Look in Frame for global function declaration in useEffect hook there. */}
+      {/* <button onClick={() => window.setHasBadge("ruby")}>click me</button> */}
     </div>
   );
 };
