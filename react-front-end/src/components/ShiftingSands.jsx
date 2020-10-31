@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SandIcon from "./SandIcon";
-// import useMinigameHook from "../hooks/useMinigameHooks";
 import "../styles/sand.scss";
 
 export default function ShiftingSands(props) {
