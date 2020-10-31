@@ -1,18 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Frame.scss";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <nav>
+    <nav className="navbar">
       <a id="logo" href="/">
         <i className="fas fa-gem fa-2x"></i> SAPPHIRE
       </a>
-
       <div className="badge-login-buttons">
-        <Link to="/badges" className="badge">
-          BADGES
-        </Link>
+        <ul className="navbar-nav">{props.children}</ul>
+
         <button className="log-button">LOGOUT</button>
       </div>
     </nav>

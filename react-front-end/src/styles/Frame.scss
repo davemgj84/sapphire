@@ -14,12 +14,137 @@
   grid-area: game;
 }
 
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   grid-area: top;
   background-color: #384048;
   align-items: center;
+}
+
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  color: #ffff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button {
+  height: 42px;
+  width: 42px;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: #5f666c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.icon-button:hover {
+  filter: brightness(1.4);
+}
+
+.drop-down-title {
+  padding-right: 1rem;
+}
+
+.fa-chevron-down {
+  color: #384048;
+}
+
+.fa-arrow-left {
+  color: white;
+}
+
+.back-icon-button {
+  height: 42px;
+  width: 42px;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: #336999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.dropdown {
+  position: absolute;
+  top: 115px;
+  width: 600px;
+  transform: translateX(-6%);
+  border: solid;
+  border-image: url("/assets/borderbox.png") 25 / 10px 10px 10px 10px stretch;
+  background-color: #55afff;
+  padding: 1em;
+  overflow: hidden;
+  z-index: 1;
+  font-family: sans-serif;
+  transition: height var(--speed) ease;
+}
+
+.badge-description {
+  display: flex;
+  justify-content: center;
+}
+
+.badge-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.badge-item {
+  height: 50px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.5em;
+  transition: background var(--speed);
+}
+
+.badge-item:hover {
+  background-color: #76bfff;
+}
+
+.badge-name {
+  padding-left: 1em;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+
+.menu-primary-exit {
+  position: absolute;
+}
+
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
 }
 
 #bottom {
@@ -55,24 +180,10 @@ nav {
 }
 
 .badge-login-buttons {
+  display: flex;
+  align-items: center;
   padding-right: 4rem;
   padding-top: 1rem;
-}
-
-.badge {
-  margin-right: 3rem;
-  border: 0;
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-  color: #ffff;
-  font-family: "Press Start 2P", cursive;
-  font-size: 1.5em;
-  text-decoration: none;
-}
-
-.badge:hover {
-  color: #b7bfc7;
 }
 
 .log-button {

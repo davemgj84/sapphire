@@ -16,3 +16,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --speed: 500ms;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

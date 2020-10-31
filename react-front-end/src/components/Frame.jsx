@@ -7,18 +7,22 @@ import Bottom from "./Bottom";
 import Navbar from "./Navbar";
 import TitlePage from "./TitlePage";
 import ChooseChar from "./ChooseChar";
-import BadgePage from "./BadgePage";
+import BadgeDropDown from "./BadgeDropDown";
+import NavDropIcon from "./NavDropIcon";
 import useColor from "../hooks/useColor";
 
 const Frame = (props) => {
   const { color, setColor } = useColor("pink");
   return (
     <div id="parent">
-      <Navbar />
+      <Navbar>
+        <NavDropIcon icon={<i className="fas fa-chevron-down "></i>}>
+          <BadgeDropDown />
+        </NavDropIcon>
+      </Navbar>
       <Left />
       <Switch>
         <Route exact path="/" component={TitlePage} />
-        <Route path="/badges" component={BadgePage} />
         <Route
           path="/character"
           component={() => (
