@@ -1,18 +1,14 @@
 import React from "react";
 
-const BadgeDropDownItem = () => {
+const BadgeDropDownItem = (props) => {
   return (
     <div className="badge-component">
       <span className="badge-item">
-        <img
-          className="badge-icon"
-          src="https://bit.ly/3jOKHXM"
-          alt="badge icon"
-        />
+        <img className="badge-icon" src={props.image} alt="badge icon" />
       </span>
       <span className="name-and-description">
-        <p className="badge-name">TITLE</p>
-        <p className="badge-description">This is a description</p>
+        <p className="badge-name">{props.title}</p>
+        <p className="badge-description">{props.description}</p>
       </span>
     </div>
   );

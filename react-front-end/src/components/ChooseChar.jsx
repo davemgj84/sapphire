@@ -8,42 +8,42 @@ const ChooseChar = (props) => {
     {
       color: "pink",
       name: "Penelope",
-      info: "Likes cantaloupe",
+      info: "Likes Cantaloupe",
     },
     {
       color: "blue",
-      name: "Bill Murray",
-      info: "Explorer",
+      name: "James",
+      info: "Does not respond to Jimmy",
     },
     {
       color: "brown",
       name: "Noodle",
-      info: "Afraid of raw meats",
+      info: "Afraid of Raw Meats",
     },
     {
       color: "red",
       name: "Xanthadar",
-      info: "Town simpleton",
+      info: "Town Simpleton",
     },
     {
       color: "burgundy",
-      name: "",
-      info: "",
+      name: "Steve Thompson",
+      info: "Accountant",
     },
     {
       color: "lime",
       name: "Dano",
-      info: "Medium person energy",
+      info: "Medium Person Energy",
     },
     {
       color: "green",
       name: "Bruce",
-      info: "Only drinks coffee at midnight",
+      info: "Only Drinks Coffee at Midnight",
     },
     {
       color: "teal",
-      name: "",
-      info: "",
+      name: "Genevieve",
+      info: "Plays the Recorder",
     },
   ];
 

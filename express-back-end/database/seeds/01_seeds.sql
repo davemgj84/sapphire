@@ -84,25 +84,14 @@ VALUES
 INSERT INTO badges 
   (title, description, image)
 VALUES
-  ('Sapphire One', 'part one of sapphire', '/assets/badges/01_sapphire_shard.png'), 
-  ('Sapphire Two', 'part two of sapphire', '/assets/badges/01_sapphire_shard.png'), 
-  ('Sapphire Three', 'part three of sapphire', '/assets/badges/01_sapphire_shard.png'), 
-  ('BigMac', 'badge for Andy', '/assets/badges/burger.png'), 
-  ('Pusheen', 'lolcatsz', '/assets/badges/pusheen.png'), 
-  ('Narwhal', 'hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'), 
-  ('Boulder', 'things Travis likes + u ded by boulder sry!', '/assets/badges/rock.png'), 
-  ('Ruby Orangutan', 'there is a primate out there who wants this back', '/assets/badges/ruby.png'); 
-
--- INSERT INTO badges
---   (scene_id, user_id, title, description, image)
--- VALUES
---   (1, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
---   (2, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
---   (3, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
---   (4, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg'),
---   (5, 1, 'BIGMAC', 'a great badge in honor of Andy', 'https://www.mcdonalds.com/is/image/content/dam/uk/nfl/nutrition/nfl-product/product/products/mcdonalds-Big-Mac.jpg');
-
--- choices 
+  ('Sapphire Piece', 'First Sapphire Shard', '/assets/badges/01_sapphire_shard.png'), 
+  ('Sapphire Piece', 'Second Sapphire Shard', '/assets/badges/01_sapphire_shard.png'), 
+  ('Sapphire Piece', 'Third Sapphire Shard', '/assets/badges/01_sapphire_shard.png'), 
+  ('BigMac', 'Andy''s Badge', '/assets/badges/burger.png'), 
+  ('Pusheen', 'Lolcatsz', '/assets/badges/pusheen.png'), 
+  ('Narwhal', 'Hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'), 
+  ('Boulder', 'Crushed by a Boulder!', '/assets/badges/rock.png'), 
+  ('Ruby Orangutan', 'A primate wants this back..', '/assets/badges/ruby.png');
 
 INSERT INTO choices
   (dialogue_id, label, next_dialogue_id, badge_id, summary)

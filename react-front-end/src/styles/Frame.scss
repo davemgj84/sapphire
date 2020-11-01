@@ -67,55 +67,57 @@
 .dropdown {
   position: absolute;
   top: 115px;
-  width: 600px;
+  width: 500px;
   transform: translateX(-6%);
   border: solid;
   border-image: url("/assets/borderbox.png") 25 / 10px 10px 10px 10px stretch;
   background-color: #55afff;
   padding: 1em;
-  overflow: hidden;
   z-index: 1;
   font-family: sans-serif;
-  transition: height var(--speed) ease;
+  cursor: default;
 }
 
 .badge-component {
   padding: 0.5em;
   display: flex;
-  align-content: flex-start;
-  align-items: center;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  font-family: "Itim", cursive;
+}
+
+.badge-component:hover {
+  background-color: #4c9de5;
 }
 
 .badge-item {
-  display: flex;
-  align-self: flex-start;
+  position: absolute;
+  padding-left: 0.5em;
+  left: 0;
+}
+
+.badge-icon {
+  width: 50px;
+  height: 50px;
 }
 
 .name-and-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .badge-name {
-  // justify-content: center;
+  font-weight: bold;
   margin-top: 1em;
   margin: 0;
+  color: #224666;
 }
 
 .badge-description {
-  display: flex;
-  justify-content: center;
   margin: 0;
-}
-
-.badge-icon {
-  width: 50px;
-  height: 50px;
-  // margin-top: 1em;
-  margin-right: 4.8em;
-  // align-self: flex-start;
 }
 
 #bottom {
