@@ -132,12 +132,14 @@
   grid-area: left;
   background-color: #708090;
   background-image: url("/assets/stonetransp.png");
+  border-right: 8px solid #384048;
 }
 
 #right {
   grid-area: right;
   background-color: #708090;
   background-image: url("/assets/stonetransp.png");
+  border-left: 8px solid #384048;
 }
 
 #logo {
