@@ -8,15 +8,15 @@ const BadgeDropDown = () => {
   const [badgeImage, setBadgeImage] = useState("");
   const [badgeDescription, setBadgeDescription] = useState("");
 
-  useEffect(() => {
-    axios.get(`/api/badges/1`).then((response) => {
-      const badges = response.data.badges;
-      console.log(badges[0]);
-      setBadgeImage(badges[0].image);
-      setBadgeTitle(badges[0].title);
-      setBadgeDescription(badges[0].description);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get(`/api/badges/1`).then((response) => {
+  //     const badges = response.data.badges;
+  //     console.log(badges[0]);
+  //     setBadgeImage(badges[0].image);
+  //     setBadgeTitle(badges[0].title);
+  //     setBadgeDescription(badges[0].description);
+  //   });
+  // }, []);
 
   return (
     <div className="dropdown">
@@ -27,7 +27,7 @@ const BadgeDropDown = () => {
             src="https://bit.ly/3jOKHXM"
             alt="badge icon"
           />
-          <span className="badge-name">{badgeTitle}</span>
+          <span className="badge-name">TITLE</span>
         </a>
       </div>
     </div>
