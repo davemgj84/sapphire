@@ -32,7 +32,6 @@ export default function useSandHook(props) {
 
   useEffect(() => {
     let timer;
-    console.log("check for timer");
     if (
       Array.isArray(props.dialogue) &&
       props.dialogue[0].story === "ShiftingSands"

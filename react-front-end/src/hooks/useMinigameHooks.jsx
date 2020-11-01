@@ -16,7 +16,7 @@ export default function useMinigameHook(props) {
   useEffect(() => {
     let timer;
     if (running.finished === false) {
-      console.log("Hello!", props);
+      // console.log("Hello!", props);
       timer = setTimeout(() => {
         props.current(props.next(props.dialogue[1]));
       }, 5000);
@@ -33,7 +33,7 @@ export default function useMinigameHook(props) {
       running.lastLeg !== "s" &&
       running.runningPercent < 100
     ) {
-      const newPercent = running.runningPercent + 2.5;
+      const newPercent = running.runningPercent + 50;
       const newLeg = "s";
       setRunning((prev) => ({
         ...prev,
@@ -46,7 +46,7 @@ export default function useMinigameHook(props) {
       running.lastLeg !== "a" &&
       running.runningPercent < 100
     ) {
-      const newPercent = running.runningPercent + 2.5;
+      const newPercent = running.runningPercent + 50;
       const newLeg = "a";
       setRunning((prev) => ({
         ...prev,
