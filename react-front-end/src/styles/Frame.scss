@@ -64,22 +64,6 @@
   color: #384048;
 }
 
-.fa-arrow-left {
-  color: white;
-}
-
-.back-icon-button {
-  height: 42px;
-  width: 42px;
-  text-decoration: none;
-  border-radius: 50%;
-  background-color: #336999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 300ms;
-}
-
 .dropdown {
   position: absolute;
   top: 115px;
@@ -126,25 +110,6 @@
 
 .menu {
   width: 100%;
-}
-
-.menu-primary-enter {
-  position: absolute;
-  transform: translateX(-110%);
-}
-
-.menu-primary-enter-active {
-  transform: translateX(0%);
-  transition: all var(--speed) ease;
-}
-
-.menu-primary-exit {
-  position: absolute;
-}
-
-.menu-primary-exit-active {
-  transform: translateX(-110%);
-  transition: all var(--speed) ease;
 }
 
 #bottom {
