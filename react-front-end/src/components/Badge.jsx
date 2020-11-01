@@ -35,7 +35,13 @@ const Badge = (props) => {
 
   return (
     <div style={{ position: "relative" }}>
-      <img className="badge-img" src={image} style={imageStyles} />
+      <img
+        id={`badge${id}`}
+        className="badge-img"
+        src={image}
+        style={imageStyles}
+        alt={`badge${id}`}
+      />
       {/* <animated.img src="/assets/badges/sparkle.png" style={sparkleStyles} /> */}
     </div>
   );

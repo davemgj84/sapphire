@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <>
-      {wasEverClicked && <MapMusic />}
+      {/* {wasEverClicked && <MapMusic />} */}
       <BrowserRouter>
         <Frame />
       </BrowserRouter>

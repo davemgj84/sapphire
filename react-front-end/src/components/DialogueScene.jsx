@@ -39,6 +39,7 @@ const DialogueScene = (props) => {
     <div className={`scene background${props.match.params.id}`}>
       {loaded && (
         <DialogueBox
+          key={props.id}
           scene={props.match.params.id}
           dialogue={currentDialogue}
           current={setCurrentDialogue}

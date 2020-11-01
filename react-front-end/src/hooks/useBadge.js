@@ -17,7 +17,7 @@ const useBadge = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log("this is hopefully badges from db", badgeItemsArray);
+  // console.log("this is hopefully badges from db", badgeItemsArray);
 
   useEffect(() => {
     //if we build in user logic, we would put some here.
@@ -29,7 +29,9 @@ const useBadge = () => {
     }
   }, [loaded]);
 
-  console.log("has badge", hasBadge);
+  // useEffect(()=>{})
+
+  // console.log("has badge", hasBadge);
 
   // let badgeState = {};
   // if (loaded) {
