@@ -70,12 +70,13 @@
   width: 500px;
   transform: translateX(-6%);
   border: solid;
-  border-image: url("/assets/borderbox.png") 25 / 10px 10px 10px 10px stretch;
+  border-image: url("/assets/borderbox2.png") 25 / 25px 25px 25px 25px stretch;
   background-color: #55afff;
   padding: 1em;
   z-index: 1;
   font-family: sans-serif;
   cursor: default;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .badge-component {
