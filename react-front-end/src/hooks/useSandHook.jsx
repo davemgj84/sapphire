@@ -25,36 +25,10 @@ export default function useSandHook(props) {
   // turns off timer if last arrow is pressed and checks on arrowButton change
   useEffect(() => {
     if (arrowButtons[sand.length - 1] === true) {
-      console.log("CLEARING TIMER");
       setSandTimer({ finished: true });
       setRound((prev) => prev + 1);
     }
   }, [arrowButtons]);
-
-  //track number of attempts and boots to worst end and checks on attempts change
-  // useEffect(() => {
-  //   if (attempts >= 3) {
-  //     setSandTimer({ finished: true });
-  //     props.current(props.next(props.dialogue[1]));
-  //   }
-  // }, [attempts]);
-
-  //starts time if finished is false and resets everything if the event is failed, refreshes on sandTimer.finished change
-  // useEffect(() => {
-  //   let timer;
-  //   if (sandTimer.finished === false) {
-  //     timer = setTimeout(() => {
-  //       setArrowButtons([false, false, false, false, false, false]);
-  //       setSandTimer({});
-  //       setAttempts((prev) => prev + 1);
-  //       setRound(0);
-  //       props.current(props.next(props.dialogue[0]));
-  //     }, 5000);
-  //   }
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
-  // }, [sandTimer.finished]);
 
   useEffect(() => {
     let timer;
@@ -63,7 +37,6 @@ export default function useSandHook(props) {
       Array.isArray(props.dialogue) &&
       props.dialogue[0].story === "ShiftingSands"
     ) {
-      console.log("TIMER GO");
       timer = setTimeout(() => {
         setArrowButtons([false, false, false, false, false, false]);
         setSandTimer({});
@@ -75,11 +48,9 @@ export default function useSandHook(props) {
         } else {
           props.current(props.next(props.dialogue[0]));
         }
-        console.log("TIMEOUT", attempts);
       }, 4000);
     }
     return () => {
-      console.log("CLEAR TIMER");
       clearTimeout(timer);
     };
   }, [props.dialogue, sand]);

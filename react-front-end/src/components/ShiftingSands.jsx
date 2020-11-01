@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SandIcon from "./SandIcon";
 import "../styles/sand.scss";
 import Timer from "../helpers/timer";
@@ -13,7 +13,6 @@ export default function ShiftingSands(props) {
 
   return (
     <div className="sand-game">
-      <Timer />
       {props.pattern.map((a, b) => (
         <SandIcon direction={a} key={b} id={b} pressed={props.pressed[b]} />
       ))}

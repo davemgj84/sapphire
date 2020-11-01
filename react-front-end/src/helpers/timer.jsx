@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../styles/running.scss";
-import RunningFill from "../components/RunningFill";
 
 export default function Timer(props) {
+  let refresh = props.pattern;
   const FULL_DASH_ARRAY = 283;
   const WARNING_THRESHOLD = 2;
   const ALERT_THRESHOLD = 1;
