@@ -76,7 +76,9 @@ VALUES
   (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.'),
   (5, 'RunningGame'),--41
   (2, 'ShiftingSands'),--42
-  (5, 'BoulderDeath');--43
+  (5, 'BoulderDeath'),--43
+  (5, 'Victory'),--44
+  (5, 'No Gems');--45
 
 
 -- one badge per scene
@@ -143,13 +145,18 @@ VALUES
   (34, 'No gems', 35, null, 'Uh-oh! There are no sapphires to offer to the monkey.'),
   (34, 'Yes gems', 37, null, 'Yes! Behold, the sapphire shards!'),
   (35, 'Next', 36, null, null),
-  (36, 'Next', null, null, 'An unsuccessful quest for the sapphires results in defeat and exhaustion. The world is a dumpster fire'),
+  (36, 'Next', 45, null, 'An unsuccessful quest for the sapphires results in defeat and exhaustion. The world is a dumpster fire'),
   (37, 'Next', 38, null, null),
   (38, 'Next', 39, 8, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero! The Sapphire Monkey reveals a Ruby Orangutan. Seems like there is more to this adventure...'),
+  (39, 'You Won', 44, null, null),
   --added for boulder buffer
   (41, 'Escape!', 33, null , 'You narrowly escape the boulder. Whew!'),
   (41, 'Dead!', 32, null, 'DEATH BY BOULDER -- YIKES! Better luck next time.'),
-  (43, 'Return to Title', null, null, null )
+  (43, 'Return to Title', null, null, null),
+  --victory scene
+  (44, 'Return to Title', null, null, null),
+  --no gems
+  (45, 'Return to Title', null, null, null);
 
 -- adventures 
 
