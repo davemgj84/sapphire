@@ -65,6 +65,11 @@
 }
 
 .dropdown {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  align-content: flex-start;
+  align-items: center;
   position: absolute;
   top: 115px;
   width: 600px;
@@ -79,37 +84,36 @@
   transition: height var(--speed) ease;
 }
 
+.badge-item {
+  display: flex;
+  align-self: flex-start;
+}
+
+.name-and-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-name {
+  // justify-content: center;
+  margin-top: 1em;
+  margin: 0;
+}
+
 .badge-description {
   display: flex;
   justify-content: center;
+  margin: 0;
 }
 
 .badge-icon {
   width: 50px;
   height: 50px;
-}
-
-.badge-item {
-  height: 50px;
-  text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  padding: 0.5em;
-  transition: background var(--speed);
-}
-
-.badge-item:hover {
-  background-color: #76bfff;
-}
-
-.badge-name {
-  padding-left: 1em;
-}
-
-.menu {
-  width: 100%;
+  // margin-top: 1em;
+  margin-right: 4.8em;
+  // align-self: flex-start;
 }
 
 #bottom {

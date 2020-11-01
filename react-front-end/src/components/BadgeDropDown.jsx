@@ -20,16 +20,17 @@ const BadgeDropDown = () => {
 
   return (
     <div className="dropdown">
-      <div className="menu">
-        <a href="#" className="badge-item">
-          <img
-            className="badge-icon"
-            src="https://bit.ly/3jOKHXM"
-            alt="badge icon"
-          />
-          <span className="badge-name">TITLE</span>
-        </a>
-      </div>
+      <span className="badge-item">
+        <img
+          className="badge-icon"
+          src="https://bit.ly/3jOKHXM"
+          alt="badge icon"
+        />
+      </span>
+      <span className="name-and-description">
+        <p className="badge-name">TITLE</p>
+        <p className="badge-description">This is a description</p>
+      </span>
     </div>
   );
 };
