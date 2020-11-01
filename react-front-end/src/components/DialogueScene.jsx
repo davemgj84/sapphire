@@ -20,6 +20,12 @@ const DialogueScene = (props) => {
     }
   };
 
+  useEffect(() => {
+    if (currentDialogue.badge_id) {
+      window.setHasBadge(currentDialogue.badge_id);
+    }
+  }, [currentDialogue]);
+
   // Grabs our initial scene dialogue ID
   useEffect(() => {
     axios.get(`/api/scene/${props.match.params.id}`).then((response) => {

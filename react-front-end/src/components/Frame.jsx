@@ -10,9 +10,12 @@ import ChooseChar from "./ChooseChar";
 import BadgeDropDown from "./BadgeDropDown";
 import NavDropIcon from "./NavDropIcon";
 import useColor from "../hooks/useColor";
+import useBadge from "../hooks/useBadge";
 
 const Frame = (props) => {
   const { color, setColor } = useColor("pink");
+  const { hasBadge, badgeItemsArray } = useBadge();
+
   return (
     <div id="parent">
       <Navbar>
@@ -29,10 +32,11 @@ const Frame = (props) => {
             <ChooseChar currentColor={color} setColor={setColor} />
           )}
         />
+        {/* passing setHasBadge into the content component here breaks the app*/}
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />
-      <Bottom />
+      <Bottom badgeItemsArray={badgeItemsArray} hasBadge={hasBadge} />
     </div>
   );
 };

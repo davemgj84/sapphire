@@ -9,6 +9,7 @@ const DIALOG = "DIALOG";
 
 function Content(props) {
   const [stage, setStage] = React.useState(MAP);
+  console.log("content", props);
 
   useEffect(() => {
     window.advanceScene = () => setStage(DIALOG);
