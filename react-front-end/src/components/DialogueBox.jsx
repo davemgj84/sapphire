@@ -11,10 +11,15 @@ import ShiftingSands from "./ShiftingSands";
 import { sandCheck } from "../helpers/sandCheck";
 import useSandHook from "../hooks/useSandHook";
 
+import GameOver from "./GameOver";
+import { deathCheck } from "../helpers/deathCheck";
+
 export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
   const { sand, sandMini, arrowButtons, round } = useSandHook(props);
   const [attempts, setAttempts] = useState(0);
+
+  console.log("DialogBox: ", props);
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
@@ -57,6 +62,17 @@ export default function DialogueBox(props) {
     }
   };
 
+  const getDeathCheck = (props) => {
+    switch (props.dialogue.story) {
+      case "BoulderDeath":
+        return deathCheck(props) && <GameOver />;
+        break;
+
+      default:
+        return false;
+    }
+  };
+
   //renders multiple choices if props.dialogue is an array
   if (props.dialogue.length) {
     return (
@@ -87,27 +103,34 @@ export default function DialogueBox(props) {
   } else {
     //renders single path
     return (
-      <div className="dialogue-box">
-        <p>
-          <TypeWriter
-            message={props.dialogue.story}
-            key={props.dialogue.story}
-          />
-          {/* {props.dialogue.story} */}
-        </p>
-        {endScene() ? (
-          <Link className="link-map" to={`/scene/${Number(props.scene) + 1}`}>
-            <button className="dialogue-buttons">Return to Map</button>
-          </Link>
-        ) : (
-          <button
-            className="dialogue-buttons"
-            onClick={() => props.current(props.next(props.dialogue))}
-          >
-            {props.dialogue.label}
-          </button>
+      <>
+        {getDeathCheck(props) || (
+          <div className="dialogue-box">
+            <p>
+              <TypeWriter
+                message={props.dialogue.story}
+                key={props.dialogue.story}
+              />
+              {/* {props.dialogue.story} */}
+            </p>
+            {endScene() ? (
+              <Link
+                className="link-map"
+                to={`/scene/${Number(props.scene) + 1}`}
+              >
+                <button className="dialogue-buttons">Return to Map</button>
+              </Link>
+            ) : (
+              <button
+                className="dialogue-buttons"
+                onClick={() => props.current(props.next(props.dialogue))}
+              >
+                {props.dialogue.label}
+              </button>
+            )}
+          </div>
         )}
-      </div>
+      </>
     );
   }
 }
