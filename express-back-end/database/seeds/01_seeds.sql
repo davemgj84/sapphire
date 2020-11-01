@@ -75,22 +75,22 @@ VALUES
   --adding buffer scene to scene 1
   (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.'),
   (5, 'RunningGame'),--41
-  (2, 'ShiftingSands');
---42
+  (2, 'ShiftingSands'),--42
+  (5, 'BoulderDeath');--43
 
 
 -- one badge per scene
 
-INSERT INTO badges 
+INSERT INTO badges
   (title, description, image)
 VALUES
-  ('Sapphire Piece', 'First Sapphire Shard', '/assets/badges/01_sapphire_shard.png'), 
-  ('Sapphire Piece', 'Second Sapphire Shard', '/assets/badges/01_sapphire_shard.png'), 
-  ('Sapphire Piece', 'Third Sapphire Shard', '/assets/badges/01_sapphire_shard.png'), 
-  ('BigMac', 'Andy''s Badge', '/assets/badges/burger.png'), 
-  ('Pusheen', 'Lolcatsz', '/assets/badges/pusheen.png'), 
-  ('Narwhal', 'Hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'), 
-  ('Boulder', 'Crushed by a Boulder!', '/assets/badges/rock.png'), 
+  ('Sapphire Piece', 'First Sapphire Shard', '/assets/badges/01_sapphire_shard.png'),
+  ('Sapphire Piece', 'Second Sapphire Shard', '/assets/badges/01_sapphire_shard.png'),
+  ('Sapphire Piece', 'Third Sapphire Shard', '/assets/badges/01_sapphire_shard.png'),
+  ('BigMac', 'Andy''s Badge', '/assets/badges/burger.png'),
+  ('Pusheen', 'Lolcatsz', '/assets/badges/pusheen.png'),
+  ('Narwhal', 'Hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'),
+  ('Boulder', 'Crushed by a Boulder!', '/assets/badges/rock.png'),
   ('Ruby Orangutan', 'A primate wants this back..', '/assets/badges/ruby.png');
 
 INSERT INTO choices
@@ -137,7 +137,8 @@ VALUES
   (29, 'Next', 30, null, null),
   (30, 'Next', 31, null, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
   (31, 'Play game', 41, null, 'You narrowly escape the boulder. Whew!'),
-  (32, 'Play again', null, 7, null),
+  --boulderdeath
+  (32, 'Game Over', 43, 7, null),
   (33, 'Next', 34, null, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
   (34, 'No gems', 35, null, 'Uh-oh! There are no sapphires to offer to the monkey.'),
   (34, 'Yes gems', 37, null, 'Yes! Behold, the sapphire shards!'),
@@ -147,7 +148,8 @@ VALUES
   (38, 'Next', 39, 8, 'All of humanity rejoices as the sapphire shards bring the monkey to life and the land is restored for all flora, fauna, Pokemon, and snails. You are a hero! The Sapphire Monkey reveals a Ruby Orangutan. Seems like there is more to this adventure...'),
   --added for boulder buffer
   (41, 'Escape!', 33, null , 'You narrowly escape the boulder. Whew!'),
-  (41, 'Dead!', 32, null,  'DEATH BY BOULDER -- YIKES! Better luck next time.')
+  (41, 'Dead!', 32, null, 'DEATH BY BOULDER -- YIKES! Better luck next time.'),
+  (43, 'Return to Title', null, null, null )
 
 -- adventures 
 
