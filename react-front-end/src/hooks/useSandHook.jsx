@@ -3,51 +3,60 @@ import { useEffect, useState } from "react";
 
 export default function useSandHook(props) {
   const [sand, setSand] = useState([]);
-  const [arrowButtons, setArrowButtons] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+  const [arrowButtons, setArrowButtons] = useState([]);
   const [sandTimer, setSandTimer] = useState({});
-  // const [ round, setRound ] = useState(0)
-
+  const [round, setRound] = useState(0);
+  const [attempts, setAttempts] = useState(0);
   const directions = ["ArrowUp", "ArrowLeft", "ArrowRight", "ArrowDown"];
 
+  //makes directions and refreshes on round change
   useEffect(() => {
     let output = [];
-    for (let i = 6; i > 0; i--) {
+    let reset = [];
+    for (let i = 6 + round; i > 0; i--) {
       output.push(directions[Math.floor(Math.random() * 4)]);
+      reset.push(false);
     }
     setSand(output);
-  }, []);
+    setArrowButtons(reset);
+    setSandTimer({});
+  }, [round, attempts]);
 
-  //reset arrows
+  // turns off timer if last arrow is pressed and checks on arrowButton change
   useEffect(() => {
-    if (arrowButtons[5] === true) {
+    if (arrowButtons[sand.length - 1] === true) {
       setSandTimer({ finished: true });
+      setRound((prev) => prev + 1);
     }
   }, [arrowButtons]);
 
   useEffect(() => {
     let timer;
-    if (sandTimer.finished === false) {
+    console.log("check for timer");
+    if (
+      Array.isArray(props.dialogue) &&
+      props.dialogue[0].story === "ShiftingSands"
+    ) {
       timer = setTimeout(() => {
-        props.current(props.next(props.dialogue[0]));
         setArrowButtons([false, false, false, false, false, false]);
         setSandTimer({});
-      }, 5000);
+        setAttempts((prev) => prev + 1);
+        setRound(0);
+        if (attempts >= 2) {
+          setSandTimer({ finished: true });
+          props.current(props.next(props.dialogue[1]));
+        } else {
+          props.current(props.next(props.dialogue[0]));
+        }
+      }, 4000);
     }
     return () => {
       clearTimeout(timer);
     };
-  }, [sandTimer.finished]);
+  }, [props.dialogue, sand]);
 
   const sandMini = (event) => {
     sandTimer.finished = false;
-
     for (let i = 0; i < sand.length; i++) {
       if (i === 0 && event.key === sand[0]) {
         setArrowButtons([
@@ -63,11 +72,6 @@ export default function useSandHook(props) {
         ]);
       }
     }
-
-    // if (event.key === sand[0]) {
-    //   console.log("YES");
-    //   setArrowButtons([...arrowButtons.slice(0, 0), true, ...arrowButtons]);
-    // }
   };
-  return { sand, sandMini, arrowButtons };
+  return { sand, sandMini, arrowButtons, round, setRound };
 }

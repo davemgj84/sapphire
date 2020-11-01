@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SandIcon from "./SandIcon";
-// import useMinigameHook from "../hooks/useMinigameHooks";
 import "../styles/sand.scss";
+import Timer from "../helpers/timer";
 
 export default function ShiftingSands(props) {
   useEffect(() => {
@@ -10,7 +10,6 @@ export default function ShiftingSands(props) {
       window.removeEventListener("keyup", props.minigame);
     }; //remove to prevent exponential fuckups
   }, [props.minigame]);
-  console.log("Sandporps: ", props);
 
   return (
     <div className="sand-game">

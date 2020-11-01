@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/DialogueBox.scss";
+import TypeWriter from "./TypeWriter";
+
 import RunningGame from "./RunningGame";
 import useMinigameHook from "../hooks/useMinigameHooks";
 import { boulderCheck } from "../helpers/boulderCheck";
-import TypeWriter from "./TypeWriter";
+
 import ShiftingSands from "./ShiftingSands";
 import { sandCheck } from "../helpers/sandCheck";
 import useSandHook from "../hooks/useSandHook";
 
 export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
-  const { sand, sandMini, arrowButtons } = useSandHook(props);
+  const { sand, sandMini, arrowButtons, round } = useSandHook(props);
+  const [attempts, setAttempts] = useState(0);
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
@@ -34,11 +37,16 @@ export default function DialogueBox(props) {
 
       case "ShiftingSands":
         return (
-          sandCheck(props, arrowButtons) && (
+          sandCheck(props, arrowButtons, round) && (
             <ShiftingSands
               minigame={sandMini}
               pattern={sand}
               pressed={arrowButtons}
+              dialogue={props.dialogue}
+              current={props.current}
+              next={props.next}
+              attempts={attempts}
+              setAttempts={setAttempts}
             />
           )
         );
