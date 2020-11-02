@@ -11,6 +11,9 @@ import ShiftingSands from "./ShiftingSands";
 import { sandCheck } from "../helpers/sandCheck";
 import useSandHook from "../hooks/useSandHook";
 
+import SnailGame from "./SnailGame";
+import useSnailGame from "../hooks/useSnailGame";
+
 import GameOver from "./GameOver";
 import { endCheck } from "../helpers/endCheck";
 import Victory from "./Victory";
@@ -19,6 +22,12 @@ export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
   const { sand, sandMini, arrowButtons, round } = useSandHook(props);
   const [attempts, setAttempts] = useState(0);
+  const { points, setPoints, snailGameOver } = useSnailGame(
+    10, //number changes starting number of points snailgame
+    props.current,
+    props.next,
+    props.dialogue
+  );
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
@@ -50,6 +59,17 @@ export default function DialogueBox(props) {
               next={props.next}
               attempts={attempts}
               setAttempts={setAttempts}
+            />
+          )
+        );
+
+      case "SnailGame":
+        return (
+          !snailGameOver && (
+            <SnailGame
+              setPoints={setPoints}
+              points={points}
+              snailGameOver={snailGameOver}
             />
           )
         );

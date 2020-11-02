@@ -78,7 +78,8 @@ VALUES
   (2, 'ShiftingSands'),--42
   (5, 'BoulderDeath'),--43
   (5, 'Victory'),--44
-  (5, 'No Gems');--45
+  (5, 'No Gems'),--45
+  (4, 'SnailGame'); --46
 
 
 -- one badge per scene
@@ -131,7 +132,7 @@ VALUES
   (22, 'Next', 23, null, null),
   (23, 'No', 24, null, null),
   (24, 'Return to Map', null, 6, null),
-  (23, 'Yes', 25, null, null),
+  (23, 'Yes', 46, null, null),
   (25, 'Next', 26, null, null),
   (26, 'Next', 27, null, null),
   (27, 'Return to Map', null, 3, null),
@@ -156,7 +157,10 @@ VALUES
   --victory scene
   (44, 'Return to Title', null, null, null),
   --no gems
-  (45, 'Return to Title', null, null, null);
+  (45, 'Return to Title', null, null, null),
+  --yes to snail game 
+  (46, 'Yes', 25, null, null),
+  (46, 'Yes', 25, null, null);
 
 -- adventures 
 
