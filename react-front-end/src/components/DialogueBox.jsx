@@ -86,8 +86,9 @@ export default function DialogueBox(props) {
       case "BoulderDeath":
         // return endCheck(props) && <GameOver />;
         return endCheck(props) && <Credits />;
+
       case "Victory":
-        return endCheck(props) && <Victory />;
+      // return endCheck(props) && <Credits />;
       case "No Gems":
         return endCheck(props) && <GameOver />;
 
