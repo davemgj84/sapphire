@@ -1,9 +1,10 @@
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "../styles/Credits.scss";
 
 const Credits = () => {
+  const [showButton, setShowButton] = useState("none");
   const intro = useRef();
   // const title = useRef();
   const content = useRef();
@@ -13,11 +14,19 @@ const Credits = () => {
 
     tl.to(intro.current, { opacity: 1, delay: 1, duration: 5 })
       .to(intro.current, { opacity: 0, duration: 1.5 })
+      // If we want to add a logo at the start of the credits?
       // .set(title.current, { opacity: 1, scale: 2.75 })
       // .to(title.current, { scale: 0.05, ease: "power2", duration: 8 })
       // .to(title.current, { opacity: 0, duration: 1.5 }, "-=1.5")
-      .to(content.current, { top: "-420%", duration: 42 });
+      .to(content.current, { top: "-666%", duration: 42 });
   }, []);
+
+  useEffect(() => {
+    document.getElementById("play-again-victory").style.display = showButton;
+    setTimeout(() => {
+      setShowButton("flex");
+    }, 35000);
+  }, [showButton]);
 
   return (
     <div id="credits">
@@ -73,6 +82,9 @@ const Credits = () => {
           </div>
         </section>
       </div>
+      <a href="/">
+        <button id="play-again-victory">Play Again</button>
+      </a>
     </div>
   );
 };

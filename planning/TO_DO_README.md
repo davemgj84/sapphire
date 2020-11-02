@@ -23,11 +23,10 @@
 - X Endings for if we have gems or do not have the gems (i think we just make this dialogue and get the MVD dialled in)
 - X Scene puzzles - mini games for each scene (4 scenes with games?) 3/3 - almost there
 - X FINE tune Bottom component -
+- X End Summary/Credits scrolling?
 
 - x - in progress - Actual map we will use for Demo -More tweaking - change it up :) SAND TILES
 - x - in progress - Controls component (buttons that show what to use to control the player movement and dialogue? Arrow keys and space bar)
-
-- End Summary/Credits scrolling?
 
 - Choose colour scheme - and fonts
 - find textures to overlay on nav and footer (transparencies - could be subtle but find it makes the colour look less blocky with texture)
@@ -47,6 +46,7 @@
 - Dynamic backgrounds?
 - Bring characters into scenes?
 - IMPROVE Background art for each scene
+- summary adventure?
 - Character dialogue comes from character you chose
 
 ## This is a lot to consider - and I am sure we will encounter more as we work - Let's make a plan and destroy this list! I believe in us!

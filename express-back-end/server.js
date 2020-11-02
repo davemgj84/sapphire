@@ -1,9 +1,6 @@
 require("dotenv").config();
 const {
-  getDialogueBySceneID,
-  getDialoguesById,
   getSceneById,
-  getChoiceLabelsByDialogueID,
   getDialoguesBySceneId,
   getBadgesbyUserID,
   getAllBadges,
@@ -19,16 +16,6 @@ const ENV = process.env.ENV || "sapphire";
 App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
 App.use(Express.static("public"));
-
-// // Sample GET route
-// App.get("/api/data", (req, res) => {
-//   getDialogueBySceneID(1)
-//     .then((response) => {
-//       console.log("Server: ", response);
-//       res.json(response.story);
-//     })
-//     .catch((err) => console.log(err));
-// });
 
 App.get("/api/scene/:id", async (req, res) => {
   const id = req.params.id;
@@ -51,24 +38,6 @@ App.get("/api/badges/:id", async (req, res) => {
   const response = { badges };
   res.json(response);
 });
-
-// App.get("/api/dialogues/:id", (req, res) => {
-//   const id = req.params.id;
-//   getDialoguesById(id)
-//     .then((response) => {
-//       res.json(response);
-//     })
-//     .catch((err) => console.log(err));
-// });
-
-// App.get("/api/choices/:id", (req, res) => {
-//   const id = req.params.id;
-//   getChoiceLabelsByDialogueID(id)
-//     .then((response) => {
-//       res.json(response);
-//     })
-//     .catch((err) => console.log(err));
-// });
 
 App.listen(PORT, () => {
   // eslint-disable-next-line no-console

@@ -6,7 +6,6 @@ CREATE TABLE adventures (
   user_id INTEGER REFERENCES users(id)
 );
 
-
 CREATE TABLE adventure_choices (
   id SERIAL PRIMARY KEY NOT NULL,
   adventure_id INTEGER REFERENCES adventures(id),

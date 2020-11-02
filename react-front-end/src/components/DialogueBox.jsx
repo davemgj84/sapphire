@@ -16,7 +16,6 @@ import useSnailGame from "../hooks/useSnailGame";
 
 import GameOver from "./GameOver";
 import { endCheck } from "../helpers/endCheck";
-import Victory from "./Victory";
 
 import Credits from "./Credits";
 
@@ -84,11 +83,10 @@ export default function DialogueBox(props) {
   const getEndCheck = (props) => {
     switch (props.dialogue.story) {
       case "BoulderDeath":
-        // return endCheck(props) && <GameOver />;
-        return endCheck(props) && <Credits />;
-
+        return endCheck(props) && <GameOver />;
+      // return endCheck(props) && <Credits />; // if you need to test credits or add to it  - change timing - easier than collecting gems
       case "Victory":
-      // return endCheck(props) && <Credits />;
+        return endCheck(props) && <Credits />;
       case "No Gems":
         return endCheck(props) && <GameOver />;
 
@@ -151,7 +149,6 @@ export default function DialogueBox(props) {
                 message={props.dialogue[0].story}
                 key={props.dialogue[0].story}
               />
-              {/* {props.dialogue[0].story} */}
             </p>
             <div>
               {props.dialogue.map((choice, i) => (
@@ -179,7 +176,6 @@ export default function DialogueBox(props) {
                 message={props.dialogue.story}
                 key={props.dialogue.story}
               />
-              {/* {props.dialogue.story} */}
             </p>
             {endScene() ? (
               <Link

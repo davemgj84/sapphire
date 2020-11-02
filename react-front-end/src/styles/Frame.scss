@@ -60,26 +60,26 @@
 
 .dropdown {
   position: absolute;
-  top: 115px;
+  top: 125px;
   width: 500px;
-  transform: translateX(-6%);
+  transform: translateX(20%);
   border: solid;
   border-image: url("/assets/borderbox2-lightgrey.jpg") 25 / 20px 20px 20px 20px
     stretch;
   background-color: #6d8383;
   padding: 1em;
-  z-index: 1;
+  z-index: 999;
   font-family: sans-serif;
   cursor: default;
   box-shadow: 8px 8px 20px 10px #1c2024;
 
-  // max-height: 600px; // if we wanted to have a scrollbar
+  // max-height: 500px; // if we wanted to have a scrollbar
   // overflow: scroll; // if we wanted to have a scrollbar
 }
 
 // ::-webkit-scrollbar {
-// // if we wanted to have a scrollbar
-// display: none;
+//   // if we wanted to have a scrollbar
+//   display: none;
 // }
 
 .badge-component {
