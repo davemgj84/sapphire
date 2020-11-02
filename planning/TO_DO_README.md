@@ -15,31 +15,38 @@
 - X Scene component
 - X Background art for each scene (5 total?)
 - X Dialogue buttons - "Next", "Continue", "End" - user interaction with the dialogue box?
+- X Background Music for each section in the game? Music for Start game, scenes, map, final ending?
+- X badge component
+- X nest badge progress components?
+- X show badges page? Not sure how we want this to look
+- X Game Over Page
+- X Endings for if we have gems or do not have the gems (i think we just make this dialogue and get the MVD dialled in)
 
+- x - in progress - Actual map we will use for Demo -More tweaking - change it up :) SAND TILES
 - x - in progress - Controls component (buttons that show what to use to control the player movement and dialogue? Arrow keys and space bar)
 - x - in progress - Scene puzzles - mini games for each scene (4 scenes with games?) 2/3 - almost there
--
-- Background Music for each section in the game? Music for Start game, scenes, map, final ending?
-- Make a story intro page?
-- Button Artwork for in map interactions ("Spacebar" to enter scene?) - CHANGE TO MAKE IT COHESIVE - CONSISTENT ('SPACE', 'START', 'A', 'S', game buttons)
-- badge component
-- FINE tune Bottom component - nest badge progress components?
-- show badges page? Not sure how we want this to look
-- Music/sound for getting a badge? player feedback
-- Popup for getting a badge?
+
 - End Summary/Credits scrolling?
 
+- Choose colour scheme - and fonts
+- find textures to overlay on nav and footer (transparencies - could be subtle but find it makes the colour look less blocky with texture)
+- Make a story intro page?
+- Button Artwork for in map interactions ("Spacebar" to enter scene?) - CHANGE TO MAKE IT COHESIVE - CONSISTENT ('SPACE', 'START', 'A', 'S', game buttons)
+- FINE tune Bottom component -
 - Writing the dialogue/story for the game - character interactions
 - Title page art (Quest for the Sapphire Monkey)
 - Artwork for sapphire monkey (pixel art) and saving the world? (CLOSINGS SCENE?)
-- Actual map we will use for Demo -More tweaking - change it up :) FINE TUNE
 - Styling and tweaking all of the above to make it look awesome - pro
 
 ## STRETCH
 
+- do we make the badges update dynamically in the dropdown, depending what you have gotten as a user? or just leave it as a list?
+- Popup for getting a badge?
+- Music/sound for getting a badge? player feedback
 - Login/Logout button logic
 - Dynamic backgrounds?
 - Bring characters into scenes?
 - IMPROVE Background art for each scene
+- Character dialogue comes from character you chose
 
 ## This is a lot to consider - and I am sure we will encounter more as we work - Let's make a plan and destroy this list! I believe in us!
