@@ -11,23 +11,20 @@ const Credits = () => {
   useEffect(() => {
     let tl = new gsap.timeline();
 
-    // tl.to(intro.current, { opacity: 1, delay: 1, duration: 1.5 })
-    //   .to(intro.current, { opacity: 0, duration: 1.5 })
-    // .set(title.current, { opacity: 1, scale: 2.75 })
-    // .to(title.current, { scale: 0.05, ease: "power2", duration: 8 })
-    // .to(title.current, { opacity: 0, duration: 1.5 }, "-=1.5")
-    tl.to(content.current, { top: "-400%", duration: 30 });
+    tl.to(intro.current, { opacity: 1, delay: 1, duration: 5 })
+      .to(intro.current, { opacity: 0, duration: 1.5 })
+      // .set(title.current, { opacity: 1, scale: 2.75 })
+      // .to(title.current, { scale: 0.05, ease: "power2", duration: 8 })
+      // .to(title.current, { opacity: 0, duration: 1.5 }, "-=1.5")
+      .to(content.current, { top: "-420%", duration: 42 });
   }, []);
 
   return (
     <div id="credits">
       <div className="container">
-        {/* <section className="intro" ref={intro}>
-          <p>
-            A long time ago, in a galaxy far,
-            <br /> far away....
-          </p>
-        </section> */}
+        <section className="intro" ref={intro}>
+          <p>YOU HAVE SAVED THE PLANET!!!</p>
+        </section>
         {/* <section className="title" ref={title}></section> */}
         <section className="crawl">
           <div className="content" ref={content}>
@@ -63,6 +60,9 @@ const Credits = () => {
             <p>Brian Chang</p>
             <p>Sarah Nicholson</p>
             <p>Max Kovalenkov</p>
+            <p>Emile Cantin</p>
+            <p>Justin Henderiks</p>
+            <p>Mikaal Naik</p>
             <p>Bradley Fung</p>
             <p>Glen Chua</p>
             <p>Diogo Pinto</p>
