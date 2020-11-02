@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Leaf from "./Leaf";
 
 function randomInteger(min, max) {
@@ -13,14 +13,14 @@ for (let i = 0; i < 80; i++) {
   data.push({ time, xPosition, leafIndex });
 }
 
-const SnailGame = () => {
-  const [points, setPoints] = useState(10);
+const SnailGame = (props) => {
+  const { points, setPoints, snailGameOver } = props;
 
   const SnailGameStyles = {
     position: "relative",
     width: "800px",
     height: "600px",
-    border: "2px solid black",
+    display: snailGameOver ? "none" : "block",
   };
 
   const innerDivStyle = {
@@ -48,16 +48,6 @@ const SnailGame = () => {
       ) : (
         <div style={innerDivStyle}>You Win!</div>
       )}
-
-      {/* <Leaf setPoints={setPoints} xPosition={10} time={3000} leafIndex={0} />
-      <Leaf setPoints={setPoints} xPosition={780} time={4000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={80} time={1000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={70} time={5000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={90} time={6000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={600} time={3000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={300} time={2000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={560} time={5000} leafIndex={4} />
-      <Leaf setPoints={setPoints} xPosition={710} time={9000} leafIndex={4} /> */}
     </div>
   );
 };

@@ -2,15 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 
 const Leaf = (props) => {
-  const {
-    xPosition,
-    time,
-    leafIndex,
-    // visible,
-    // setVisible,
-    // fall,
-    // setFall,
-  } = props;
+  const { xPosition, time, leafIndex } = props;
   const [visible, setVisible] = useState(true);
   const [fall, setFall] = useState(false);
 
@@ -28,7 +20,6 @@ const Leaf = (props) => {
     config: {
       friction: 400,
       mass: 1000,
-      // tension: 900,
       clamp: true,
     },
   });

@@ -12,6 +12,7 @@ import { sandCheck } from "../helpers/sandCheck";
 import useSandHook from "../hooks/useSandHook";
 
 import SnailGame from "./SnailGame";
+import useSnailGame from "../hooks/useSnailGame";
 
 import GameOver from "./GameOver";
 import { endCheck } from "../helpers/endCheck";
@@ -21,15 +22,19 @@ export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
   const { sand, sandMini, arrowButtons, round } = useSandHook(props);
   const [attempts, setAttempts] = useState(0);
-
-  // console.log("DialogBox: ", props);
+  const { points, setPoints, snailGameOver } = useSnailGame(
+    10, //number changes starting number of points snailgame
+    props.current,
+    props.next,
+    props.dialogue
+  );
 
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
       return true;
     }
   };
-  console.log("dialogue", props.dialogue);
+
   const getGame = (props) => {
     switch (props.dialogue[0].story) {
       case "RunningGame":
@@ -59,7 +64,15 @@ export default function DialogueBox(props) {
         );
 
       case "SnailGame":
-        return <SnailGame />;
+        return (
+          !snailGameOver && (
+            <SnailGame
+              setPoints={setPoints}
+              points={points}
+              snailGameOver={snailGameOver}
+            />
+          )
+        );
 
       default:
         return false;
