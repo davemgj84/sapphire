@@ -34,7 +34,7 @@ const Badge = (props) => {
   // };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className={`badge${id}`} style={{ position: "relative" }}>
       <img
         id={`badge${id}`}
         className="badge-img"

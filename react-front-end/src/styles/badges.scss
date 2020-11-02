@@ -6,8 +6,6 @@
 
 .badge-row {
   display: flex;
-  // align-items: center;
-  margin: 1em;
 }
 
 #badge-container {
@@ -15,9 +13,117 @@
   display: none;
   align-items: center;
   margin-top: 2.5rem;
-  // margin-left: 2.5rem;
+  display: none;
+  justify-content: space-evenly;
+  width: 800px;
+}
+
+.badge1 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: solid;
-  border-image: url("/assets/borderbox-dark.png") 25 / 10px 10px 10px 10px
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
     stretch;
-  background-color: #21262b;
+  background-color: #253f3f;
+  margin-right: 1rem;
+}
+
+.badge2 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge3 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge4 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge5 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge6 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge7 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.badge8 {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  border-image: url("/assets/borderbox-grey.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #253f3f;
+  margin-left: 1rem;
 }

@@ -12,33 +12,45 @@
   }
 }
 .background1 {
+  border: 10px solid white;
   background-image: url("/assets/placeholderArt.png");
   background-size: 100% 100%;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .background2 {
+  border: 10px solid white;
   background-image: url("/assets/desert.png");
   background-size: 100% 100%;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .background3 {
+  border: 10px solid white;
   background-image: url("/assets/grassland.jpg");
   background-size: 100% 100%;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .background4 {
+  border: 10px solid white;
   background-image: url("/assets/greattree.png");
   background-size: 100% 100%;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .background5 {
+  border: 10px solid white;
   background-image: url("/assets/temple.png");
   background-size: 100% 100%;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .background6 {
+  border: 10px solid white;
   background-image: url("/assets/gameover.png");
   background-size: 100% 100%;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .gameover {
@@ -58,6 +70,7 @@
     width: 300px;
     height: auto;
     margin-bottom: 1rem;
+    // border: 1px solid white;
   }
 
   a {

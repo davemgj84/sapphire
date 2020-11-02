@@ -6,8 +6,8 @@
     "top top top"
     "left game right"
     "bottom bottom bottom";
-  grid-template-rows: 1fr 608px 1fr;
-  grid-template-columns: 1fr 800px 1fr;
+  grid-template-rows: 1fr 628px 1fr;
+  grid-template-columns: 1fr 820px 1fr;
 }
 
 #game {
@@ -62,14 +62,23 @@
   width: 500px;
   transform: translateX(-6%);
   border: solid;
-  border-image: url("/assets/borderbox2.png") 25 / 25px 25px 25px 25px stretch;
-  background-color: #55afff;
+  border-image: url("/assets/borderbox2-lightgrey.jpg") 25 / 20px 20px 20px 20px
+    stretch;
+  background-color: #6d8383;
   padding: 1em;
   z-index: 1;
   font-family: sans-serif;
   cursor: default;
   box-shadow: 8px 8px 20px 10px #1c2024;
+
+  // max-height: 600px; // if we wanted to have a scrollbar
+  // overflow: scroll; // if we wanted to have a scrollbar
 }
+
+// ::-webkit-scrollbar {
+// // if we wanted to have a scrollbar
+// display: none;
+// }
 
 .badge-component {
   padding: 0.5em;
@@ -82,7 +91,7 @@
 }
 
 .badge-component:hover {
-  background-color: #4c9de5;
+  background-color: #a7b4b4;
 }
 
 .badge-item {
@@ -106,7 +115,7 @@
   font-weight: bold;
   margin-top: 1em;
   margin: 0;
-  color: #224666;
+  color: #202727;
 }
 
 .badge-description {
@@ -115,9 +124,11 @@
 
 canvas {
   border: 10px solid white;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 #start-new-game {
   border: 10px solid white;
+  box-shadow: 8px 8px 20px 10px #1c2024;
 }
 
 .navbar {
@@ -135,6 +146,7 @@ canvas {
   justify-content: center;
   background-color: #0e1717;
   background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
+  z-index: -1;
 }
 
 #left {
@@ -148,6 +160,7 @@ canvas {
   grid-area: right;
   background-color: #0e1717;
   background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
+  z-index: -1;
 }
 
 #logo {

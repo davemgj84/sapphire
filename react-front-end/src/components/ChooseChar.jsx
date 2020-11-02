@@ -66,7 +66,7 @@ const ChooseChar = (props) => {
       <div className="all-characters">{allCharacters}</div>
 
       <Link to={"/scene/1"} id="start-game">
-        <button className="start-btn"></button>
+        <button className="start-btn">Start Game</button>
       </Link>
     </div>
   );

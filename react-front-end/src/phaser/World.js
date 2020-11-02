@@ -30,7 +30,10 @@ class World extends Phaser.Scene {
 
     // enter button test link:
     // this.load.image("button", "/assets/enter.png");
-    this.load.image("button", "/assets/space.png");
+    this.load.spritesheet("button", "/assets/spacebar.png", {
+      frameWidth: 54,
+      frameHeight: 24,
+    });
   }
 
   create() {
@@ -164,7 +167,7 @@ class World extends Phaser.Scene {
     // Create Scene button - set button to invisible until event:
     const button = this.add.image(0, 0, "button");
     const container = this.add.container(400, 580, [button]);
-    container.setSize(button.width, button.height).setScale(0.3);
+    container.setSize(button.width, button.height).setScale(2);
     container.setInteractive();
     container.setVisible(false);
 
