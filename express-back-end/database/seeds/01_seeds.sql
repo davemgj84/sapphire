@@ -159,6 +159,7 @@ VALUES
   --no gems
   (45, 'Return to Title', null, null, null),
   --yes to snail game 
+  (46, 'Yes', 25, null, null),
   (46, 'Yes', 25, null, null);
 
 -- adventures 

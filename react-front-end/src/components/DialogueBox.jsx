@@ -11,6 +11,8 @@ import ShiftingSands from "./ShiftingSands";
 import { sandCheck } from "../helpers/sandCheck";
 import useSandHook from "../hooks/useSandHook";
 
+import SnailGame from "./SnailGame";
+
 import GameOver from "./GameOver";
 import { endCheck } from "../helpers/endCheck";
 import Victory from "./Victory";
@@ -55,6 +57,9 @@ export default function DialogueBox(props) {
             />
           )
         );
+
+      case "SnailGame":
+        return <SnailGame />;
 
       default:
         return false;
