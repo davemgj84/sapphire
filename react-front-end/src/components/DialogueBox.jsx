@@ -27,7 +27,7 @@ export default function DialogueBox(props) {
       return true;
     }
   };
-
+  console.log("dialogue", props.dialogue);
   const getGame = (props) => {
     switch (props.dialogue[0].story) {
       case "RunningGame":
