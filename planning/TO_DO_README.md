@@ -21,10 +21,11 @@
 - X show badges page? Not sure how we want this to look
 - X Game Over Page
 - X Endings for if we have gems or do not have the gems (i think we just make this dialogue and get the MVD dialled in)
+- X Scene puzzles - mini games for each scene (4 scenes with games?) 3/3 - almost there
+- X FINE tune Bottom component -
 
 - x - in progress - Actual map we will use for Demo -More tweaking - change it up :) SAND TILES
 - x - in progress - Controls component (buttons that show what to use to control the player movement and dialogue? Arrow keys and space bar)
-- x - in progress - Scene puzzles - mini games for each scene (4 scenes with games?) 2/3 - almost there
 
 - End Summary/Credits scrolling?
 
@@ -32,7 +33,6 @@
 - find textures to overlay on nav and footer (transparencies - could be subtle but find it makes the colour look less blocky with texture)
 - Make a story intro page?
 - Button Artwork for in map interactions ("Spacebar" to enter scene?) - CHANGE TO MAKE IT COHESIVE - CONSISTENT ('SPACE', 'START', 'A', 'S', game buttons)
-- FINE tune Bottom component -
 - Writing the dialogue/story for the game - character interactions
 - Title page art (Quest for the Sapphire Monkey)
 - Artwork for sapphire monkey (pixel art) and saving the world? (CLOSINGS SCENE?)
