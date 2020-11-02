@@ -37,11 +37,12 @@
   width: 42px;
   text-decoration: none;
   border-radius: 50%;
-  background-color: #5f666c;
+  background-color: #98a8a8;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 300ms;
+  box-shadow: 1px 1px 5px 2px #1c2024;
 }
 
 .icon-button:hover {
@@ -50,6 +51,7 @@
 
 .drop-down-title {
   padding-right: 1rem;
+  text-shadow: 5px 5px 8px #1c2024;
 }
 
 .fa-chevron-down {
@@ -170,6 +172,7 @@ canvas {
   text-decoration: none;
   font-family: "Press Start 2P", cursive;
   padding-left: 4rem;
+  text-shadow: 5px 5px 8px #1c2024;
 }
 
 #logo:hover {
@@ -191,6 +194,7 @@ canvas {
   color: #ffff;
   font-family: "Press Start 2P", cursive;
   font-size: 1.5em;
+  text-shadow: 5px 5px 8px #1c2024;
 }
 
 .log-button:hover {
