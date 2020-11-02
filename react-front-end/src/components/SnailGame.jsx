@@ -8,8 +8,8 @@ function randomInteger(min, max) {
 let data = [];
 for (let i = 0; i < 80; i++) {
   const time = randomInteger(0, 60000);
-  const xPosition = randomInteger(10, 770);
-  const leafIndex = randomInteger(0, 6);
+  const xPosition = randomInteger(10, 750);
+  const leafIndex = randomInteger(0, 4);
   data.push({ time, xPosition, leafIndex });
 }
 

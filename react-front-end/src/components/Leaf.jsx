@@ -6,7 +6,15 @@ const Leaf = (props) => {
   const [visible, setVisible] = useState(true);
   const [fall, setFall] = useState(false);
 
-  const leaves = ["🍁", "🍃", "🍂", "🌿", "🍀", "🌼", "🌱"];
+  // const leaves = ["🍁", "🍃", "🍂", "🌿", "🍀", "🌼", "🌱"];
+
+  const leaves = [
+    "/assets/leaves/herb1.png",
+    "/assets/leaves/herb2.png",
+    "/assets/leaves/herb3.png",
+    "/assets/leaves/herb4.png",
+    "/assets/leaves/herb5.png",
+  ];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,7 +33,9 @@ const Leaf = (props) => {
   });
 
   const leafStyles = {
-    fontSize: "2em",
+    // fontSize: "2em",
+    height: "40px",
+    width: "40px",
     display: visible ? "block" : "none",
     position: "absolute",
     left: `${xPosition}px`,
@@ -42,7 +52,7 @@ const Leaf = (props) => {
     <>
       {fall && (
         <animated.div style={leafStyles} onClick={handleClick}>
-          <span>{leaves[leafIndex]}</span>
+          <img src={leaves[leafIndex]} />
         </animated.div>
       )}
     </>
