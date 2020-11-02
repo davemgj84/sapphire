@@ -18,6 +18,8 @@ import GameOver from "./GameOver";
 import { endCheck } from "../helpers/endCheck";
 import Victory from "./Victory";
 
+import Credits from "./Credits";
+
 export default function DialogueBox(props) {
   const { running, runningMini } = useMinigameHook(props);
   const { sand, sandMini, arrowButtons, round } = useSandHook(props);
@@ -82,7 +84,8 @@ export default function DialogueBox(props) {
   const getEndCheck = (props) => {
     switch (props.dialogue.story) {
       case "BoulderDeath":
-        return endCheck(props) && <GameOver />;
+        // return endCheck(props) && <GameOver />;
+        return endCheck(props) && <Credits />;
       case "Victory":
         return endCheck(props) && <Victory />;
       case "No Gems":
