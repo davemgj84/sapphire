@@ -14,14 +14,6 @@
   grid-area: game;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  grid-area: top;
-  background-color: #384048;
-  align-items: center;
-}
-
 .navbar-nav {
   max-width: 100%;
   height: 100%;
@@ -121,25 +113,41 @@
   margin: 0;
 }
 
+canvas {
+  border: 10px solid white;
+}
+#start-new-game {
+  border: 10px solid white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  grid-area: top;
+  background-color: #0e1717;
+  background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
+  align-items: center;
+}
+
 #bottom {
   display: flex;
   grid-area: bottom;
-  background-color: #384048;
+  justify-content: center;
+  background-color: #0e1717;
+  background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
 }
 
 #left {
   display: flex;
   grid-area: left;
-  background-color: #708090;
-  background-image: url("/assets/stonetransp.png");
-  border-right: 5px solid #384048;
+  background-color: #0e1717;
+  background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
 }
 
 #right {
   grid-area: right;
-  background-color: #708090;
-  background-image: url("/assets/stonetransp.png");
-  border-left: 5px solid #384048;
+  background-color: #0e1717;
+  background-image: url("https://www.transparenttextures.com/patterns/ravenna.png");
 }
 
 #logo {

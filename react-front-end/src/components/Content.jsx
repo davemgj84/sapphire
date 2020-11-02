@@ -13,6 +13,7 @@ function Content(props) {
 
   useEffect(() => {
     window.advanceScene = () => setStage(DIALOG);
+    document.getElementById("badge-container").style.display = "flex";
   }, []);
 
   useEffect(() => {

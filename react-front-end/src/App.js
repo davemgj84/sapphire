@@ -23,7 +23,6 @@ const App = () => {
         <Frame />
       </BrowserRouter>
     </>
-    // currentColor={color} setColor={setColor}
   );
 };
 

@@ -32,7 +32,6 @@ const Frame = (props) => {
             <ChooseChar currentColor={color} setColor={setColor} />
           )}
         />
-        {/* passing setHasBadge into the content component here breaks the app*/}
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />

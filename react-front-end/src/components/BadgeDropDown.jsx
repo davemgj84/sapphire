@@ -13,9 +13,10 @@ const BadgeDropDown = () => {
     });
   }, []);
 
-  const badgeList = allbadges.map((badge) => {
+  const badgeList = allbadges.map((badge, index) => {
     return (
       <BadgeDropDownItem
+        key={index}
         image={badge.image}
         title={badge.title}
         description={badge.description}

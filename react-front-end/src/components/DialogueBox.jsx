@@ -20,8 +20,6 @@ export default function DialogueBox(props) {
   const { sand, sandMini, arrowButtons, round } = useSandHook(props);
   const [attempts, setAttempts] = useState(0);
 
-  // console.log("DialogBox: ", props);
-
   const endScene = () => {
     if (props.dialogue.next_dialogue_id === null) {
       return true;

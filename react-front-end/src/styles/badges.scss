@@ -9,3 +9,15 @@
   // align-items: center;
   margin: 1em;
 }
+
+#badge-container {
+  height: 50%;
+  display: none;
+  align-items: center;
+  margin-top: 2.5rem;
+  // margin-left: 2.5rem;
+  border: solid;
+  border-image: url("/assets/borderbox-dark.png") 25 / 10px 10px 10px 10px
+    stretch;
+  background-color: #21262b;
+}

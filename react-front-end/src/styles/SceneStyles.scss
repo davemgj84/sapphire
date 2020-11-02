@@ -48,14 +48,48 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  iframe {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+.play-again {
+  font-family: "VT323", monospace;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #c3c5c8;
+  margin-bottom: 2rem;
+}
+
+.play-again:hover {
+  background-color: #ebebec;
 }
 
 .victory {
   width: 100%;
   height: 100%;
   background-image: url("/assets/victory.png");
-  // background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  a {
+    text-decoration: none;
+  }
 }
