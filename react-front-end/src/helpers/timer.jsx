@@ -20,7 +20,7 @@ export default function Timer(props) {
     },
   };
 
-  const TIME_LIMIT = 5;
+  const TIME_LIMIT = props.starttime;
   let timePassed = 1;
   let timeLeft = TIME_LIMIT;
   let timerInterval = null;
@@ -40,7 +40,7 @@ export default function Timer(props) {
         setCircleDasharray();
         setRemainingPathColor(timeLeft);
 
-        if (timeLeft === -1) {
+        if (timeLeft === 0) {
           onTimesUp();
         }
       }, 1000);
