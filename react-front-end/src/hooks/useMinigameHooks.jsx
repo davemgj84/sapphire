@@ -15,7 +15,10 @@ export default function useMinigameHook(props) {
 
   useEffect(() => {
     let timer;
-    if (running.finished === false) {
+    if (
+      Array.isArray(props.dialogue) &&
+      props.dialogue[0].story === "RunningGame"
+    ) {
       timer = setTimeout(() => {
         props.current(props.next(props.dialogue[1]));
       }, 5000);
@@ -23,7 +26,7 @@ export default function useMinigameHook(props) {
     return () => {
       clearTimeout(timer);
     };
-  }, [running.finished]);
+  }, [props.dialogue]);
 
   const runningMini = (event) => {
     running.finished = false;

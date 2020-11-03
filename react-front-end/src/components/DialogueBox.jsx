@@ -44,6 +44,8 @@ export default function DialogueBox(props) {
             <RunningGame
               minigame={runningMini}
               percentage={running.runningPercent}
+              leg={running.lastLeg}
+              dialogue={props.dialogue}
             />
           )
         );

@@ -22,10 +22,12 @@ export default function ShiftingSands(props) {
 
   return (
     <div className="sand-game">
-      {timerCheck() && <Timer />}
-      {props.pattern.map((a, b) => (
-        <SandIcon direction={a} key={b} id={b} pressed={props.pressed[b]} />
-      ))}
+      {timerCheck() && <Timer starttime={5} />}
+      <div className="sand-icons">
+        {props.pattern.map((a, b) => (
+          <SandIcon direction={a} key={b} id={b} pressed={props.pressed[b]} />
+        ))}
+      </div>
     </div>
   );
 }
