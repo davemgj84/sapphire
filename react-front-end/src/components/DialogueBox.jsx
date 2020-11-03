@@ -83,8 +83,8 @@ export default function DialogueBox(props) {
   const getEndCheck = (props) => {
     switch (props.dialogue.story) {
       case "BoulderDeath":
-        // return endCheck(props) && <GameOver />;
-        return endCheck(props) && <Credits />; // if you need to test credits or add to it  - change timing - easier than collecting gems
+        return endCheck(props) && <GameOver />;
+      // return endCheck(props) && <Credits />; // if you need to test credits or add to it  - change timing - easier than collecting gems
       case "Victory":
         return endCheck(props) && <Credits />;
       case "No Gems":
