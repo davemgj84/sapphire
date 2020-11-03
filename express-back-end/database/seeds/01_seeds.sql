@@ -20,19 +20,19 @@ INSERT INTO dialogues
 VALUES
   (1, 'scene 1, dialogue 1 You step outside to buy Doritos from the convenience store in the desolate town of  Zoomieville. Things have become increasingly bleak as scientists have predicted the end of the world is near, so you''ve taken to tending to an ant farm in your basement to pass the time and keep your mind busy.'),
   (1, 'scene 1, dialogue 2 OLD MAN: "I am old and I am a man and therefore, I am wise. Listen to me, kid!" You are startled by his blunt approach, but you have no plans and decide it might be interesting to hear him out.'),
-  (1, 'scene 1, dialogue 3 OLD MAN: "Our Earth is burning but it wasn''t always like this. Long before you were born, our land was lush and brimming with life. Last nighy, I had a vision that hidden deeply in a forest rests a temple in honour of the Sapphire Monkey. Vandals stole the sapphires and the great Sapphire Monkey lost its power, resulting in a curse over the land."' ),
-  (1, 'scene 1, dialogue 4  OLD MAN: "You must go on a quest to find three sapphire shards to return to the monkey, or all of humanity will be doomed." Vapidly, you blink at the geezer but his gaze never falters as it peirces your soul. You want to doubt this man''s story. Afterall, you don''t believe in mystical visions, aliens or the Lochness Monster. Then again, the world is ending and...you want to believe. You are suddenly filled with the impulse for nonsensical adventure.'),
+  (1, 'scene 1, dialogue 3 OLD MAN: "Our Earth is burning but it wasn''t always like this. Long before you were born, our land was lush and brimming with life. Last night, I had a vision that -- hidden deeply in a forest -- rests a temple in honour of the Sapphire Monkey. Vandals stole the sapphires, causing the great Sapphire Monkey to lose its power, resulting in a curse over our land."' ),
+  (1, 'scene 1, dialogue 4  OLD MAN: "You must go on a quest to find three sapphire shards and return them to the monkey, or all of humanity will be doomed." Vapidly, you blink at the geezer but his gaze never falters. You want to doubt this man''s story. Afterall, you don''t believe in mystical visions, aliens or, the Lochness Monster. Then again, the world is ending and maybe, deep down, you DO want to believe. You are filled with the impulse for nonsensical adventure.'),
   (1, 'scene 1, dialogue 5 OLD MAN: "Ya hear me, or what!?"'),
 
   -- Scene 2
 
-  (2, 'scene 2, dialogue 6 The old man has directed you to find his friend, the alchemist at a small camp on the edge of the desert. Apparently part of the sapphire is lost in the desert and his mystical spookum powers can help guide you safely to it. You trudge slowly forward with the realization that, though stylish, Crocs are not ideal foot protection in the desert and your thoughts drift to how you should have bought some Gatorade with those Doritos.'),
-  (2, 'scene 2, dialogue 7 On the brink of giving up, you are shocked to discover a person dressed in robes covered in strange symbols. It occurs to you that you don''t actually know what an alchemist is, but your intuition tells you this free spirit must, indeed, be the alchemist.'),
-  (2, 'scene 2, dialogue 8 ALCHEMIST: "There''s a small shard of sapphire lost in the dessert sands. Each morning, the sands shift, making it increasinly diffucult to locate. I''ve become too slow to locate it on my own. TAKE MY MAP! Follow the arrows to discover what you desire." [on the next page, type the arrows in order before time runs out!]'),
+  (2, 'scene 2, dialogue 6 The old man has directed you to find his friend, the alchemist, at a small camp on the edge of the desert. Apparently part of the sapphire is lost in the desert and his mystical spookum powers can help guide you safely to it. You trudge slowly forward with the realization that, though stylish, Crocs are not ideal foot protection in the desert and your thoughts drift to how you should have bought some Gatorade with those Doritos.'),
+  (2, 'scene 2, dialogue 7 On the brink of giving up, you are shocked to discover a person dressed in robes covered in strange symbols. It occurs to you that you don''t actually know what an alchemist is, but your intuition tells you this free spirit must be the one.'),
+  (2, 'scene 2, dialogue 8 ALCHEMIST: "There''s a small shard of sapphire lost in the dessert sands. Each morning, the sands shift, making it increasinly diffucult to locate. I''ve become too slow to find it on my own. TAKE MY MAP! Follow the arrows to discover what you desire." [type the arrows that appear on the screen before time runs out!]'),
   --tween sceene for game 42
   (2, 'scene 2, dialogue 9 DAG NABBIT! You''ve done messed up. Those arrows were just as cryptic as you thought and you''ve got sand in your trousers, which is not ideal. You find yourself back at the Alchemist''s camp where he sighs disapprovingly. He''ll help you again tomorrow, but you''ll have to learn a new path through the desert.'),
   (2, 'scene 2, dialogue 10 You return from your day of aimlessly rolling around in the sand, doubt and defeat overcome you because you''ve completely failed in your task. As you search for the alchemist, you notice he''s gone. All he''s left behind is a McDonald''s bag. From the receipt, you discover that his name is actually Andy. Weird. You eat a cold fry left solemnly at the bottom of the bag and decide it''s high time to move on. You shrug and wander off towards the horizon.'),
-  (2, 'scene 2, dialogue 11 GLORY BE! A small oasis is revealed in the heart of the shifting sands, and on a pedestal in the water, glimmers a shining sapphire shard. Your cycnical mind doesn''t even contemplate this obvious witchcraft. Your beliefs are shifting. All the matters now is the Sapphire Monkey! Triumphantly, you return to the alchemist who instructs you to seek out a friend of his that makes his living hunting in the plains. He suspects that woman might have pertinent info on one of the sapphire shards.'),
+  (2, 'scene 2, dialogue 11 GLORY BE! A small oasis is revealed in the heart of the shifting sands -- and -- on a pedestal in the water, glimmers a shining sapphire shard. Your cycnical mind doesn''t even contemplate this obvious wizardry. All the matters now is the Sapphire Monkey! Triumphantly, you return to the alchemist who instructs you to seek out a friend of his that makes their living hunting in the plains. He suspects they might have pertinent info on one of the sapphire shards.'),
 
   -- Scene3
   (3, 'scene 3, dialogue 12 - You walk for hours through the great plains, the prairie dogs and mosquitos your only companions. Seeing wildlife for the first time in many years gives you a sense of hope. But that hope is overshaddowed by the doom of sweeping vacancy. You wonder if you''ve gone the right direction when you stumble upon a small camp. Nobody is home and you are feeling rife with curiosity. You pick through the hunter''s belongings for clues.'),
@@ -48,7 +48,7 @@ VALUES
 
   (4, 'scene 4, dialogue 20 - You slink along to the enchanted forest in search of the wise hermit, but your thoughts keep drifing to things like Tom Holland as Spiderman and Carly Rae Jepsen''s latest album drop. "BIG TREE", you tell yourself, trying to maintain focus, "GIANT!"..."UGE"..."THE BIGGEST" Your thoughts are clearly getting away from you and just as soon as you think you''ve lost it...'),
   (4, 'scene 4, dialogue 21 - ...You run right smack-dab into the tallest tree you''ve ever seen. To be fair, Zoomieville doesn''t have trees, but you''ve seen them in movies so you know, this is a big''un. Looking around, you dont see a soul, when suddenly you hear a faint squeaking sound and look down...'),
-  (4, 'scene 4, dialogue 22 - Near your feet, there is a MEDIUM SIZED snail. Not that small, but not that big... It is it can be firmly categorized as medium-sized. "SNAILS SQUEAK!?" you gasp aloud. Life is weird.'),
+  (4, 'scene 4, dialogue 22 - Near your feet, there is a MEDIUM SIZED snail. Not that small, but not that big... It is it can be firmly categorized as medium-sized. "SNAILS SQUEAK!?" you gasp aloud. Life is stranger than fiction.'),
   (4, 'scene 4, dialogue 23 - SNAIL: "HELP ME! I have been transformed into a snail by a wicked imp! The only way the spell can be reveresed is by collecting ten special herbs, but I am too slow and by the time I gather one, the others have blown away! Will you help!? Pretty-please-with-sugar-on-top!?" [click the herbs on the page to help the snail]'),
   (4, 'scene 4, dialogue 24 - SNAIL: "REALLY?! You won''t help a snail out? Curse you!  I hope you find your dad, Buddy!"  She "STORMS" off.... or, rather, slowly slides away... You wouldn''t trust that snail for a million bitcoins'),
   (4, 'scene 4, dialogue 25 - SNAIL: "SHORTY, YOU''RE MY ANGEL. YOU''RE MY DARLING ANGEL. YOU''RE MY FRIEND WHEN I''M IN NEED. THANK YOU!" In this moment, you realize she clearly been a snail since the turn of the century and decide it best not to fill her in on the state of current affairs.'),
@@ -73,7 +73,7 @@ VALUES
   (5, 'scene 5, dialogue 39 YOU ARE A HERO OF OUR TIME! The sapphire monkey crowns you with rubies and explains that  these are the long-lost Orangutan Rubies! Your eyes lock and you share the knowing...there is more to this adventure... A quest for the RUBY ORANGUTAN!'),
 
   --adding buffer scene to scene 1
-  (1, 'scene 1, dialogue 40 You follow the old man''s instructions and head off to find the Alchemist.'),
+  (1, 'scene 1, dialogue 40 You follow the old man''s instructions and set off to find the alchemist.'),
   (5, 'RunningGame'),--41
   (2, 'ShiftingSands'),--42
   (5, 'BoulderDeath'),--43
@@ -94,7 +94,7 @@ VALUES
   ('Pusheen', 'Lolcatsz', '/assets/badges/pusheen.png'),
   ('Narwhal', 'Hope u find ur dad, Buddy!', '/assets/badges/narwhal.png'),
   ('Boulder', 'Crushed by a Boulder!', '/assets/badges/rock.png'),
-  ('Ruby Orangutan', 'A primate wants this back..', '/assets/badges/ruby.png');
+  ('Ruby Orangutan', 'A primate wants this back...', '/assets/badges/ruby.png');
 
 INSERT INTO choices
   (dialogue_id, label, next_dialogue_id, badge_id, summary)
