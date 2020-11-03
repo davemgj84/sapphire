@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/running.scss";
 
 export default function Timer(props) {
-  let refresh = props.pattern;
   const FULL_DASH_ARRAY = 283;
   const WARNING_THRESHOLD = 2;
   const ALERT_THRESHOLD = 1;
@@ -21,8 +20,8 @@ export default function Timer(props) {
     },
   };
 
-  const TIME_LIMIT = 4;
-  let timePassed = 0;
+  const TIME_LIMIT = 5;
+  let timePassed = 1;
   let timeLeft = TIME_LIMIT;
   let timerInterval = null;
   let remainingPathColor = COLOR_CODES.info.color;
@@ -41,21 +40,10 @@ export default function Timer(props) {
         setCircleDasharray();
         setRemainingPathColor(timeLeft);
 
-        if (timeLeft === 0) {
+        if (timeLeft === -1) {
           onTimesUp();
         }
       }, 1000);
-    }
-
-    function formatTime(time) {
-      const minutes = Math.floor(time / 60);
-      let seconds = time % 60;
-
-      if (seconds < 10) {
-        seconds = `0${seconds}`;
-      }
-
-      return `${minutes}:${seconds}`;
     }
 
     function setRemainingPathColor(timeLeft) {
@@ -95,23 +83,23 @@ export default function Timer(props) {
     };
   }, []);
   return (
-    <div class="base-timer">
+    <div className="base-timer">
       <svg
-        class="base-timer__svg"
+        className="base-timer__svg"
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g class="base-timer__circle">
+        <g className="base-timer__circle">
           <circle
-            class="base-timer__path-elapsed"
+            className="base-timer__path-elapsed"
             cx="50"
             cy="50"
             r="45"
           ></circle>
           <path
             id="base-timer-path-remaining"
-            stroke-dasharray="283"
-            class={`base-timer__path-remaining ${remainingPathColor}`}
+            strokeDasharray="283"
+            className={`base-timer__path-remaining ${remainingPathColor}`}
             d="
               M 50, 50
               m -45, 0
@@ -121,7 +109,7 @@ export default function Timer(props) {
           ></path>
         </g>
       </svg>
-      <span id="base-timer-label" class="base-timer__label"></span>
+      <span id="base-timer-label" className="base-timer__label"></span>
     </div>
   );
 }

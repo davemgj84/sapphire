@@ -4,6 +4,7 @@ import "../styles/sand.scss";
 import Timer from "../helpers/timer";
 
 export default function ShiftingSands(props) {
+  console.log("SS: ", props);
   useEffect(() => {
     window.addEventListener("keyup", props.minigame); //add listener with function
     return () => {
@@ -11,8 +12,17 @@ export default function ShiftingSands(props) {
     }; //remove to prevent exponential fuckups
   }, [props.minigame]);
 
+  const timerCheck = () => {
+    if (props.pressed[props.pressed.length - 1] === false) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <div className="sand-game">
+      {timerCheck() && <Timer />}
       {props.pattern.map((a, b) => (
         <SandIcon direction={a} key={b} id={b} pressed={props.pressed[b]} />
       ))}
