@@ -21,9 +21,10 @@
     display: flex;
     flex-direction: column;
     font-family: "VT323", monospace;
-    background-color: #55afff;
+    background-color: #e8ead3;
     border: solid;
-    border-image: url("/assets/borderbox.png") 25 / 10px 10px 10px 10px stretch;
+    border-image: url("/assets/borderbox-earth.png") 25 / 10px 10px 10px 10px
+      stretch;
     font-size: 1.5rem;
     width: 60%;
     color: #384048;

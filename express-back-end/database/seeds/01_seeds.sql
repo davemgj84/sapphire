@@ -195,7 +195,7 @@ VALUES
   (28, 'Next', 29, null, 'You made it to the temple with no time to spare! You search diligently for the sapphire monkey'),
   (29, 'Next', 30, null, null),
   (30, 'Next', 31, null, 'A giant boulder seemingly emerges from the nethers and chases you down.'),
-  (31, 'Play game', 41, null, 'You narrowly escape the boulder. Whew!'),
+  (31, 'RUN!!!', 41, null, 'You narrowly escape the boulder. Whew!'),
   --boulderdeath
   (32, 'Game Over', 43, 7, null),
   (33, 'Next', 34, null, 'Are the sapphrie shards nestled in your fanny pack, safe and sound?'),
