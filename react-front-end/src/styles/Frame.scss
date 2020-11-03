@@ -69,7 +69,7 @@
   background-color: #6d8383;
   padding: 1em;
   z-index: 999;
-  font-family: sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   cursor: default;
   box-shadow: 8px 8px 20px 10px #1c2024;
 
@@ -89,7 +89,7 @@
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 8px;
-  font-family: "Itim", cursive;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .badge-component:hover {
@@ -100,6 +100,7 @@
   position: absolute;
   padding-left: 0.5em;
   left: 0;
+  width: 25%;
 }
 
 .badge-icon {
@@ -108,20 +109,27 @@
 }
 
 .name-and-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-left: 4.5rem;
 }
 
 .badge-name {
   font-weight: bold;
   margin-top: 1em;
+  padding-bottom: 0.5em;
+
   margin: 0;
   color: #202727;
 }
 
 .badge-description {
+  font-size: 0.8em;
   margin: 0;
+}
+
+.align-left-please {
+  display: flex;
+  align-items: flex-start;
+  width: 75%;
 }
 
 canvas {
