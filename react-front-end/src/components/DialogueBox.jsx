@@ -97,7 +97,10 @@ export default function DialogueBox(props) {
     }
   };
 
-  if (props.dialogue.length && props.dialogue[0].label === "No gems") {
+  if (
+    props.dialogue.length &&
+    props.dialogue[0].label === "I don't have all the gems"
+  ) {
     const gemCheck = () => {
       if (
         (document.getElementById("badge1").style.opacity &&
