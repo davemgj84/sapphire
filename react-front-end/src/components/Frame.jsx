@@ -11,8 +11,9 @@ import BadgeDropDown from "./BadgeDropDown";
 import NavDropIcon from "./NavDropIcon";
 import useColor from "../hooks/useColor";
 import useBadge from "../hooks/useBadge";
+import OpeningScene from "./OpeningScene";
 
-const Frame = (props) => {
+const Frame = () => {
   const { color, setColor } = useColor("pink");
   const { hasBadge, badgeItemsArray } = useBadge();
 
@@ -32,6 +33,7 @@ const Frame = (props) => {
             <ChooseChar currentColor={color} setColor={setColor} />
           )}
         />
+        <Route path="/opening" component={OpeningScene} />
         <Route path="/scene/:id" component={Content} />
       </Switch>
       <Right />

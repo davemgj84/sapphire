@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "../styles/SceneStyles.scss";
+import MusicContext from "./MusicContext";
+import Sound from "react-sound";
 
 export default function GameOver() {
+  const { setMusicStatus } = useContext(MusicContext);
+
+  useEffect(() => {
+    setMusicStatus(Sound.status.STOPPED);
+  }, []);
+
   return (
     <div className="gameover">
       <iframe

@@ -1,23 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sound from "react-sound";
 import song from "../Sound/Abstraction - Three Red Hearts - Sanctuary.wav";
+import MusicContext from "./MusicContext";
 
-class MapMusic extends React.Component {
-  render() {
-    return (
-      <Sound
-        url={song}
-        playStatus={Sound.status.PLAYING}
-        // playFromPosition={300 /* in milliseconds */}
-        volume={3}
-        autoLoad={true}
-        onLoading={this.handleSongLoading}
-        onPlaying={this.handleSongPlaying}
-        onFinishedPlaying={this.handleSongFinishedPlaying}
-        loop={true}
-      />
-    );
-  }
-}
+const MapMusic = () => {
+  const { musicStatus } = useContext(MusicContext);
+  return (
+    <Sound
+      url={song}
+      playStatus={musicStatus}
+      volume={5}
+      autoLoad={true}
+      loop={true}
+    />
+  );
+};
 
 export default MapMusic;

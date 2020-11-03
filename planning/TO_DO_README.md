@@ -24,18 +24,16 @@
 - X Scene puzzles - mini games for each scene (4 scenes with games?) 3/3 - almost there
 - X FINE tune Bottom component -
 - X End Summary/Credits scrolling?
+- X Actual map we will use for Demo -More tweaking - change it up :) SAND TILES
+- X Make a story intro page?
 
-- x - in progress - Actual map we will use for Demo -More tweaking - change it up :) SAND TILES
 - x - in progress - Controls component (buttons that show what to use to control the player movement and dialogue? Arrow keys and space bar)
+- x - in progress - Choose colour scheme - and fonts
 
-- Choose colour scheme - and fonts
-- find textures to overlay on nav and footer (transparencies - could be subtle but find it makes the colour look less blocky with texture)
-- Make a story intro page?
 - Button Artwork for in map interactions ("Spacebar" to enter scene?) - CHANGE TO MAKE IT COHESIVE - CONSISTENT ('SPACE', 'START', 'A', 'S', game buttons)
 - Writing the dialogue/story for the game - character interactions
 - Title page art (Quest for the Sapphire Monkey)
-- Artwork for sapphire monkey (pixel art) and saving the world? (CLOSINGS SCENE?)
-- Styling and tweaking all of the above to make it look awesome - pro
+- Artwork for sapphire monkey (pixel art)?
 
 ## STRETCH
 

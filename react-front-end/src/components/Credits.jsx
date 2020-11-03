@@ -18,21 +18,21 @@ const Credits = () => {
       // .set(title.current, { opacity: 1, scale: 2.75 })
       // .to(title.current, { scale: 0.05, ease: "power2", duration: 8 })
       // .to(title.current, { opacity: 0, duration: 1.5 }, "-=1.5")
-      .to(content.current, { top: "-666%", duration: 42 });
+      .to(content.current, { top: "-666%", duration: 60 });
   }, []);
 
   useEffect(() => {
     document.getElementById("play-again-victory").style.display = showButton;
     setTimeout(() => {
       setShowButton("flex");
-    }, 35000);
+    }, 45000);
   }, [showButton]);
 
   return (
     <div id="credits">
       <div className="container">
         <section className="intro" ref={intro}>
-          <p>YOU HAVE SAVED THE PLANET!!!</p>
+          <p>YOU SAVED THE PLANET!</p>
         </section>
         {/* <section className="title" ref={title}></section> */}
         <section className="crawl">
@@ -55,6 +55,9 @@ const Credits = () => {
             <p>React Sound</p>
             <p>Node Sass</p>
             <p>GreenSock Animation Platform</p>
+            <h1 className="subtitle">Art and Music</h1>
+            <p>Tilesheet Art - Eder Muniz</p>
+            <p>Music - Three Red Hearts by Abstraction</p>
             <h1 className="subtitle">Special Thanks To</h1>
             <p>Andy Lindsay</p>
             <p>Travis Borsa</p>
@@ -72,13 +75,15 @@ const Credits = () => {
             <p>Emile Cantin</p>
             <p>Justin Henderiks</p>
             <p>Mikaal Naik</p>
+            <p>Andrew Hsieh</p>
             <p>Bradley Fung</p>
             <p>Glen Chua</p>
             <p>Diogo Pinto</p>
             <p>Caroline Lauder</p>
+            <p>Ryan Dee</p>
             <p>Mom and Dad</p>
             <p>Our Pets</p>
-            <p>.. and Kim, Dano and James are cool too... I guess</p>
+            <p>Kim, Dano and James</p>
           </div>
         </section>
       </div>
