@@ -23,6 +23,13 @@ const SnailGame = (props) => {
     display: snailGameOver ? "none" : "block",
   };
 
+  const pointStyles = {
+    position: "absolute",
+    top: "10px",
+    left: "20px",
+    color: "darkolivegreen",
+  };
+
   const innerDivStyle = {
     width: "100%",
     height: "100%",
@@ -42,7 +49,7 @@ const SnailGame = (props) => {
 
   return (
     <div style={SnailGameStyles}>
-      <h1>{points}</h1>
+      <h1 style={pointStyles}>{points}</h1>
       {points > 0 ? (
         <div style={innerDivStyle}> {leaves}</div>
       ) : (
