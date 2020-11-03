@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 
 const Sparkle = (props) => {
   const { sparkle } = props;
+
+  const [removed, setRemoved] = useState(false);
+
+  //use timeout and setRemoved flag to remove the sparkle altogether, otherwise, it will re-render with each new badge
+  useEffect(() => {
+    if (sparkle) {
+      const timer = setTimeout(() => {
+        setRemoved(true);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [sparkle]);
 
   const { opacity } = useSpring({
     to: async (next, cancel) => {
@@ -16,13 +28,17 @@ const Sparkle = (props) => {
     width: "16px",
     height: "16px",
     position: "absolute",
-    top: "5px",
-    left: "5px",
+    top: "7px",
+    left: "7px",
     opacity: sparkle ? opacity : 0,
   };
 
   return (
-    <animated.img src="/assets/badges/sparkle.png" style={sparkleStyles} />
+    <>
+      {!removed && (
+        <animated.img src="/assets/badges/sparkle.png" style={sparkleStyles} />
+      )}
+    </>
   );
 };
 
