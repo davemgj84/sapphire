@@ -28,14 +28,14 @@
 - X Make a story intro page?
 - X Writing the dialogue/story for the game - character interactions
 - X Button Artwork for in map interactions ("Spacebar" to enter scene?) - CHANGE TO MAKE IT COHESIVE - CONSISTENT ('SPACE', 'START', 'A', 'S', game buttons)
+- X Choose colour scheme - and fonts
 
 - x - in progress - Controls component (buttons that show what to use to control the player movement and dialogue? Arrow keys and space bar)
-- x - in progress - Choose colour scheme - and fonts
-
-- Title page art (Quest for the Sapphire Monkey)
+- x - in progress - Title page art (Quest for the Sapphire Monkey)
 
 ## STRETCH
 
+- may update background transparency - and color
 - Artwork for sapphire monkey (pixel art)?
 - do we make the badges update dynamically in the dropdown, depending what you have gotten as a user? or just leave it as a list?
 - Popup for getting a badge?
