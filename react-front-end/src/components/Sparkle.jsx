@@ -11,7 +11,7 @@ const Sparkle = (props) => {
     if (sparkle) {
       const timer = setTimeout(() => {
         setRemoved(true);
-      }, 3000);
+      }, 4000);
       return () => clearTimeout(timer);
     }
   }, [sparkle]);
@@ -25,11 +25,11 @@ const Sparkle = (props) => {
   });
 
   const sparkleStyles = {
-    width: "16px",
-    height: "16px",
+    width: "36px",
+    height: "36px",
     position: "absolute",
-    top: "7px",
-    left: "7px",
+    top: "0px",
+    left: "0px",
     opacity: sparkle ? opacity : 0,
   };
 
