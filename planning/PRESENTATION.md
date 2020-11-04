@@ -93,3 +93,16 @@
 - Adventure Summary - we were implementing this feature - but still needs work.
 - Character dialogue (dynamic dialogue) comes from character you choose.
 - THERE ARE SO MANY THINGS!
+
+# OUTLINE
+
+- intro: Kegan, Jen, David
+- inspiration: Keagan
+- tech stack: Jen
+- Phaser/React + POC: Jen
+- DB challenges/user routes: Keagan
+- Mini games feature: David
+- Badge feature: Jen
+- Teamwork/flow: Keagan
+- Async problem solving: Jen
+- Future plans + development goals: David
