@@ -181,7 +181,7 @@ VALUES
   (17, 'Pancakes', 19, null, null),
   (17, 'Recipe Book', 19, null, null),
 
-  (18, 'Return to Map', null, null, null),
+  (18, 'Return to Map', null, 2, null),
   (19, 'Return to Map', null, 5, null),
   (20, 'Next', 21, null, null),
   (21, 'Next', 22, null, null),
