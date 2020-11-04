@@ -153,7 +153,7 @@ VALUES
   (6, 'Next', 7, null, null),
   (7, 'Next', 8, null, null),
 
-  (8, 'Play Game', 42, null, null),
+  (8, 'Explore the Desert', 42, null, null),
   (42, 'Fail to find the Shard', 9 , null, null),
   (9, 'Try Again', 42, null, null),
   (42, 'Lose the Shard forever', 10, null, 'The shard was forever lost in the sand'),
