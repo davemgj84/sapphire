@@ -37,8 +37,6 @@
 - Vintage Games - pixel art - old graphics
 - Choose your own adventure
 
-- THROWS IT OVER TO David and Jen
-
 # TECH STACK
 
 - Node

@@ -9,7 +9,7 @@ const MapMusic = () => {
     <Sound
       url={song}
       playStatus={musicStatus}
-      volume={5}
+      volume={1}
       autoLoad={true}
       loop={true}
     />
