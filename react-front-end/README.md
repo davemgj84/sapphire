@@ -10,8 +10,10 @@
 
 ## Dependencies
 
-- Clone this repo and run `npm install` to install dependencies.
+- Clone this repo and cd into react-front-end, then run `npm install` to install dependencies.
+- Run `npm start` to play.
 - Dependencies include:
+
   - React
   - React-Router-Dom
   - React-Sound
@@ -23,10 +25,21 @@
   - GSAP
   - Axios
 
+- Also cd into express-back-end, then run `npm install` to install dependencies.
+- Run `npm run go` to run server with nodemon.
+
+- Dependencies include:
+  - Express
+  - Nodemon
+  - Chalk
+  - Body-Parser
+  - PG
+  - PG-Native
+
 ## Screenshots
 
 ![Title Page](https://github.com/davemgj84/sapphire/blob/master/Docs/Titlepage.png?raw=true)
 ![Choose Character](https://github.com/davemgj84/sapphire/blob/master/Docs/ChooseCharacter.png?raw=true)
 ![Overworld Map](https://github.com/davemgj84/sapphire/blob/master/Docs/OverworldMap.png?raw=true)
-![Dialogue]()
+![Dialogue](https://github.com/davemgj84/sapphire/blob/master/Docs/Dialogue.png?raw=true)
 ![Mini Games](https://github.com/davemgj84/sapphire/blob/master/Docs/MiniGame.png?raw=true)
