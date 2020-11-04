@@ -46,5 +46,6 @@
 - IMPROVE Background art for each scene
 - summary adventure?
 - Character dialogue comes from character you chose
+- making scenes dependent on location , not the url
 
 ## This is a lot to consider - and I am sure we will encounter more as we work - Let's make a plan and destroy this list! I believe in us!
