@@ -25,8 +25,8 @@
 
 ## Screenshots
 
-![Title Page]()
-![Choose Character]()
-![Overworld Map]()
+![Title Page](https://github.com/davemgj84/sapphire/blob/master/Docs/Titlepage.png?raw=true)
+![Choose Character](https://github.com/davemgj84/sapphire/blob/master/Docs/ChooseCharacter.png?raw=true)
+![Overworld Map](https://github.com/davemgj84/sapphire/blob/master/Docs/OverworldMap.png?raw=true)
 ![Dialogue]()
-![Mini Games]()
+![Mini Games](https://github.com/davemgj84/sapphire/blob/master/Docs/MiniGame.png?raw=true)
