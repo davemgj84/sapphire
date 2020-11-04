@@ -10,7 +10,7 @@
 
 ## Dependencies
 
-- Clone this repo and cd into react-front-end, then run `npm install` to install dependencies.
+- Clone this repo and cd into `react-front-end`. Run `npm install` to install dependencies.
 - Run `npm start` to play.
 - Dependencies include:
 
@@ -25,7 +25,7 @@
   - GSAP
   - Axios
 
-- Also cd into express-back-end, then run `npm install` to install dependencies.
+- Also cd into `express-back-end`. Run `npm install` to install dependencies.
 - Run `npm run go` to run server with nodemon.
 
 - Dependencies include:
