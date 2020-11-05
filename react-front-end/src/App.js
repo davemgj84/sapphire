@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Frame from "./components/Frame";
-// import useColor from "./hooks/useColor";
 import MapMusic from "./components/MapMusic";
 import Sound from "react-sound";
 import MusicContext from "./components/MusicContext";

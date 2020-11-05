@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import SandIcon from "./SandIcon";
 import "../styles/sand.scss";
 import Timer from "../helpers/timer";
 
 export default function ShiftingSands(props) {
-  console.log("SS: ", props);
   useEffect(() => {
     window.addEventListener("keyup", props.minigame); //add listener with function
     return () => {
