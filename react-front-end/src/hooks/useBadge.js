@@ -27,6 +27,7 @@ const useBadge = () => {
     }
   }, [loaded]);
 
+  // copy object but set ID to true when has badge:
   useEffect(() => {
     window.setHasBadge = (id) =>
       setHasBadge((prev) => ({ ...prev, [id]: true }));

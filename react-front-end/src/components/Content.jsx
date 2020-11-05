@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import DialogueScene from "./DialogueScene";
 import SapphireGame from "./SapphireGame";
@@ -7,12 +7,14 @@ import World from "../phaser/World";
 const MAP = "MAP";
 const DIALOG = "DIALOG";
 
+// default props - to get location URL
 function Content(props) {
-  const [stage, setStage] = React.useState(MAP);
-  console.log("content", props);
+  const [stage, setStage] = useState(MAP);
 
+  // Work around for using phaser and react - had to create/attach a funtion in global scope
   useEffect(() => {
     window.advanceScene = () => setStage(DIALOG);
+    // shows badges at bottom once game begins
     document.getElementById("badge-container").style.display = "flex";
   }, []);
 

@@ -6,6 +6,7 @@ const Leaf = (props) => {
   const [visible, setVisible] = useState(true);
   const [fall, setFall] = useState(false);
 
+  // Old leaves
   // const leaves = ["🍁", "🍃", "🍂", "🌿", "🍀", "🌼", "🌱"];
 
   const leaves = [
@@ -33,7 +34,6 @@ const Leaf = (props) => {
   });
 
   const leafStyles = {
-    // fontSize: "2em",
     height: "40px",
     width: "40px",
     display: visible ? "block" : "none",

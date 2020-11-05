@@ -5,6 +5,7 @@ import Sparkle from "./Sparkle";
 const Badge = (props) => {
   const { image, id, hasBadge } = props;
 
+  // Controls badge opacity - when user gets a badge - gets brighter
   const imageStyles = {
     opacity: hasBadge[id] ? 1 : 0.25,
   };

@@ -17,9 +17,6 @@ const Character = (props) => {
     config: { mass: 5, tension: 500, friction: 150 },
   });
 
-  // const updateIndex = (curr, min, max) => {
-  //   return curr < max ? curr + 1 : min;
-  // };
   //conditioned to only run on a mouse hover
   useEffect(() => {
     if (!hover) return;
