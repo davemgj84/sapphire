@@ -49,7 +49,7 @@ const Character = (props) => {
     backgroundImage: `url(/assets/cards/card_${color}.png)`,
     boxShadow:
       currentColor === color
-        ? "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)"
+        ? "0 14px 28px #71716c, 0 10px 10px #71716c"
         : "none",
     opacity,
     transform: transform.interpolate((t) => `${t} rotateY(180deg)`),

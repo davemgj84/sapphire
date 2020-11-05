@@ -61,7 +61,7 @@ const ChooseChar = (props) => {
   });
   return (
     <div className="choose-character">
-      <p className="choose">CHOOSE A CHARACTER</p>
+      <span className="choose">CHOOSE A CHARACTER</span>
 
       <div className="all-characters">{allCharacters}</div>
 
