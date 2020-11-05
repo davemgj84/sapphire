@@ -80,6 +80,7 @@ const Credits = () => {
             <p>Glen Chua</p>
             <p>Diogo Pinto</p>
             <p>Caroline Lauder</p>
+            <p>Kelly (K-Fox)</p>
             <p>Ryan Dee</p>
             <p>Mom and Dad</p>
             <p>Our Pets</p>
